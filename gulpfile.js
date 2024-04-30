@@ -26,13 +26,13 @@ import clean from 'gulp-clean';
 
 export const styles = () => {
 	return src('src/scss/style.scss')
+		.pipe(concat('style.min.css'))
 		.pipe(
 			autoprefixer({
 				overrideBrowserslist: ['last 10 versions'],
 				cascade: false,
 			})
 		)
-		.pipe(concat('style.min.css'))
 		.pipe(scss({ outputStyle: 'compressed' }))
 		.pipe(dest('src/css'))
 		.pipe(browserSync.stream());
@@ -74,10 +74,10 @@ export const cleanDist = () => {
 export const building = () => {
 	return src(
 		[
-			'src/css/style.min.css',
+			'src/css/*.css',
 			'src/js/main.min.js',
 			'src/**/*.*html',
-			'src/images/*.*',
+			'src/images/**/*.*',
 			'src/fonts/*.*',
 		],
 		{ base: 'src' }
@@ -87,4 +87,5 @@ export const building = () => {
 export const build = series(cleanDist, building);
 
 export default parallel(styles, scripts, browsersync, watching);
+
 // export default parallel(styles, scripts, html, browsersync, watching);
