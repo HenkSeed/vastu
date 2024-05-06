@@ -19,10 +19,15 @@ const browserSync = bSync.create();
 
 // Добавляем префиксы для совместимости версий
 import autoprefixer from 'gulp-autoprefixer';
-// import include from 'gulp-file-include';
+
+// Добавляем пакет объединения файлов
+import include from 'gulp-file-include';
 
 // Настраиваем очистку папки build
 import clean from 'gulp-clean';
+
+import fs from 'fs/promises';
+import { constants } from 'fs';
 
 export const styles = () => {
 	return src('src/scss/style.scss')
@@ -46,17 +51,30 @@ export const scripts = () => {
 		.pipe(browserSync.stream());
 };
 
-// export const html = () => {
-// 	return src('src/html/index.html')
-// 		.pipe(dest('src'))
-// 		.pipe(browserSync.stream());
-// };
+export const html = () => {
+	// return src(['src/**/*.html'], { base: 'src' })
+	// return src(['src/**/*.html', '!src/html_result/**', '!src/index.html'])
+	return src(['src/html_pages/**/*.html'])
+		.pipe(include({ prefix: '@@' }))
+		.pipe(dest(['src/html_result']))
+		.pipe(browserSync.stream());
+};
+
+// Перезаписываем запускающий файл index.html
+export const html_index = () => {
+	return src('src/html_result/main.html')
+		.pipe(concat('index.html'))
+		.pipe(dest('src/'))
+		.pipe(browserSync.stream());
+};
 
 export const watching = () => {
 	watch(['src/scss/style.scss'], styles);
 	watch(['src/js/main.js'], scripts);
-	// watch(['src/html/index.html'], html);
-	watch(['src/*.html']).on('change', browserSync.reload);
+	watch(['src/html_pages/*.html'], html);
+	watch(['src/html_result/main.html'], html_index);
+	// watch(['src/**/*.html'], html);
+	// watch(['src/**/*.html']).on('change', browserSync.reload);
 };
 
 export const browsersync = () => {
@@ -67,16 +85,19 @@ export const browsersync = () => {
 	});
 };
 
+// ==========================================
 export const cleanDist = () => {
-	return src('dist').pipe(clean());
+	return src('dist/*').pipe(clean());
 };
+// ------------------------------------------
 
 export const building = () => {
 	return src(
 		[
 			'src/css/*.css',
 			'src/js/main.min.js',
-			'src/**/*.*html',
+			'src/html_result/**/*.html',
+			'src/index.html',
 			'src/images/**/*.*',
 			'src/fonts/*.*',
 		],
@@ -86,6 +107,12 @@ export const building = () => {
 
 export const build = series(cleanDist, building);
 
-export default parallel(styles, scripts, browsersync, watching);
+export default parallel(styles, scripts, html, browsersync, watching);
 
-// export default parallel(styles, scripts, html, browsersync, watching);
+// export default parallel(
+// 	styles,
+// 	scripts,
+// 	series(html, html_index),
+// 	browsersync,
+// 	watching
+// );

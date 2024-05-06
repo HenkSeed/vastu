@@ -24,6 +24,15 @@ body {
       "wdth" 100;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+}
+
 a {
    text-decoration: none;
 }
@@ -73,7 +82,7 @@ ul {
    &__logo {
       color: #fff;
       font-size: 24px;
-      font-weight: 600;
+      font-weight: 500;
    }
 
    &__nav {
@@ -84,7 +93,7 @@ ul {
          color: #8B4513;
          font-size: 14px;
          text-transform: uppercase;
-         font-weight: 600;
+         font-weight: 500;
       }
    }
 
@@ -98,6 +107,7 @@ ul {
    &__cart {
       /* "Поглащает" выступающий счётчик, сохраняя общий padding блока header */
       padding-right: 10px;
+      cursor: pointer;
 
       &__image {
          position: relative;
@@ -114,6 +124,41 @@ ul {
          position: absolute;
          top: -5px;
          right: -10px;
+      }
+   }
+}
+
+.hero {
+   margin: 0 auto;
+   background-image: url('../images/hero/main_bg.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+   background-size: cover;
+   /*    padding-top: 103px;
+   padding-bottom: 634px; */
+   aspect-ratio: 1920 / 1344;
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 33px;
+      align-items: center;
+      max-width: 1190px;
+      padding-left: 10px;
+      padding-right: 10px;
+      /*       padding-top: 103px;
+      padding-bottom: 634px; */
+
+      & h1 {
+         margin-top: 103px;
+         font-family: "Cinzel Decorative", serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 96px;
+         color: #fff;
+         /*    color: cyan; */
       }
    }
 }
