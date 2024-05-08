@@ -1,4 +1,4 @@
-// Comments
+/* Comments */
 *,
 *::after,
 *::before {
@@ -63,18 +63,21 @@ ul {
    padding-right: calc(50% - 595px);
 }
 
+.container {
+   display: flex;
+   max-width: 1190px;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
 .header {
    margin: 0 auto;
    background-color: #F1C9A5;
    border: #9B9773 1px solid;
 
    &__container {
-      display: flex;
       justify-content: space-between;
       align-items: center;
-      max-width: 1190px;
-      padding-left: 10px;
-      padding-right: 10px;
       padding-top: 21px;
       padding-bottom: 21px;
    }
@@ -128,6 +131,28 @@ ul {
    }
 }
 
+.footer {
+   margin: 0 auto;
+   background-color: #F1C9A5;
+   border: #9B9773 1px solid;
+
+   &__container {
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 21px;
+      padding-bottom: 21px;
+   }
+
+   &__copyright {
+      color: #8B4513;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+      font-weight: 400;
+   }
+}
+
 .hero {
    margin: 0 auto;
    background-image: url('../images/hero/main_bg.png');
@@ -140,14 +165,10 @@ ul {
    aspect-ratio: 1920 / 1344;
 
    &__container {
-      display: flex;
       flex-direction: column;
       justify-content: space-between;
       gap: 33px;
       align-items: center;
-      max-width: 1190px;
-      padding-left: 10px;
-      padding-right: 10px;
       /*       padding-top: 103px;
       padding-bottom: 634px; */
 
@@ -158,7 +179,6 @@ ul {
          font-style: normal;
          font-size: 96px;
          color: #fff;
-         /*    color: cyan; */
       }
    }
 }

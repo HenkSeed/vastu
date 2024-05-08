@@ -26,8 +26,8 @@ import include from 'gulp-file-include';
 // Настраиваем очистку папки build
 import clean from 'gulp-clean';
 
-import fs from 'fs/promises';
-import { constants } from 'fs';
+// import fs from 'fs/promises';
+// import { constants } from 'fs';
 
 export const styles = () => {
 	return src('src/scss/style.scss')
@@ -51,16 +51,16 @@ export const scripts = () => {
 		.pipe(browserSync.stream());
 };
 
+// Собираем html-файлы и перемещаем результат в папку 'src/html_result'
 export const html = () => {
 	// return src(['src/**/*.html'], { base: 'src' })
-	// return src(['src/**/*.html', '!src/html_result/**', '!src/index.html'])
 	return src(['src/html_pages/**/*.html'])
 		.pipe(include({ prefix: '@@' }))
 		.pipe(dest(['src/html_result']))
 		.pipe(browserSync.stream());
 };
 
-// Перезаписываем запускающий файл index.html
+// Перезаписываем запускающий файл index.html в корне проекта
 export const html_index = () => {
 	return src('src/html_result/main.html')
 		.pipe(concat('index.html'))
@@ -71,7 +71,7 @@ export const html_index = () => {
 export const watching = () => {
 	watch(['src/scss/style.scss'], styles);
 	watch(['src/js/main.js'], scripts);
-	watch(['src/html_pages/*.html'], html);
+	watch(['src/html_pages/**/*.html'], html);
 	watch(['src/html_result/main.html'], html_index);
 	// watch(['src/**/*.html'], html);
 	// watch(['src/**/*.html']).on('change', browserSync.reload);
