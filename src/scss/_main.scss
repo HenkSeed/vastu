@@ -1,0 +1,245 @@
+/* Comments */
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+*:focus:not(:focus-visible) {
+   outline: none;
+}
+
+html,
+body {
+   font-size: 62.5%;
+}
+
+body {
+   /* box-sizing: border-box; */
+   font-family: "Noto Sans", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: 400;
+   font-style: normal;
+   font-variation-settings:
+      "wdth" 100;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+button {
+   cursor: pointer;
+}
+
+label,
+input,
+button {
+
+   &:hover,
+   &:active,
+   &:focus {
+      outline: 0;
+      outline-offset: 0;
+   }
+}
+
+ul {
+   text-decoration: none;
+   list-style: none;
+}
+
+.center {
+   padding-left: calc(50% - 59.5rem);
+   padding-right: calc(50% - 59.5rem);
+}
+
+.container {
+   display: flex;
+   max-width: 119.0rem;
+   padding-left: 2rem;
+   padding-right: 2rem;
+}
+
+.header {
+   margin: 0 auto;
+   background-color: #F1C9A5;
+   border: #9B9773 0.1rem solid;
+
+   &__container {
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2.1rem;
+      padding-bottom: 2.1rem;
+   }
+
+   &__logo {
+      color: #fff;
+      font-size: 2.4rem;
+      font-weight: 500;
+   }
+
+   &__nav {
+      display: flex;
+      gap: 3rem;
+
+      &__item {
+         color: #8B4513;
+         font-size: 1.4rem;
+         text-transform: uppercase;
+         font-weight: 500;
+      }
+   }
+
+   &__social {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1.5rem;
+   }
+
+   &__cart {
+      /* "Поглащает" выступающий счётчик, сохраняя общий padding блока header */
+      padding-right: 1.0rem;
+      cursor: pointer;
+
+      &__image {
+         position: relative;
+         width: 3.6rem;
+         height: 3.5rem;
+      }
+
+      /*  &__image img {
+         width: 100%;
+      } */
+
+
+      &__counter {
+         position: absolute;
+         top: -0.5rem;
+         right: -1.0rem;
+      }
+   }
+}
+
+.hero {
+   --header-color: #fff;
+   /* --header-color: cyan; */
+   margin: 0 auto;
+   background-image: url('../images/hero/main_bg.png');
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: 100% auto;
+   background-size: cover;
+   /*    padding-top: 103px;
+   padding-bottom: 634px; */
+   aspect-ratio: 1920 / 1344;
+
+   &__container {
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 3.3rem;
+      align-items: center;
+      /*       padding-top: 103px;
+      padding-bottom: 634px; */
+
+      & h1 {
+         margin-top: 10.3rem;
+         font-family: "Cinzel Decorative", serif;
+         font-weight: 400;
+         font-style: normal;
+         font-size: 9.6rem;
+         color: var(--header-color);
+      }
+
+      &__text {
+         font-size: 3.2rem;
+         font-family: "Cormorant Infant", serif;
+         font-weight: 500;
+         font-style: normal;
+         max-width: 56.5rem;
+         text-align: center;
+         color: #fff;
+      }
+   }
+}
+
+.about {
+   background-color: #F2E8DE;
+   padding-top: 12.0rem;
+   padding-bottom: 6.0rem;
+
+   &__container {
+      width: 100%;
+      min-height: 58.0rem;
+      /* background-color: cyan; */
+      position: relative;
+   }
+
+   &__image {
+      position: absolute;
+      width: 48.72%;
+      left: 1.0rem;
+      border-radius: 1.0rem;
+      overflow: hidden;
+
+      & img {
+         width: 100%;
+      }
+   }
+
+   &__info {
+      position: absolute;
+      width: 57.26%;
+      right: 1.0rem;
+      top: 50%;
+      transform: translateY(-50%);
+      padding-left: 13.0rem;
+      border-radius: 1.0rem;
+      overflow: hidden;
+      z-index: 10;
+      background-color: #F1C9A5;
+      opacity: 0.6;
+   }
+}
+
+.footer {
+   margin: 0 auto;
+   background-color: #F1C9A5;
+   border: #9B9773 0.1rem solid;
+
+   &__container {
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2.1rem;
+      padding-bottom: 2.1rem;
+   }
+
+   &__copyright {
+      color: #8B4513;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 2.0rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+   }
+}
+
+@media(max-width:1170px) {
+
+   html,
+   body {
+      font-size: calc(5px + (10 - 5) * ((100vw - 320px) / (1170 - 320)));
+   }
+}

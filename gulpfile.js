@@ -30,7 +30,7 @@ import clean from 'gulp-clean';
 // import { constants } from 'fs';
 
 export const styles = () => {
-	return src('src/scss/style.scss')
+	return src('src/style.scss')
 		.pipe(concat('style.min.css'))
 		.pipe(
 			autoprefixer({
@@ -69,7 +69,8 @@ export const html_index = () => {
 };
 
 export const watching = () => {
-	watch(['src/scss/style.scss'], styles);
+	// watch(['src/style.scss'], styles);
+	watch(['src/**/*.scss'], styles);
 	watch(['src/js/main.js'], scripts);
 	watch(['src/html_pages/**/*.html'], html);
 	watch(['src/html_result/main.html'], html_index);
