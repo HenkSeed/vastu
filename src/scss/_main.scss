@@ -17,7 +17,6 @@ body {
 }
 
 body {
-   /* box-sizing: border-box; */
    font-family: "Noto Sans", sans-serif;
    font-optical-sizing: auto;
    font-weight: 400;
@@ -80,8 +79,13 @@ ul {
    &__container {
       justify-content: space-between;
       align-items: center;
-      padding-top: 2.1rem;
-      padding-bottom: 2.1rem;
+      padding-top: 2.7rem;
+      padding-bottom: 2.7rem;
+   }
+
+   &__burger {
+      display: none;
+      cursor: pointer;
    }
 
    &__logo {
@@ -92,7 +96,8 @@ ul {
 
    &__nav {
       display: flex;
-      gap: 3rem;
+      /* gap: 3rem; */
+      gap: calc(10px + (30 - 10) * ((100vw - 768px) / (1170 - 768)));
 
       &__item {
          color: #8B4513;
@@ -107,35 +112,55 @@ ul {
       justify-content: space-between;
       align-items: center;
       gap: 1.5rem;
+
+      & a img {
+         width: 3.8rem;
+
+      }
    }
 
    &__cart {
       /* "Поглащает" выступающий счётчик, сохраняя общий padding блока header */
-      padding-right: 1.0rem;
+      padding-right: 2.0rem;
       cursor: pointer;
 
       &__image {
          position: relative;
-         width: 3.6rem;
-         height: 3.5rem;
+
+         & img {
+            /* width: 3.6rem;
+            height: 3.5rem; */
+            width: 36px;
+            height: 35px;
+         }
       }
-
-      /*  &__image img {
-         width: 100%;
-      } */
-
 
       &__counter {
+         /* width: 2.0rem;
+         height: 2.0rem; */
+         width: 20px;
+         height: 20px;
          position: absolute;
-         top: -0.5rem;
-         right: -1.0rem;
+         /* top: -0.5rem;
+         right: -1.0rem; */
+         top: -5px;
+         right: -10px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: red;
+         border-radius: 50%;
+         color: #fff;
+         /* font-size: 1.2rem; */
+         font-size: 12px;
       }
+
    }
 }
 
 .hero {
+   /* --hero_ratio_width: 1920; */
    --header-color: #fff;
-   /* --header-color: cyan; */
    margin: 0 auto;
    background-image: url('../images/hero/main_bg.png');
    background-position: center;
@@ -145,6 +170,7 @@ ul {
    /*    padding-top: 103px;
    padding-bottom: 634px; */
    aspect-ratio: 1920 / 1344;
+   /* aspect-ratio: var(--hero_ratio_width) / 1344; */
 
    &__container {
       flex-direction: column;
@@ -236,10 +262,48 @@ ul {
    }
 }
 
-@media(max-width:1170px) {
+
+
+@media(max-width:1200px) {
 
    html,
    body {
-      font-size: calc(5px + (10 - 5) * ((100vw - 320px) / (1170 - 320)));
+      font-size: calc(5px + (10 - 5) * ((100vw - 320px) / (1200 - 320)));
    }
+}
+
+@media(max-width:768px) {
+   .header {
+      &__burger {
+         display: block;
+      }
+
+      &__logo {
+         font-size: 24px;
+      }
+
+      &__nav,
+      &__social {
+         display: none;
+      }
+
+   }
+
+   .hero {
+      /* background-position-x: 36%;
+      background-size: 161% 100%;
+      aspect-ratio: 1535 / 1344; */
+      /* Смотрится нормально на w360px */
+      background-position-x: 41%;
+      background-size: 185% 100%;
+      aspect-ratio: 1029 / 1344;
+   }
+
+   .footer {
+      &__container {
+         justify-content: center;
+      }
+   }
+
+
 }
