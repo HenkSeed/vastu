@@ -96,8 +96,8 @@ ul {
 
    &__nav {
       display: flex;
+      gap: 30px;
       /* gap: 3rem; */
-      gap: calc(10px + (30 - 10) * ((100vw - 768px) / (1170 - 768)));
 
       &__item {
          color: #8B4513;
@@ -169,8 +169,8 @@ ul {
    background-size: cover;
    /*    padding-top: 103px;
    padding-bottom: 634px; */
-   aspect-ratio: 1920 / 1344;
-   /* aspect-ratio: var(--hero_ratio_width) / 1344; */
+   /* aspect-ratio: 1920 / 1344; */
+   height: calc(100vw / 1920 * 1344);
 
    &__container {
       flex-direction: column;
@@ -215,6 +215,7 @@ ul {
 
    &__image {
       position: absolute;
+      z-index: 10;
       width: 48.72%;
       left: 1.0rem;
       border-radius: 1.0rem;
@@ -227,6 +228,7 @@ ul {
 
    &__info {
       position: absolute;
+      z-index: 10;
       width: 57.26%;
       right: 1.0rem;
       top: 50%;
@@ -235,8 +237,30 @@ ul {
       border-radius: 1.0rem;
       overflow: hidden;
       z-index: 10;
+      background-color: rgba(241, 201, 165, 0.6);
+      /* opacity: 0.6; */
+
+      &__header {
+         color: #8B4513;
+         font-size: 4.8rem;
+         font-weight: 500;
+         opacity: 1.0;
+      }
+
+      &__text {
+         color: #2A2A2A;
+         font-size: 1.8rem;
+      }
+   }
+
+   &__rectangle {
+      position: absolute;
+      left: -78px;
+      top: 115px;
+      min-width: 180px;
+      min-height: 600px;
       background-color: #F1C9A5;
-      opacity: 0.6;
+      border-radius: 1.0rem;
    }
 }
 
@@ -270,6 +294,12 @@ ul {
    body {
       font-size: calc(5px + (10 - 5) * ((100vw - 320px) / (1200 - 320)));
    }
+
+   .header {
+      &__nav {
+         gap: calc(10px + (30 - 10) * ((100vw - 768px) / (1200 - 768)));
+      }
+   }
 }
 
 @media(max-width:768px) {
@@ -286,17 +316,24 @@ ul {
       &__social {
          display: none;
       }
-
    }
 
    .hero {
       /* background-position-x: 36%;
       background-size: 161% 100%;
       aspect-ratio: 1535 / 1344; */
+
       /* Смотрится нормально на w360px */
-      background-position-x: 41%;
-      background-size: 185% 100%;
-      aspect-ratio: 1029 / 1344;
+      /* background-position-x: 41%; */
+      /* background-size: 185% 100%; */
+      /* aspect-ratio: 1029 / 1344; */
+
+      background-size: calc(185vw - (443) * ((100vw - 360px) / (768 - 360))) 100%;
+      height: calc(470px + (538 - 470) * ((100vw - 360px) / (768 - 360)));
+      ;
+
+      /* Плавно от 50% до 41% (или от -105px до -124px при 768px -> 360px */
+      background-position-x: calc(-124px + (19) * ((100vw - 360px) / (768 - 360)));
    }
 
    .footer {
