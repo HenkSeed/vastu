@@ -26,8 +26,16 @@ import include from 'gulp-file-include';
 // Настраиваем очистку папки build
 import clean from 'gulp-clean';
 
+import ghPages from 'gh-pages';
+
+import path from 'path';
+
 // import fs from 'fs/promises';
 // import { constants } from 'fs';
+
+export const deploy = (cb) => {
+	ghPages.publish(path.join(process.cwd(), './dist'), cb);
+};
 
 export const styles = () => {
 	return src('src/style.scss')
@@ -90,6 +98,10 @@ export const browsersync = () => {
 export const cleanDist = () => {
 	return src('dist/*').pipe(clean());
 };
+// ------------------------------------------
+
+// ==========================================
+// export const
 // ------------------------------------------
 
 export const building = () => {
