@@ -94,15 +94,9 @@ export const browsersync = () => {
 	});
 };
 
-// ==========================================
 export const cleanDist = () => {
 	return src('dist/*').pipe(clean());
 };
-// ------------------------------------------
-
-// ==========================================
-// export const
-// ------------------------------------------
 
 export const building = () => {
 	return src(
@@ -111,14 +105,22 @@ export const building = () => {
 			'src/js/main.min.js',
 			'src/html_result/**/*.html',
 			'src/index.html',
-			'src/images/**/*.*',
 			'src/fonts/*.*',
 		],
 		{ base: 'src' }
 	).pipe(dest('dist'));
 };
 
-export const build = series(cleanDist, building);
+export const buildImg = () => {
+	return src(
+		'src/images/**/*',
+		{ base: 'src' },
+		{ encoding: false },
+		{ buffer: false }
+	).pipe(dest('dist', { encoding: false }));
+};
+
+export const build = series(cleanDist, building, buildImg);
 
 export default parallel(styles, scripts, html, browsersync, watching);
 
