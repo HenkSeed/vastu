@@ -123,21 +123,43 @@ ul {
       align-items: center;
       gap: 1.5rem;
 
-      & a img {
-         width: 3.8rem;
-
+      /* Родительский блок для каждой иконки */
+      &__item {
+         width: 38px;
+         height: 38px;
+         /* Обрезаем по окружности его содержимое */
+         border-radius: 50%;
+         overflow: hidden;
       }
 
-      &__telegram:hover {
+      /* Окружность вокруг иконки */
+      &__telegram-circle {
+         stroke: #8B4513;
+      }
+
+      /* При наведении закрашиваем фон иконки и окружность */
+      &__telegram:hover &__telegram-circle {
          fill: #37AEE2;
          stroke: #37AEE2;
-         border-color: #37AEE2;
       }
 
-      /* 
-      &__telegram:hover svg path {
-         fill: linear-gradient(#37AEE2, #1E96C8);
-      } */
+      &__whatsup-circle {
+         stroke: #8B4513;
+      }
+
+      &__whatsup:hover &__whatsup-circle {
+         fill: #25D366;
+         stroke: #25D366;
+      }
+
+      &__vk-circle {
+         stroke: #8B4513;
+      }
+
+      &__vk:hover &__vk-circle {
+         fill: #4C6C91;
+         stroke: #4C6C91;
+      }
    }
 
    &__cart {
@@ -178,6 +200,10 @@ ul {
 
    }
 }
+
+/* .header__social__item.header__social__telegram {
+
+} */
 
 .hero {
    /* --hero_ratio_width: 1920; */
