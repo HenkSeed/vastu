@@ -484,7 +484,7 @@ ul {
    background-color: rgba(241, 201, 165, 0.27);
    padding-top: 12rem;
    padding-bottom: 6rem;
-   height: 705px;
+   height: 70.5rem;
 
    &__container {
       /* position: relative; */
@@ -517,19 +517,12 @@ ul {
 
    &__bg-img {
       position: absolute;
-      right: 285px;
-      /* top: -172px; */
-      bottom: 145px;
+      right: 0%;
+      bottom: 20%;
 
       & img {
          width: 100%;
       }
-   }
-
-   &__left-img,
-   &__main-img,
-   &__right-img {
-      width: 100%;
    }
 
    &__images {
@@ -871,6 +864,12 @@ ul {
    .hero__container__title {
       margin-top: calc(53px + (103 - 53) * ((100vw - 1200px) / (1920 - 1200)));
    }
+
+   .diploma {
+      &__bg-img {
+         right: calc(0px + (290 - 0) * ((100vw - 1200px) / (1920 - 1200)));
+      }
+   }
 }
 
 @media(max-width:1200px) {
@@ -949,6 +948,47 @@ ul {
             max-width: 370px;
          }
       } */
+   }
+
+   .diploma {
+
+      &__header {
+         font-size: calc(34px + (48 - 34) * ((100vw - 360px) / (1200 - 360)));
+      }
+
+      &__bg-img {
+         position: absolute;
+         right: 0%;
+         bottom: 20%;
+         width: calc(360px + (740 - 360) * ((100vw - 768px) / (1200 - 768)));
+
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__images {
+         gap: calc(20px + (30 - 20) * ((100vw - 360px) / (1200 - 360)));
+      }
+
+      &__main-img {
+         width: calc(260px + (570 - 260) * ((100vw - 360px) / (1200 - 360)));
+         height: auto;
+
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__left-img,
+      &__right-img {
+         width: calc(180px + (270 - 180) * ((100vw - 360px) / (1200 - 360)));
+         height: auto;
+
+         & img {
+            width: 100%;
+         }
+      }
    }
 }
 
@@ -1142,6 +1182,26 @@ ul {
       }
    }
 
+   .diploma {
+      &__title {
+         width: 100%;
+         flex-direction: column;
+         gap: 0;
+      }
+
+      &__header {
+         align-self: flex-start;
+      }
+
+      &__line {
+         width: 100%;
+      }
+
+      &__bg-img {
+         display: none;
+      }
+   }
+
    .footer {
       &__container {
          justify-content: center;
@@ -1184,6 +1244,16 @@ ul {
          &__text {
             font-size: 14px;
          }
+      }
+   }
+
+   .diploma {
+      &__header {
+         font-size: 34px;
+      }
+
+      &__images {
+         gap: 20px;
       }
    }
 }
