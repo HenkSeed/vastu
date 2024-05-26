@@ -646,6 +646,13 @@ ul {
          }
       }
 
+      &__first,
+      &__second,
+      &__more {
+         border-radius: 10px;
+         overflow: hidden;
+      }
+
       &__btn {
          position: absolute;
          width: 6.6rem;
@@ -718,49 +725,64 @@ ul {
          justify-content: space-between;
          align-items: center;
          gap: 20px;
+
+         & img {
+            width: 45px;
+            height: 45px;
+         }
       }
    }
 
    &__card {
-      position: relative;
-      padding-top: 14rem;
-      padding-bottom: 2rem;
-      padding-left: 4rem;
-      padding-right: 4rem;
+      /* position: relative; */
+      /* padding-top: 14rem; */
+      padding-bottom: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
       background-color: #fff;
-      border-radius: 1rem;
+      border-radius: 10px;
       width: 48%;
       display: flex;
       flex-direction: column;
       align-items: center;
 
       &__img {
-         position: absolute;
-         top: -3rem;
-         width: 15rem;
-         height: 15rem;
+         /*          position: absolute;
+         top: -3rem; */
+         margin-top: -30px;
+         margin-bottom: 20px;
+         width: 150px;
+         height: 150px;
+
+         & img {
+            width: 100%;
+         }
       }
 
       &__name {
          color: #8B4513;
          font-size: 3.2rem;
          font-weight: 500;
-         margin-bottom: 1rem;
+         margin-bottom: 10px;
       }
 
       &__line {
          border: 0.5px solid #F1C9A5;
          width: 100%;
          height: 0;
-         margin-bottom: 5rem;
+         margin-bottom: 50px;
       }
 
       &__quote-mark {
          margin-bottom: 25px;
+
+         & img {
+            width: 100%;
+         }
       }
 
       &__text {
-         font-size: 1.8rem;
+         font-size: 18px;
          color: #2A2A2A;
          text-align: center;
          line-height: 145%;
@@ -769,7 +791,7 @@ ul {
 
       &__arrows {
          display: flex;
-         gap: 2rem;
+         gap: 20px;
       }
 
       &__arrow-left,
@@ -777,8 +799,8 @@ ul {
          display: flex;
          justify-content: center;
          align-items: center;
-         width: 3.6rem;
-         height: 3.6rem;
+         width: 36px;
+         height: 36px;
          background-color: #F1C9A5;
          cursor: pointer;
       }
@@ -1027,6 +1049,42 @@ ul {
          font-size: calc(34px + (48 - 34) * ((100vw - 360px) / (1200 - 360)));
       }
    }
+
+   .reviews {
+      &__stars {
+         &__header {
+            font-size: calc(34px + (48 - 34) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__images {
+            & img {
+               width: calc(36px + (45 - 36) * ((100vw - 360px) / (1200 - 360)));
+            }
+         }
+      }
+
+      &__card {
+         padding-left: calc(10px + (40 - 10) * ((100vw - 360px) / (1200 - 360)));
+
+         padding-right: calc(10px + (40 - 10) * ((100vw - 360px) / (1200 - 360)));
+
+         &__name {
+            font-size: calc(28px + (32 - 28) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__line {
+            margin-bottom: calc(30px + (50 - 30) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__quote-mark {
+            width: calc(30px + (37 - 30) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__text {
+            font-size: calc(13px + (18 - 13) * ((100vw - 360px) / (1200 - 360)));
+         }
+      }
+   }
 }
 
 @media(max-width:768px) {
@@ -1267,7 +1325,11 @@ ul {
          &__video {
             width: 100%;
             max-width: none;
+            border-radius: 10px;
+            overflow: hidden;
          }
+
+         /* &__wraper {} */
 
          &__frame {
             position: static;
@@ -1280,6 +1342,40 @@ ul {
          &__videos {
             max-width: none;
             width: 100%;
+            gap: 20px;
+         }
+
+         &__btn {
+            width: 11rem;
+            height: 11rem;
+
+            & img {
+               width: 4rem;
+               height: 3.4rem;
+            }
+         }
+      }
+   }
+
+   .reviews {
+      &__container {
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &__stars {
+         margin-bottom: 60px;
+
+         &__header {
+            font-size: 34px;
+         }
+      }
+
+      &__card {
+         width: 100%;
+
+         &__text {
+            margin-bottom: 60px;
          }
       }
    }
@@ -1336,6 +1432,18 @@ ul {
 
       &__images {
          gap: 20px;
+      }
+   }
+
+   .reviews {
+      &__stars {
+         &__images {
+            & img {
+               width: 36px;
+               height: 36px;
+               gap: 10px;
+            }
+         }
       }
    }
 }
