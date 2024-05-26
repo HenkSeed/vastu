@@ -548,7 +548,10 @@ ul {
 
    &__title {
       display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
       align-items: center;
+      justify-content: start;
       margin-bottom: 6rem;
       gap: 4rem;
       /* margin-bottom: 60px; */
@@ -558,11 +561,12 @@ ul {
       color: #8B4513;
       font-size: 4.8rem;
       font-weight: 400;
+      white-space: nowrap;
       /* margin-bottom: 6rem; */
    }
 
    &__line {
-      width: 600px;
+      width: 80%;
       height: 0;
       border: 1px solid #F1C9A5;
       margin-top: 5px;
@@ -571,20 +575,35 @@ ul {
 
    &__videos {
       display: flex;
-      gap: 30px;
-      /* flex-direction: column; */
+      gap: 2.57%;
+      flex-direction: row;
    }
 
    &__main {
       &__video {
+         max-width: 77rem;
+         width: 65.81%;
+
+         & img {
+            width: 100%;
+         }
+      }
+
+      &__wraper {
+         width: 100%;
          position: relative;
+
       }
 
       &__frame {
          position: absolute;
          border: none;
-         top: 29px;
-         left: 28px;
+         width: 92.857%;
+         left: 50%;
+         transform: translateX(-50%);
+         top: 4.5%;
+         /* top: 50%; */
+         /* transform: translateY(-50%); */
       }
 
       &__btn {
@@ -612,12 +631,19 @@ ul {
       &__videos {
          display: flex;
          flex-direction: column;
-         gap: 20px;
+         max-width: 37rem;
+         width: 31.62%;
+         gap: 2rem;
       }
 
       &__first,
       &__second {
+         width: 100%;
          position: relative;
+
+         & img {
+            width: 100%;
+         }
       }
 
       &__btn {
@@ -642,6 +668,11 @@ ul {
 
       &__more {
          cursor: pointer;
+
+         & svg {
+            width: 100%;
+            height: auto;
+         }
       }
 
       &__more:hover svg g rect {
@@ -990,6 +1021,12 @@ ul {
          }
       }
    }
+
+   .about-us {
+      &__header {
+         font-size: calc(34px + (48 - 34) * ((100vw - 360px) / (1200 - 360)));
+      }
+   }
 }
 
 @media(max-width:768px) {
@@ -1199,6 +1236,51 @@ ul {
 
       &__bg-img {
          display: none;
+      }
+   }
+
+   .about-us {
+      &__title {
+         flex-direction: column;
+         gap: 0;
+      }
+
+      &__header {
+         align-self: flex-start;
+      }
+
+      &__line {
+         width: 100%;
+      }
+
+      &__videos {
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+      }
+
+      &__main {
+         &__img {
+            display: none;
+         }
+
+         &__video {
+            width: 100%;
+            max-width: none;
+         }
+
+         &__frame {
+            position: static;
+            transform: translateX(0);
+            width: 100%;
+         }
+      }
+
+      &__aside {
+         &__videos {
+            max-width: none;
+            width: 100%;
+         }
       }
    }
 
