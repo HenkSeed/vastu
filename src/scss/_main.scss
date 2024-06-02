@@ -25,6 +25,11 @@ body {
       "wdth" 100;
 }
 
+body {
+   /* Для вызова затемнённого меню */
+   position: relative;
+}
+
 h1,
 h2,
 h3,
@@ -71,6 +76,166 @@ ul {
    padding-right: 15px;
 }
 
+.dark-bg {
+   position: fixed;
+   transform: translateX(-100%);
+   left: 0;
+   top: 0;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0);
+   z-index: 100;
+   transition: transform .5s, background-color .5s;
+
+   &__show {
+      transform: translateX(0);
+      background-color: rgba(0, 0, 0, .5);
+   }
+
+   &__container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+   }
+
+   &__burger-menu {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      /* opacity: 0; */
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 300px;
+      max-height: 495px;
+      background-color: #F1C9A5;
+      padding: 20px 20px 30px;
+
+      &_hidden {
+         display: none;
+      }
+
+      & ul {
+         margin-bottom: 30px;
+         width: 100%;
+      }
+
+      &__cross {
+         cursor: pointer;
+         margin-bottom: 60px;
+      }
+
+      &__item {
+         border-bottom: #8B4513 1px solid;
+         padding-bottom: 15px;
+
+         &:not(:first-child) {
+            margin-top: 15px;
+         }
+
+         & a {
+            color: #8B4513;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            & img {
+               margin-left: 10px;
+            }
+         }
+      }
+
+      & .header__social {
+         max-width: 209px;
+         align-self: center;
+      }
+
+      & .header__social__item {
+         width: 50px;
+         height: auto;
+      }
+   }
+
+   &__burger__consult {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      /* opacity: 0; */
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 300px;
+      max-height: 495px;
+      background-color: #F1C9A5;
+      padding: 20px 20px 30px;
+
+      &_hidden {
+         display: none;
+      }
+
+      & ul {
+         /* margin-bottom: 30px; */
+         width: 100%;
+      }
+
+      &__cross {
+         cursor: pointer;
+         margin-bottom: 60px;
+      }
+
+      &>a {
+         width: 100%;
+         color: #8B4513;
+         font-size: 14px;
+         font-weight: 500;
+         text-decoration: none;
+         text-transform: uppercase;
+         padding-bottom: 15px;
+         border-bottom: #8B4513 1px solid;
+
+         & img {
+            margin-right: 10px;
+         }
+      }
+
+      &__item {
+         /* border-bottom: #8B4513 1px solid; */
+         /* padding-bottom: 15px; */
+
+         &:not(:first-child) {
+            margin-top: 20px;
+         }
+
+         &:first-child {
+            margin-top: 15px;
+         }
+
+         & a {
+            color: #8B4513;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            /* text-transform: uppercase; */
+
+            & img {
+               margin-left: 10px;
+            }
+         }
+      }
+
+      & .header__social {
+         max-width: 209px;
+         align-self: center;
+      }
+
+      & .header__social__item {
+         width: 50px;
+         height: auto;
+      }
+   }
+}
+
 .header {
    position: relative;
    z-index: 10;
@@ -86,7 +251,7 @@ ul {
       padding-bottom: 2.7rem;
    }
 
-   &__burger {
+   &__burger__icon {
       display: none;
       cursor: pointer;
    }
@@ -257,6 +422,7 @@ ul {
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2);
+      transition: transform .5s;
 
       &__menu {
          width: 100%;
@@ -297,6 +463,7 @@ ul {
       border-bottom-right-radius: 10px;
       border-bottom-left-radius: 10px;
       box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2);
+      transition: transform .5s;
 
       &__menu {
          width: 100%;
@@ -1024,6 +1191,16 @@ ul {
    }
 }
 
+.get-visible {
+   opacity: 1;
+   display: block;
+}
+
+.get-invisible {
+   opacity: 0;
+   display: none;
+}
+
 @media(max-width:1920px) {
    .hero__container__title {
       margin-top: calc(53px + (103 - 53) * ((100vw - 1200px) / (1920 - 1200)));
@@ -1222,7 +1399,7 @@ ul {
          padding: 20px 20px;
       }
 
-      &__burger {
+      &__burger__icon {
          display: block;
       }
 
@@ -1230,8 +1407,11 @@ ul {
          font-size: 24px;
       }
 
+      /* Прячем навигационное меню и иконки соцсетей,
+      но только в шапке и подвале */
       &__nav,
-      &__social {
+      footer &__social,
+      header &__social {
          display: none;
       }
    }
