@@ -85,11 +85,13 @@ function showDropMenu(event) {
 // Показываем затемнённое окно
 function showDark() {
 	darkBg.classList.add('dark-bg__show');
+	document.body.style.overflow = 'hidden';
 }
 
 // Убираем затемнённое окно
 function hideDark() {
 	darkBg.classList.remove('dark-bg__show');
+	document.body.style.overflow = '';
 }
 
 // Вызываем бургер-меню

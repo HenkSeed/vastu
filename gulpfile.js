@@ -34,7 +34,7 @@ import path from 'path';
 // import { constants } from 'fs';
 
 export const deploy = (cb) => {
-	ghPages.publish(path.join(process.cwd(), './dist'), cb);
+	ghPages.publish(path.join(process.cwd(), '/dist'), cb);
 };
 
 export const styles = () => {
@@ -64,7 +64,15 @@ export const html = () => {
 	// return src(['src/**/*.html'], { base: 'src' })
 	return src(['src/html_pages/**/*.html'])
 		.pipe(include({ prefix: '@@' }))
-		.pipe(dest(['src/html_result']))
+		.pipe(dest(['src/html_result']));
+	// .pipe(browserSync.stream());
+};
+
+// Собранные файлы html перемещаем в рабочую папку
+// и подключаем к процессу работы локального сервера
+export const htmlResult = () => {
+	return src(['src/html_result/*.html'])
+		.pipe(dest(['src']))
 		.pipe(browserSync.stream());
 };
 
@@ -81,6 +89,7 @@ export const watching = () => {
 	watch(['src/**/*.scss'], styles);
 	watch(['src/js/main.js'], scripts);
 	watch(['src/html_pages/**/*.html'], html);
+	watch(['src/html_result/*.html'], htmlResult);
 	watch(['src/html_result/main.html'], html_index);
 	// watch(['src/**/*.html'], html);
 	// watch(['src/**/*.html']).on('change', browserSync.reload);
@@ -103,7 +112,7 @@ export const building = () => {
 		[
 			'src/css/*.css',
 			'src/js/main.min.js',
-			'src/html_result/**/*.html',
+			// 'src/html_result/**/*.html',
 			'src/index.html',
 			'src/fonts/*.*',
 		],
@@ -111,16 +120,20 @@ export const building = () => {
 	).pipe(dest('dist'));
 };
 
+export const buildHTML = () => {
+	return src(['src/html_result/*.html']).pipe(dest('dist'));
+};
+
 export const buildImg = () => {
 	return src(
-		'src/images/**/*',
+		['src/images/**/*'],
 		{ base: 'src' },
 		{ encoding: false },
 		{ buffer: false }
 	).pipe(dest('dist', { encoding: false }));
 };
 
-export const build = series(cleanDist, building, buildImg);
+export const build = series(cleanDist, building, buildHTML, buildImg);
 
 export default parallel(styles, scripts, html, browsersync, watching);
 
