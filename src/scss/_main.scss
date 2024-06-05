@@ -87,7 +87,7 @@ ul {
    z-index: 100;
    transition: transform .5s, background-color .5s;
 
-   &__show {
+   &--shown {
       transform: translateX(0);
       background-color: rgba(0, 0, 0, .5);
    }
@@ -102,7 +102,7 @@ ul {
       position: absolute;
       top: 0;
       left: 15px;
-      z-index: 30;
+      z-index: 50;
       opacity: 1;
       display: flex;
       flex-direction: column;
@@ -111,7 +111,7 @@ ul {
       max-height: 495px;
       background-color: #F1C9A5;
       padding: 20px 20px 30px;
-      transition: opacity 0.5s 0.2s;
+      transition: opacity 0.5s ease-out 0.2s;
 
       &_hidden {
          display: none;
@@ -122,12 +122,12 @@ ul {
          width: 100%;
       }
 
-      &__cross {
+      &-cross {
          cursor: pointer;
          margin-bottom: 60px;
       }
 
-      &__item {
+      &-item {
          border-bottom: #8B4513 1px solid;
          padding-bottom: 15px;
 
@@ -159,7 +159,7 @@ ul {
       }
    }
 
-   &__burger__consult {
+   &__burger-consult {
       position: absolute;
       top: 0;
       left: 15px;
@@ -172,7 +172,7 @@ ul {
       max-height: 495px;
       background-color: #F1C9A5;
       padding: 20px 20px 30px;
-      transition: opacity 0.5s;
+      transition: opacity 0.5s ease-in-out;
 
       &_hidden {
          display: none;
@@ -183,7 +183,7 @@ ul {
          width: 100%;
       }
 
-      &__cross {
+      &-cross {
          cursor: pointer;
          margin-bottom: 60px;
       }
@@ -204,7 +204,88 @@ ul {
          }
       }
 
-      &__item {
+      &-item {
+         /* border-bottom: #8B4513 1px solid; */
+         /* padding-bottom: 15px; */
+
+         &:not(:first-child) {
+            margin-top: 20px;
+         }
+
+         &:first-child {
+            margin-top: 15px;
+         }
+
+         & a {
+            color: #8B4513;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            /* text-transform: uppercase; */
+
+            & img {
+               margin-left: 10px;
+            }
+         }
+      }
+
+      & .header__social {
+         max-width: 209px;
+         align-self: center;
+      }
+
+      & .header__social__item {
+         width: 50px;
+         height: auto;
+      }
+   }
+
+   &__burger-artifacts {
+      position: absolute;
+      top: 0;
+      left: 15px;
+      opacity: 0;
+      z-index: 20;
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 300px;
+      max-height: 495px;
+      background-color: #F1C9A5;
+      padding: 20px 20px 30px;
+      transition: opacity 0.5s ease-in-out;
+
+      &_hidden {
+         display: none;
+      }
+
+      & ul {
+         /* margin-bottom: 30px; */
+         width: 100%;
+      }
+
+      &-cross {
+         cursor: pointer;
+         margin-bottom: 60px;
+      }
+
+      &>a {
+         display: block;
+         width: 100%;
+         color: #8B4513;
+         font-size: 14px;
+         font-weight: 500;
+         text-decoration: none;
+         text-transform: uppercase;
+         padding-bottom: 15px;
+         border-bottom: #8B4513 1px solid;
+
+         & img {
+            margin-right: 10px;
+         }
+      }
+
+      &-item {
          /* border-bottom: #8B4513 1px solid; */
          /* padding-bottom: 15px; */
 
@@ -254,6 +335,18 @@ ul {
       align-items: center;
       padding-top: 2.7rem;
       padding-bottom: 2.7rem;
+   }
+
+   &__cart-menu {
+      position: absolute;
+      z-index: 150;
+      bottom: 0;
+      right: 0;
+      transform: translateY(100%);
+      width: 410px;
+      height: 487px;
+      background-color: #F2E8DE;
+      padding: 30px;
    }
 
    &__burger__icon {
@@ -388,6 +481,53 @@ ul {
 
    }
 
+}
+
+.dark {
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(0, 0, 0, 0.5);
+   z-index: 100;
+   /* transform: translateX(-100%); */
+
+   &__header {
+      position: fixed;
+      left: 0;
+      top: 0;
+   }
+}
+
+.cart {
+   &__items {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+   }
+
+   &__header {
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #2a2a2a;
+   }
+
+   &__price-block {
+      justify-content: start;
+      align-items: center;
+   }
+
+   &__price,
+   &__counter {
+      font-size: 16px;
+      font-weight: 500;
+   }
 }
 
 .hero {
@@ -1244,11 +1384,13 @@ ul {
 
 .get-visible {
    opacity: 1;
+   z-index: 50;
    /* display: block; */
 }
 
 .get-invisible {
    opacity: 0;
+   z-index: 20;
    /* display: none; */
 }
 
