@@ -1,4 +1,13 @@
 /* Comments */
+
+/* Chrome, Safari, Edge, Opera */
+/* Убирает стрелочки у числа в input */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
 *,
 *::after,
 *::before {
@@ -490,6 +499,7 @@ ul {
    background-color: rgba(0, 0, 0, 0);
    z-index: -100;
    transition: background-color 0.5s;
+   pointer-events: none;
 
    &__header {
       z-index: -100;
@@ -510,10 +520,13 @@ ul {
 }
 
 .cart-menu {
-   width: 410px;
+   max-width: 410px;
    height: 487px;
    background-color: #F2E8DE;
-   padding: 30px;
+   padding-top: 30px;
+   padding-bottom: 30px;
+   padding-left: 30px;
+   padding-right: 30px;
    transform: translateY(-30%);
    transition: transform 0.5s;
 
@@ -561,7 +574,6 @@ ul {
 
    &__price-block {
       display: flex;
-      /* justify-content: start; */
       align-items: center;
       font-size: 16px;
       font-weight: 500;
@@ -574,14 +586,26 @@ ul {
       height: 24px;
       border: 1px solid #8B4513;
       border-radius: 2px;
+
+      & svg {
+         stroke: #2A2A2A;
+      }
+
+      &:hover {
+         background-color: #A66321;
+
+         & svg {
+            stroke: #fff;
+         }
+      }
    }
 
    &__minus {
       margin-left: 30px;
       margin-right: 14px;
 
-      & img {
-         margin-bottom: 4px;
+      & svg {
+         margin-bottom: 5px;
       }
    }
 
@@ -589,9 +613,20 @@ ul {
       margin-left: 14px;
       margin-right: 20px;
 
-      & img {
-         margin-top: 2px;
+      & svg {
+         margin-bottom: -1px;
       }
+   }
+
+   &__delete {
+      background-color: #F2E8DE;
+      border: none;
+   }
+
+   &__counter {
+      width: 10px;
+      background-color: #F2E8DE;
+      border: none;
    }
 
    &__result-price {
@@ -622,16 +657,22 @@ ul {
 
    &__button--clear {
       color: #8B4513;
+      background-color: #F2E8DE;
+
+      &:hover {
+         background-color: #A66321;
+         color: #fff;
+      }
    }
 
    &__button--order {
       color: #fff;
       background-color: #8B4513;
+
+      &:hover {
+         background-color: #A66321;
+      }
    }
-
-
-
-
 }
 
 .header .cart-menu {
@@ -1351,7 +1392,13 @@ ul {
          width: 36px;
          height: 36px;
          background-color: #F1C9A5;
+         stroke: #8B4513;
          cursor: pointer;
+
+         &:hover {
+            background-color: #A66321;
+            stroke: #fff;
+         }
       }
    }
 }
@@ -2084,6 +2131,28 @@ ul {
 }
 
 @media(max-width:500px) {
+   .cart-menu {
+      padding-left: 20px;
+      padding-right: 20px;
+
+      &__item {
+         gap: 10px;
+      }
+
+      &__minus {
+         margin-left: 10px;
+         margin-right: 10px;
+      }
+
+      &__plus {
+         margin-left: 10px;
+      }
+
+      &__button {
+         padding: 9px 35px;
+      }
+   }
+
    .consult {
       &__line {
          width: 100%;

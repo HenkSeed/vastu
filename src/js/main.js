@@ -1,4 +1,4 @@
-import burger from '/js/modules/burger.js';
+import burger from './burger.js';
 
 // Находим в шапке сайта пункты навигационного меню
 const headerSection = document.querySelector('.header');

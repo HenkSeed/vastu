@@ -52,12 +52,18 @@ export const styles = () => {
 };
 
 export const scripts = () => {
-	return src('src/js/main.js')
-		.pipe(concat('main.min.js'))
-		.pipe(uglify())
+	return src('src/js/modules/*.js')
 		.pipe(dest('src/js'))
 		.pipe(browserSync.stream());
 };
+
+// export const scripts = () => {
+// 	return src('src/js/main.js')
+// 		.pipe(concat('main.min.js'))
+// 		.pipe(uglify())
+// 		.pipe(dest('src/js'))
+// 		.pipe(browserSync.stream());
+// };
 
 // Собираем html-файлы и перемещаем результат в папку 'src/html_result'
 export const html = () => {
@@ -88,7 +94,8 @@ export const watching = () => {
 	// watch(['src/style.scss'], styles);
 	watch(['src/**/*.scss'], styles);
 	// watch(['src/js/**/*.js'], scripts);
-	watch(['src/js/main.js'], scripts);
+	// watch(['src/js/main.js'], scripts);
+	watch(['src/js/modules/*.js'], scripts);
 	watch(['src/html_pages/**/*.html'], html);
 	watch(['src/html_result/*.html'], htmlResult);
 	watch(['src/html_result/main.html'], html_index);
@@ -110,7 +117,7 @@ export const building = () => {
 	return src(
 		[
 			'src/css/*.css',
-			'src/js/**/*.js',
+			'src/js/*.js',
 			// 'src/js/main.min.js',
 			// 'src/html_result/**/*.html',
 			'src/index.html',

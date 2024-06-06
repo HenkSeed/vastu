@@ -16,7 +16,7 @@
       rel="stylesheet">
    <link rel="stylesheet" href="css/normalize.css">
    <link rel="stylesheet" href="css/style.min.css">
-   <script type="module" src="js/main.min.js" defer></script>
+   <script type="module" src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -181,62 +181,115 @@
    <div class="dark__header dark dark--invisible"></div>
 
    <div class="container header__container">
+
       <div class="cart-menu cart-menu--invisible">
 
-         <div class="cart-menu__items">
+   <div class="cart-menu__items">
 
-            <div class="cart-menu__item">
-               <img src="images/main/cart/item-1.png" alt="Item-1" class="cart-menu__img">
-               <div class="cart-menu__info">
-                  <div class="cart-menu__header">Круглая спираль Васту</div>
-                  <div class="cart-menu__price-block">
-                     <span class="cart-menu__price">1700 руб.</span>
-                     <button class="cart-menu__minus"><img src="images/main/cart/minus.svg" alt="Minus Icon"></button>
-                     <span class="cart-menu__counter">1</span>
-                     <button class="cart-menu__plus"><img src="images/main/cart/plus.svg" alt="Plus Icon"></button>
-                     <img src="images/main/cart/delete_icon.svg" alt="Delete Icon" class="cart-menu__delete">
-                  </div>
-               </div>
+      <div class="cart-menu__item">
+         <a href="#">
+            <img src="images/main/cart/item-1.png" alt="Item-1" class="cart-menu__img">
+         </a>
+
+         <div class="cart-menu__info">
+            <div class="cart-menu__header"><a href="#">Круглая спираль Васту</a></div>
+            <div class="cart-menu__price-block">
+               <span class="cart-menu__price">1700 руб.</span>
+
+               <button class="cart-menu__minus"><svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15 1H1" stroke="" stroke-width="2" stroke-linecap="round" />
+                  </svg></button>
+
+               <input type="number" value="1" class="cart-menu__counter">
+
+               <button class="cart-menu__plus"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M8 1V8M8 8V15M8 8H15M8 8H1" stroke="" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                  </svg>
+               </button>
+
+               <button class="cart-menu__delete">
+                  <img src="images/main/cart/delete_icon.svg" alt="Delete Icon">
+               </button>
             </div>
-
-            <div class="cart-menu__item">
-               <img src="images/main/cart/item-2.png" alt="Item-2" class="cart-menu__img">
-               <div class="cart-menu__info">
-                  <div class="cart-menu__header">Круглая спираль Васту</div>
-                  <div class="cart-menu__price-block">
-                     <span class="cart-menu__price">1700 руб.</span>
-                     <button class="cart-menu__minus"><img src="images/main/cart/minus.svg" alt="Minus Icon"></button>
-                     <span class="cart-menu__counter">1</span>
-                     <button class="cart-menu__plus"><img src="images/main/cart/plus.svg" alt="Plus Icon"></button>
-                     <img src="images/main/cart/delete_icon.svg" alt="Delete Icon" class="cart-menu__delete">
-                  </div>
-               </div>
-            </div>
-
-            <div class="cart-menu__item">
-               <img src="images/main/cart/item-3.png" alt="Item-3" class="cart-menu__img">
-               <div class="cart-menu__info">
-                  <div class="cart-menu__header">Круглая спираль Васту</div>
-                  <div class="cart-menu__price-block">
-                     <span class="cart-menu__price">1700 руб.</span>
-                     <button class="cart-menu__minus"><img src="images/main/cart/minus.svg" alt="Minus Icon"></button>
-                     <span class="cart-menu__counter">1</span>
-                     <button class="cart-menu__plus"><img src="images/main/cart/plus.svg" alt="Plus Icon"></button>
-                     <img src="images/main/cart/delete_icon.svg" alt="Delete Icon" class="cart-menu__delete">
-                  </div>
-               </div>
-            </div>
-
-         </div>
-         <div class="cart-menu__result-price">
-            <span class="cart-menu__text">Итого:</span>
-            <span class="cart-menu__price">5100 руб.</span>
-         </div>
-         <div class="cart-menu__buttons">
-            <button class="cart-menu__button cart-menu__button--clear">Очистить</button>
-            <button class="cart-menu__button cart-menu__button--order">Заказать</button>
          </div>
       </div>
+
+      <div class="cart-menu__item">
+         <a href="#">
+            <img src="images/main/cart/item-2.png" alt="Item-2" class="cart-menu__img">
+         </a>
+
+         <div class="cart-menu__info">
+            <div class="cart-menu__header"><a href="#">Круглая спираль Васту</a></div>
+
+            <div class="cart-menu__price-block">
+               <span class="cart-menu__price">1700 руб.</span>
+               <button class="cart-menu__minus"><svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15 1H1" stroke="" stroke-width="2" stroke-linecap="round" />
+                  </svg>
+               </button>
+
+               <input type="number" value="1" class="cart-menu__counter">
+
+               <button class="cart-menu__plus"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M8 1V8M8 8V15M8 8H15M8 8H1" stroke="" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                  </svg></button>
+
+               <button class="cart-menu__delete">
+                  <img src="images/main/cart/delete_icon.svg" alt="Delete Icon">
+               </button>
+            </div>
+         </div>
+      </div>
+
+      <div class="cart-menu__item">
+         <a href="#">
+            <img src="images/main/cart/item-3.png" alt="Item-3" class="cart-menu__img">
+         </a>
+
+         <div class="cart-menu__info">
+            <div class="cart-menu__header"><a href="#">Круглая спираль Васту</a></div>
+
+            <div class="cart-menu__price-block">
+               <span class="cart-menu__price">1700 руб.</span>
+               <button class="cart-menu__minus"><svg width="16" height="2" viewBox="0 0 16 2" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M15 1H1" stroke="" stroke-width="2" stroke-linecap="round" />
+                  </svg></button>
+
+               <input type="number" value="1" class="cart-menu__counter">
+
+               <button class="cart-menu__plus"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path d="M8 1V8M8 8V15M8 8H15M8 8H1" stroke="" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                  </svg></button>
+
+               <button class="cart-menu__delete">
+                  <img src="images/main/cart/delete_icon.svg" alt="Delete Icon">
+               </button>
+            </div>
+         </div>
+      </div>
+
+   </div>
+   <div class="cart-menu__result-price">
+      <span class="cart-menu__text">Итого:</span>
+      <span class="cart-menu__price">5100 руб.</span>
+   </div>
+
+   <div class="cart-menu__buttons">
+      <button class="cart-menu__button cart-menu__button--clear">Очистить</button>
+
+      <a href="#" class="cart-menu__button cart-menu__button--order">Заказать</a>
+   </div>
+</div>
 
       <div class="header__burger__icon">
    <img src="images/main/header/burger.svg" alt="Burger Icon">
@@ -583,10 +636,21 @@
          </div>
          <div class="reviews__card__arrows">
             <div class="reviews__card__arrow-left">
-               <img src="images/main/reviews/arrow_left.svg" alt="Left Arrow Image">
+               <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M9 1L2.55635 7.04093C1.82686 7.72482 1.46211 8.06677 1.46211 8.5C1.46211 8.93323 1.82686 9.27518 2.55635 9.95908L9 16"
+                     stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+
+
             </div>
             <div class="reviews__card__arrow-right">
-               <img src="images/main/reviews/arrow_right.svg" alt="Right Arrow Image">
+               <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M0.999999 16L7.44365 9.95908C8.17314 9.27518 8.53789 8.93323 8.53789 8.5C8.53789 8.06677 8.17314 7.72482 7.44365 7.04093L1 1"
+                     stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+
             </div>
 
          </div>
