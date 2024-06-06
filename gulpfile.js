@@ -87,12 +87,11 @@ export const html_index = () => {
 export const watching = () => {
 	// watch(['src/style.scss'], styles);
 	watch(['src/**/*.scss'], styles);
+	// watch(['src/js/**/*.js'], scripts);
 	watch(['src/js/main.js'], scripts);
 	watch(['src/html_pages/**/*.html'], html);
 	watch(['src/html_result/*.html'], htmlResult);
 	watch(['src/html_result/main.html'], html_index);
-	// watch(['src/**/*.html'], html);
-	// watch(['src/**/*.html']).on('change', browserSync.reload);
 };
 
 export const browsersync = () => {
@@ -111,7 +110,8 @@ export const building = () => {
 	return src(
 		[
 			'src/css/*.css',
-			'src/js/main.min.js',
+			'src/js/**/*.js',
+			// 'src/js/main.min.js',
 			// 'src/html_result/**/*.html',
 			'src/index.html',
 			'src/fonts/*.*',
