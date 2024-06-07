@@ -1,0 +1,30 @@
+.footer {
+   margin: 0 auto;
+   background-color: #F1C9A5;
+   border: #9B9773 0.1rem solid;
+
+   &__container {
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2.1rem;
+      padding-bottom: 2.1rem;
+   }
+
+   &__copyright {
+      color: #8B4513;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 2.0rem;
+      font-size: 1.4rem;
+      font-weight: 400;
+   }
+}
+
+@media(max-width:768px) {
+
+   .footer {
+      &__container {
+         justify-content: center;
+      }
+   }
+}

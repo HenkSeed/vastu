@@ -10,6 +10,7 @@ function burger() {
 
 	// Находим бургер-меню
 	const darkBurgerMenu = darkBg.querySelector('.dark-bg__burger-menu');
+	console.log('darkBurgerMenu: ', darkBurgerMenu);
 
 	// Находим крест бургер-меню
 	const darkBgBurgerMenuCross = darkBg.querySelector(
@@ -179,5 +180,3 @@ function burger() {
 		});
 	}
 }
-
-export default burger;

@@ -1,4 +1,5 @@
 import burger from './burger.js';
+import scrollTop from './scroll_top.js';
 
 // Находим в шапке сайта пункты навигационного меню
 const headerSection = document.querySelector('.header');
@@ -71,6 +72,8 @@ function hideCart() {
 burger();
 
 findNavItems();
+
+scrollTop();
 
 // Перебераем все элементы навигационного меню
 function findNavItems() {

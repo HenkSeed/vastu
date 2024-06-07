@@ -39,7 +39,7 @@ export const deploy = (cb) => {
 
 export const styles = () => {
 	return (
-		src('src/**/*.scss')
+		src('src//**/*.scss')
 			// src('src/style.scss')
 			// .pipe(concat('style.min.css'))
 			.pipe(concat('style.css'))
@@ -56,12 +56,18 @@ export const styles = () => {
 	);
 };
 
+// Version 03
 export const scripts = () => {
-	return src('src/js/modules/*.js')
-		.pipe(dest('src/js'))
-		.pipe(browserSync.stream());
+	return (
+		src('src/js/modules/*.js')
+			.pipe(concat('script.js'))
+			// .pipe(uglify())
+			.pipe(dest('src/js'))
+			.pipe(browserSync.stream())
+	);
 };
 
+// Version 01
 // export const scripts = () => {
 // 	return src('src/js/main.js')
 // 		.pipe(concat('main.min.js'))

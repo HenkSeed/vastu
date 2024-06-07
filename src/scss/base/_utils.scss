@@ -1,0 +1,23 @@
+.center {
+   padding-left: calc(50% - 60.0rem);
+   padding-right: calc(50% - 60.0rem);
+}
+
+.container {
+   display: flex;
+   max-width: 120.0rem;
+   padding-left: 15px;
+   padding-right: 15px;
+}
+
+.get-visible {
+   opacity: 1;
+   z-index: 50;
+   /* display: block; */
+}
+
+.get-invisible {
+   opacity: 0;
+   z-index: 20;
+   /* display: none; */
+}
