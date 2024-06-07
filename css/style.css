@@ -269,6 +269,7 @@ ul {
   height: 24px;
   border: 1px solid #8B4513;
   border-radius: 2px;
+  transition: all 0.3s;
 }
 .cart-menu__plus svg, .cart-menu__minus svg {
   stroke: #2A2A2A;
@@ -2377,6 +2378,8 @@ ul {
   height: 24px;
   border: 1px solid #8B4513;
   border-radius: 2px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .cart-menu__plus svg, .cart-menu__minus svg {
   stroke: #2A2A2A;

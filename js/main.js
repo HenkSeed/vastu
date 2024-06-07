@@ -1,5 +1,8 @@
 import burger from './burger.js';
 
+// Находим логотип
+const headerLogo = document.querySelectorAll('.header__logo');
+
 // Находим в шапке сайта пункты навигационного меню
 const headerSection = document.querySelector('.header');
 const headerNavItems = headerSection.querySelectorAll('.header__nav__item');
@@ -23,6 +26,14 @@ const darkHeader = document.querySelector('.dark__header');
 const cartMenu = document.querySelector('.cart-menu');
 console.log('cartMenu: ', cartMenu);
 
+// Отслеживаем нажатие на логотип
+headerLogo.forEach((logo) => {
+	logo.addEventListener('click', (event) => {
+		event.preventDefault();
+		windowScrollToTop();
+	});
+});
+
 // Отслеживаем нажатие иконки корзины
 headerCartIcon.addEventListener('click', (event) => {
 	showCart();
@@ -32,6 +43,14 @@ headerCartIcon.addEventListener('click', (event) => {
 darkHeader.addEventListener('click', () => {
 	hideCart();
 });
+
+// Функция скроллинга в начало страницы
+function windowScrollToTop() {
+	window.scrollTo({
+		top: 0,
+		behavior: 'smooth',
+	});
+}
 
 // Функция появления тёмного кода
 function showDarkHeader() {
