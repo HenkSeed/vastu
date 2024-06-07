@@ -38,17 +38,22 @@ export const deploy = (cb) => {
 };
 
 export const styles = () => {
-	return src('src/style.scss')
-		.pipe(concat('style.min.css'))
-		.pipe(
-			autoprefixer({
-				overrideBrowserslist: ['last 10 versions'],
-				cascade: false,
-			})
-		)
-		.pipe(scss({ outputStyle: 'compressed' }))
-		.pipe(dest('src/css'))
-		.pipe(browserSync.stream());
+	return (
+		src('src/**/*.scss')
+			// src('src/style.scss')
+			// .pipe(concat('style.min.css'))
+			.pipe(concat('style.css'))
+			.pipe(
+				autoprefixer({
+					overrideBrowserslist: ['last 10 versions'],
+					cascade: false,
+				})
+			)
+			// .pipe(scss({ outputStyle: 'compressed' }))
+			.pipe(scss())
+			.pipe(dest('src/css'))
+			.pipe(browserSync.stream())
+	);
 };
 
 export const scripts = () => {
