@@ -20,10 +20,6 @@ export default function cart() {
 		hideCart();
 	});
 
-	window.addEventListener('click', (event) => {
-		console.log(event.target);
-	});
-
 	// Функция появления тёмного фона
 	function showDarkHeader() {
 		darkHeader.classList.remove('dark--invisible');
@@ -51,6 +47,28 @@ export default function cart() {
 	function showCart() {
 		showDarkHeader();
 		showCartMenu();
+
+		chequeToCloseCart();
+	}
+
+	function chequeToCloseCart() {
+		const bodyLimit = document.querySelector('body');
+
+		bodyLimit.addEventListener('click', (event) => {
+			if (
+				// Отсеиваем клик по иконке корзины, который привёл к открытию этого окна
+				event.target.classList.value != 'header__cart' &&
+				event.target.classList.value != ''
+			) {
+				// Закрываем окно корзины
+				hideCart();
+			}
+		});
+
+		// Перехватываем всплытие, если кликнули в пределах окна корзины
+		cartMenu.addEventListener('click', (event) => {
+			event.stopPropagation();
+		});
 	}
 
 	function hideCart() {

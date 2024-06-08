@@ -4,9 +4,11 @@ export default function cart() {
 
 	// Находим тёмный фон
 	const darkHeader = document.querySelector('.dark__header');
+	console.log('darkHeader: ', darkHeader);
 
 	// Находим блок меню корзины
 	const cartMenu = document.querySelector('.cart-menu');
+	console.log('cartMenu: ', cartMenu);
 
 	// Отслеживаем нажатие иконки корзины
 	headerCartIcon.addEventListener('click', (event) => {
@@ -14,7 +16,7 @@ export default function cart() {
 	});
 
 	// Отслеживаем нажатие тёмного фона (для закрытия меню корзины)
-	darkHeader.addEventListener('click', () => {
+	darkHeader.addEventListener('click', (event) => {
 		hideCart();
 	});
 
@@ -45,6 +47,28 @@ export default function cart() {
 	function showCart() {
 		showDarkHeader();
 		showCartMenu();
+
+		chequeToCloseCart();
+	}
+
+	function chequeToCloseCart() {
+		const bodyLimit = document.querySelector('body');
+
+		bodyLimit.addEventListener('click', (event) => {
+			if (
+				// Отсеиваем клик по иконке корзины, который привёл к открытию этого окна
+				event.target.classList.value != 'header__cart' &&
+				event.target.classList.value != ''
+			) {
+				// Закрываем окно корзины
+				hideCart();
+			}
+		});
+
+		// Перехватываем всплытие, если кликнули в пределах окна корзины
+		cartMenu.addEventListener('click', (event) => {
+			event.stopPropagation();
+		});
 	}
 
 	function hideCart() {
