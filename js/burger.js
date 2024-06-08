@@ -1,4 +1,4 @@
-function burger() {
+export default function burger() {
 	// Находим шапку сайта для сокращения времени поиска элементов
 	const headerSection = document.querySelector('.header');
 
@@ -57,15 +57,6 @@ function burger() {
 		closeArtifactsMenu();
 	});
 
-	// Функция закрытия Artifacts меню
-	function closeArtifactsMenu() {
-		console.log('Нажат элемент закрытия меню артефактов');
-		darkBurgerArtifacts.classList.toggle('get-invisible');
-		darkBurgerArtifacts.classList.toggle('get-visible');
-
-		getBurgerMenuVisible();
-	}
-
 	// Отлавливаем нажатие на строку закрытия Consult меню
 	closeConsultItem.addEventListener('click', (event) => {
 		closeConsultMenu();
@@ -86,6 +77,15 @@ function burger() {
 		console.log('Нажат элемент закрытия меню консультации');
 		darkBurgerConsult.classList.toggle('get-invisible');
 		darkBurgerConsult.classList.toggle('get-visible');
+
+		getBurgerMenuVisible();
+	}
+
+	// Функция закрытия Artifacts меню
+	function closeArtifactsMenu() {
+		console.log('Нажат элемент закрытия меню артефактов');
+		darkBurgerArtifacts.classList.toggle('get-invisible');
+		darkBurgerArtifacts.classList.toggle('get-visible');
 
 		getBurgerMenuVisible();
 	}
@@ -138,6 +138,7 @@ function burger() {
 
 	// Делаем основное бургер-меню невидимым
 	function getBurgerMenuInvisible() {
+		console.log('darkBurgerMenu: ', darkBurgerMenu);
 		darkBurgerMenu.classList.add('get-invisible');
 		darkBurgerMenu.classList.remove('get-visible');
 	}
@@ -179,5 +180,3 @@ function burger() {
 		});
 	}
 }
-
-export default burger;

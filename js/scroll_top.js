@@ -1,4 +1,5 @@
-function scrollTop() {
+// Прокручиваем страницу в начало
+export default function scrollTop() {
 	// Находим логотип
 	const headerLogo = document.querySelectorAll('.header__logo');
 
@@ -18,5 +19,3 @@ function scrollTop() {
 		});
 	}
 }
-
-export default scrollTop;
