@@ -1,5 +1,5 @@
 // Прокручиваем страницу в начало
-function scrollTop() {
+export default function scrollTop() {
 	// Находим логотип
 	const headerLogo = document.querySelectorAll('.header__logo');
 

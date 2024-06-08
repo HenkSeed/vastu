@@ -59,13 +59,24 @@ export const styles = () => {
 // Version 03
 export const scripts = () => {
 	return (
-		src('src/js/modules/*.js')
-			.pipe(concat('script.js'))
+		src('src/js_modules/*.js')
+			// .pipe(concat('script.js'))
 			// .pipe(uglify())
 			.pipe(dest('src/js'))
 			.pipe(browserSync.stream())
 	);
 };
+
+// Version 02
+// export const scripts = () => {
+// 	return (
+// 		src('src/js/modules/*.js')
+// 			.pipe(concat('script.js'))
+// 			// .pipe(uglify())
+// 			.pipe(dest('src/js'))
+// 			.pipe(browserSync.stream())
+// 	);
+// };
 
 // Version 01
 // export const scripts = () => {
@@ -106,7 +117,7 @@ export const watching = () => {
 	watch(['src/**/*.scss'], styles);
 	// watch(['src/js/**/*.js'], scripts);
 	// watch(['src/js/main.js'], scripts);
-	watch(['src/js/modules/*.js'], scripts);
+	watch(['src/js_modules/*.js'], scripts);
 	watch(['src/html_pages/**/*.html'], html);
 	watch(['src/html_result/*.html'], htmlResult);
 	watch(['src/html_result/main.html'], html_index);

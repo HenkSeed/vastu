@@ -1,10 +1,10 @@
-function cart() {
+export default function cart() {
 	// Находим иконку корзины
 	const headerCartIcon = document.querySelector('.header__cart');
-	console.log('headerCartIcon: ', headerCartIcon);
 
 	// Находим тёмный фон
 	const darkHeader = document.querySelector('.dark__header');
+	console.log('darkHeader: ', darkHeader);
 
 	// Находим блок меню корзины
 	const cartMenu = document.querySelector('.cart-menu');
@@ -16,8 +16,12 @@ function cart() {
 	});
 
 	// Отслеживаем нажатие тёмного фона (для закрытия меню корзины)
-	darkHeader.addEventListener('click', () => {
+	darkHeader.addEventListener('click', (event) => {
 		hideCart();
+	});
+
+	window.addEventListener('click', (event) => {
+		console.log(event.target);
 	});
 
 	// Функция появления тёмного фона

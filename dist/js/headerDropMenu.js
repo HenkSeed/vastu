@@ -1,4 +1,4 @@
-function headerDropMenu() {
+export default function headerDropMenu() {
 	// Перебераем все элементы навигационного меню
 	function findNavItems() {
 		headerNavItems.forEach((navItem) => {
