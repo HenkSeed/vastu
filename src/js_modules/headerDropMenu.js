@@ -1,5 +1,18 @@
 export default function headerDropMenu() {
-	// Перебераем все элементы навигационного меню
+	// Находим в шапке сайта пункты навигационного меню
+	const headerSection = document.querySelector('.header');
+	const headerNavItems = headerSection.querySelectorAll('.header__nav__item');
+
+	// Находим блок hero для ограничения зоны поиска элементов
+	const heroSection = document.querySelector('.hero');
+
+	// Находим в nav каждое выпадающее меню по их классу
+	const heroDropConsult = heroSection.querySelector('.hero__drop__consult');
+	const heroDropArtifacts = heroSection.querySelector('.hero__drop__artifacts');
+
+	findNavItems();
+
+	// Перебираем все элементы навигационного меню
 	function findNavItems() {
 		headerNavItems.forEach((navItem) => {
 			navItem.addEventListener('click', (event) => {

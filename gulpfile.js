@@ -56,7 +56,7 @@ export const styles = () => {
 	);
 };
 
-// Version 03
+// Обрабатываем JS файлы
 export const scripts = () => {
 	return (
 		src('src/js_modules/*.js')
@@ -67,49 +67,37 @@ export const scripts = () => {
 	);
 };
 
-// Version 02
-// export const scripts = () => {
-// 	return (
-// 		src('src/js/modules/*.js')
-// 			.pipe(concat('script.js'))
-// 			// .pipe(uglify())
-// 			.pipe(dest('src/js'))
-// 			.pipe(browserSync.stream())
-// 	);
-// };
-
-// Version 01
-// export const scripts = () => {
-// 	return src('src/js/main.js')
-// 		.pipe(concat('main.min.js'))
-// 		.pipe(uglify())
-// 		.pipe(dest('src/js'))
-// 		.pipe(browserSync.stream());
-// };
-
-// Собираем html-файлы и перемещаем результат в папку 'src/html_result'
+// ВНИМАНИЕ ! Данная функция html, по окончании своей работы,
+// запускает функцию htmlResult, которая, отработав в свою очередь,
+// запускает функцию html_index. Поэтому, две эти функции не включены
+// в поток экспорта
+// Собираем html-файлы и перемещаем результат в папку 'src/html_tmp'
 export const html = () => {
 	// return src(['src/**/*.html'], { base: 'src' })
 	return src(['src/html_pages/**/*.html'])
 		.pipe(include({ prefix: '@@' }))
-		.pipe(dest(['src/html_result']));
+		.pipe(dest(['src/html_tmp']));
 	// .pipe(browserSync.stream());
 };
 
 // Собранные файлы html перемещаем в рабочую папку
 // и подключаем к процессу работы локального сервера
 export const htmlResult = () => {
-	return src(['src/html_result/*.html'])
+	return src(['src/html_tmp/*.html'])
 		.pipe(dest(['src']))
 		.pipe(browserSync.stream());
 };
 
 // Перезаписываем запускающий файл index.html в корне проекта
 export const html_index = () => {
-	return src('src/html_result/main.html')
+	return src('src/html_tmp/main.html')
 		.pipe(concat('index.html'))
 		.pipe(dest('src/'))
 		.pipe(browserSync.stream());
+};
+
+export const remove_html_tmp = () => {
+	return src('src/html_tmp/**/*.*').pipe(clean());
 };
 
 export const watching = () => {
@@ -119,8 +107,9 @@ export const watching = () => {
 	// watch(['src/js/main.js'], scripts);
 	watch(['src/js_modules/*.js'], scripts);
 	watch(['src/html_pages/**/*.html'], html);
-	watch(['src/html_result/*.html'], htmlResult);
-	watch(['src/html_result/main.html'], html_index);
+	watch(['src/html_tmp/*.html'], htmlResult);
+	watch(['src/html_tmp/main.html'], html_index);
+	// watch(['src/index.html'], remove_html_tmp);
 };
 
 export const browsersync = () => {
@@ -150,7 +139,7 @@ export const building = () => {
 };
 
 export const buildHTML = () => {
-	return src(['src/html_result/*.html']).pipe(dest('dist'));
+	return src(['src/*.html']).pipe(dest('dist'));
 };
 
 export const buildImg = () => {
@@ -162,14 +151,20 @@ export const buildImg = () => {
 	).pipe(dest('dist', { encoding: false }));
 };
 
-export const build = series(cleanDist, building, buildHTML, buildImg);
+export const build = series(
+	cleanDist,
+	building,
+	buildHTML,
+	buildImg,
+	remove_html_tmp
+);
 
 export default parallel(styles, scripts, html, browsersync, watching);
 
 // export default parallel(
 // 	styles,
 // 	scripts,
-// 	series(html, html_index),
+// 	series(html, htmlResult, html_index, remove_html_tmp),
 // 	browsersync,
 // 	watching
 // );

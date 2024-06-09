@@ -15,8 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet">
    <link rel="stylesheet" href="css/normalize.css">
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
    <script type="module" src="js/main.js" defer></script>
 </head>
 
@@ -629,50 +629,90 @@
       </div>
 
       <div class="swiper">
+
          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <!-- <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div> -->
 
-            <div class="reviews__card card-1">
-               <div class="reviews__card__img">
-                  <img src="images/main/reviews/review_photo.png" alt="Reviews Photo">
-               </div>
-               <h3 class="reviews__card__name">Сергей П.</h3>
-               <div class="reviews__card__line"></div>
-               <div class="reviews__card__quote-mark">
-                  <img src="images/main/reviews/quotemark.svg" alt="Quote Mark">
-               </div>
-               <div class="reviews__card__text">
-                  <p>Я очень доволен консультацией по Васту, которую приобрел на этом сайте. Консультант был очень
-                     профессиональным и дал мне
-                     много&nbsp;полезных советов по гармонизации пространства. Я чувствую, что моя жизнь начала меняться
-                     к
-                     лучшему
-                     после его
-                     рекомендаций. Благодарю за ценный опыт!</p>
-               </div>
-
-               <div class="reviews__card__arrows">
-                  <div class="reviews__card__arrow-left">
-                     <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M9 1L2.55635 7.04093C1.82686 7.72482 1.46211 8.06677 1.46211 8.5C1.46211 8.93323 1.82686 9.27518 2.55635 9.95908L9 16"
-                           stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                     </svg>
-
-
-                  </div>
-                  <div class="reviews__card__arrow-right">
-                     <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                           d="M0.999999 16L7.44365 9.95908C8.17314 9.27518 8.53789 8.93323 8.53789 8.5C8.53789 8.06677 8.17314 7.72482 7.44365 7.04093L1 1"
-                           stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                     </svg>
-
+            <div class="swiper-slide">
+               <div class="reviews__card card-1">
+                  <div class="reviews__card__img">
+                     <img src="images/main/reviews/review_photo.png" alt="Reviews Photo">
                   </div>
 
+                  <h3 class="reviews__card__name">Сергей П.</h3>
+                  <div class="reviews__card__line"></div>
+                  <div class="reviews__card__quote-mark">
+                     <img src="images/main/reviews/quotemark.svg" alt="Quote Mark">
+                  </div>
+
+                  <div class="reviews__card__text">
+                     <p>Я очень доволен консультацией по Васту, которую приобрел на этом сайте. Консультант был очень
+                        профессиональным и дал мне
+                        много&nbsp;полезных советов по гармонизации пространства. Я чувствую, что моя жизнь начала
+                        меняться
+                        к
+                        лучшему
+                        после его
+                        рекомендаций. Благодарю за ценный опыт!</p>
+                  </div>
                </div>
+
+            </div>
+
+            <div class="swiper-slide">
+               <div class="reviews__card card-2">
+                  <div class="reviews__card__img">
+                     <img src="images/main/reviews/review_photo.png" alt="Reviews Photo">
+                  </div>
+
+                  <h3 class="reviews__card__name">Николай П.</h3>
+                  <div class="reviews__card__line"></div>
+                  <div class="reviews__card__quote-mark">
+                     <img src="images/main/reviews/quotemark.svg" alt="Quote Mark">
+                  </div>
+
+                  <div class="reviews__card__text">
+                     <p>Я очень доволен консультацией по Васту, которую приобрел на этом сайте. Консультант был очень
+                        профессиональным и дал мне
+                        много&nbsp;полезных советов по гармонизации пространства. Я чувствую, что моя жизнь начала
+                        меняться
+                        к
+                        лучшему
+                        после его
+                        рекомендаций. Благодарю за ценный опыт!</p>
+                  </div>
+               </div>
+
             </div>
 
          </div>
+
+         <!-- <div class="swiper-button-prev"></div>
+         <div class="swiper-button-next"></div> -->
+
+         <div class="reviews__card__arrows">
+            <div class="swiper-button-prev reviews__card__arrow-left">
+               <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M9 1L2.55635 7.04093C1.82686 7.72482 1.46211 8.06677 1.46211 8.5C1.46211 8.93323 1.82686 9.27518 2.55635 9.95908L9 16"
+                     stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+
+
+            </div>
+            <div class="swiper-button-next reviews__card__arrow-right">
+               <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M0.999999 16L7.44365 9.95908C8.17314 9.27518 8.53789 8.93323 8.53789 8.5C8.53789 8.06677 8.17314 7.72482 7.44365 7.04093L1 1"
+                     stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+
+            </div>
+         </div>
+
       </div>
 
    </div>
@@ -812,14 +852,8 @@
    <div class="footer__copyright"><span>© соpyright 2024 vas-tu.ru</span></div>
 </footer>
 
-<!-- <script src="./js/main.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- <script type="module">
-   import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
-
-   const swiper = new Swiper(...) -->
-</script>
 </body>
 
 </html>
