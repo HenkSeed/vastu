@@ -48,12 +48,22 @@
       padding-left: 40px;
       padding-right: 40px;
       background-color: #fff;
-      border-radius: 10px;
+      /* border-radius: 10px; */
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
       /*       width: 48%; */
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      &-wrapper {
+         padding-top: 30px;
+         position: relative;
+         /*  z-index: -1; */
+         background-color: rgba($color: #000000, $alpha: 0.0);
+         /* background-color: rgba(0, 0, 0, 0); */
+      }
 
       &__img {
          margin-top: -30px;
@@ -94,19 +104,24 @@
          color: #2A2A2A;
          text-align: center;
          line-height: 145%;
-         margin-bottom: 64px;
+         margin-bottom: 74px;
+         height: 200px;
+         overflow-y: hidden;
+         /*          margin-bottom: 64px; */
       }
 
       &__arrows {
+         background-color: #fff;
          display: flex;
          justify-content: center;
          align-self: center;
          justify-self: center;
          position: relative;
-         margin-top: -56px;
-         /*          display: flex;
-         justify-content: center; */
+         z-index: 50;
+         padding-bottom: 20px;
          gap: 20px;
+         /* Следующая строка для стыковки блоков в нахлёст */
+         margin-top: -10px;
       }
 
       &__arrow-left,
@@ -130,27 +145,17 @@
 }
 
 .swiper {
-   /* display: flex; */
    flex-direction: column;
-   background-color: #fff;
    border-radius: 10px;
    width: 48%;
-   /* overflow: visible; */
 }
 
-.swiper-wrapper {
-   padding-bottom: 120px;
-   /*    display: flex;
-   flex-direction: column; */
-   /* overflow: visible; */
-}
+/* .swiper-wrapper {
+} */
 
 .swiper-slide {
-   /* align-items: center; */
    font-size: 24px;
    text-align: center;
-   /* overflow-x: hidden; */
-   /* overflow: visible; */
 }
 
 @media(max-width:1200px) {

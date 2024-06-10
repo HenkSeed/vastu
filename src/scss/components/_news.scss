@@ -49,9 +49,12 @@
          border-radius: 10px;
          overflow: hidden;
 
+         /* @include image-hover; */
+
          & img {
             width: 100%;
          }
+
       }
 
       &__text {
@@ -109,6 +112,8 @@
          & img {
             width: 100%;
          }
+
+         /* @include image-hover; */
       }
    }
 }

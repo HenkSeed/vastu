@@ -1036,6 +1036,21 @@ ul {
 .consult__closed__img img {
   width: 100%;
 }
+.consult__closed__img a:after {
+  content: "";
+  display: block;
+  background-color: rgba(138, 87, 44, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 350ms;
+}
+.consult__closed__img a:hover:after {
+  background-color: rgba(138, 87, 44, 0.1);
+}
 .consult__closed__badge {
   position: absolute;
   min-width: 200px;
@@ -1331,6 +1346,21 @@ ul {
   /* top: 50%; */
   /* transform: translateY(-50%); */
 }
+.about-us__main__frame a:after {
+  content: "";
+  display: block;
+  background-color: rgba(138, 87, 44, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 350ms;
+}
+.about-us__main__frame a:hover:after {
+  background-color: rgba(138, 87, 44, 0.1);
+}
 .about-us__main__btn {
   position: absolute;
   width: 11rem;
@@ -1362,6 +1392,21 @@ ul {
 }
 .about-us__aside__first img, .about-us__aside__second img {
   width: 100%;
+}
+.about-us__aside__first a:after, .about-us__aside__second a:after {
+  content: "";
+  display: block;
+  background-color: rgba(138, 87, 44, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 350ms;
+}
+.about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
+  background-color: rgba(138, 87, 44, 0.1);
 }
 .about-us__aside__first, .about-us__aside__second, .about-us__aside__more {
   border-radius: 10px;
@@ -1526,12 +1571,21 @@ ul {
   padding-left: 40px;
   padding-right: 40px;
   background-color: #fff;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   /*       width: 48%; */
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.reviews__card-wrapper {
+  padding-top: 30px;
+  position: relative;
+  /*  z-index: -1; */
+  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
 }
 .reviews__card__img {
   margin-top: -30px;
@@ -1566,18 +1620,23 @@ ul {
   color: #2A2A2A;
   text-align: center;
   line-height: 145%;
-  margin-bottom: 64px;
+  margin-bottom: 74px;
+  height: 200px;
+  overflow-y: hidden;
+  /*          margin-bottom: 64px; */
 }
 .reviews__card__arrows {
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-self: center;
   justify-self: center;
   position: relative;
-  margin-top: -56px;
-  /*          display: flex;
-  justify-content: center; */
+  z-index: 50;
+  padding-bottom: 20px;
   gap: 20px;
+  /* Следующая строка для стыковки блоков в нахлёст */
+  margin-top: -10px;
 }
 .reviews__card__arrow-left, .reviews__card__arrow-right {
   display: flex;
@@ -1596,27 +1655,16 @@ ul {
 }
 
 .swiper {
-  /* display: flex; */
   flex-direction: column;
-  background-color: #fff;
   border-radius: 10px;
   width: 48%;
-  /* overflow: visible; */
 }
 
-.swiper-wrapper {
-  padding-bottom: 120px;
-  /*    display: flex;
-  flex-direction: column; */
-  /* overflow: visible; */
-}
-
+/* .swiper-wrapper {
+} */
 .swiper-slide {
-  /* align-items: center; */
   font-size: 24px;
   text-align: center;
-  /* overflow-x: hidden; */
-  /* overflow: visible; */
 }
 
 @media (max-width: 1200px) {
@@ -1719,6 +1767,7 @@ ul {
   margin-bottom: 1.5rem;
   border-radius: 10px;
   overflow: hidden;
+  /* @include image-hover; */
 }
 .news__main__img img {
   width: 100%;
@@ -1761,6 +1810,7 @@ ul {
   width: 36%;
   border-radius: 10px;
   overflow: hidden;
+  /* @include image-hover; */
 }
 .news__aside__img a {
   display: block;
@@ -2030,6 +2080,22 @@ ul {
   /* top: 50%; */
   /* transform: translateY(-50%); */
 }
+.about-us__main__frame a:after {
+  content: "";
+  display: block;
+  background-color: rgba(138, 87, 44, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+.about-us__main__frame a:hover:after {
+  background-color: rgba(138, 87, 44, 0.1);
+}
 .about-us__main__btn {
   position: absolute;
   width: 11rem;
@@ -2075,6 +2141,22 @@ ul {
 }
 .about-us__aside__first img, .about-us__aside__second img {
   width: 100%;
+}
+.about-us__aside__first a:after, .about-us__aside__second a:after {
+  content: "";
+  display: block;
+  background-color: rgba(138, 87, 44, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+.about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
+  background-color: rgba(138, 87, 44, 0.1);
 }
 .about-us__aside__first, .about-us__aside__second, .about-us__aside__more {
   border-radius: 10px;
@@ -2710,6 +2792,22 @@ ul {
 }
 .consult__closed__img img {
   width: 100%;
+}
+.consult__closed__img a:after {
+  content: "";
+  display: block;
+  background-color: rgba(138, 87, 44, 0.3);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
+.consult__closed__img a:hover:after {
+  background-color: rgba(138, 87, 44, 0.1);
 }
 .consult__closed__badge {
   position: absolute;
@@ -3721,6 +3819,7 @@ ul {
   margin-bottom: 1.5rem;
   border-radius: 10px;
   overflow: hidden;
+  /* @include image-hover; */
 }
 .news__main__img img {
   width: 100%;
@@ -3769,6 +3868,7 @@ ul {
   width: 36%;
   border-radius: 10px;
   overflow: hidden;
+  /* @include image-hover; */
 }
 .news__aside__img a {
   display: block;
@@ -3921,7 +4021,9 @@ ul {
   padding-left: 40px;
   padding-right: 40px;
   background-color: #fff;
-  border-radius: 10px;
+  /* border-radius: 10px; */
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
   /*       width: 48%; */
   width: 100%;
   display: -webkit-box;
@@ -3934,6 +4036,13 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+.reviews__card-wrapper {
+  padding-top: 30px;
+  position: relative;
+  /*  z-index: -1; */
+  background-color: rgba(0, 0, 0, 0);
+  /* background-color: rgba(0, 0, 0, 0); */
 }
 .reviews__card__img {
   margin-top: -30px;
@@ -3968,9 +4077,13 @@ ul {
   color: #2A2A2A;
   text-align: center;
   line-height: 145%;
-  margin-bottom: 64px;
+  margin-bottom: 74px;
+  height: 200px;
+  overflow-y: hidden;
+  /*          margin-bottom: 64px; */
 }
 .reviews__card__arrows {
+  background-color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3981,10 +4094,11 @@ ul {
   align-self: center;
   justify-self: center;
   position: relative;
-  margin-top: -56px;
-  /*          display: flex;
-  justify-content: center; */
+  z-index: 50;
+  padding-bottom: 20px;
   gap: 20px;
+  /* Следующая строка для стыковки блоков в нахлёст */
+  margin-top: -10px;
 }
 .reviews__card__arrow-left, .reviews__card__arrow-right {
   display: -webkit-box;
@@ -4010,30 +4124,19 @@ ul {
 }
 
 .swiper {
-  /* display: flex; */
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #fff;
   border-radius: 10px;
   width: 48%;
-  /* overflow: visible; */
 }
 
-.swiper-wrapper {
-  padding-bottom: 120px;
-  /*    display: flex;
-  flex-direction: column; */
-  /* overflow: visible; */
-}
-
+/* .swiper-wrapper {
+} */
 .swiper-slide {
-  /* align-items: center; */
   font-size: 24px;
   text-align: center;
-  /* overflow-x: hidden; */
-  /* overflow: visible; */
 }
 
 @media (max-width: 1200px) {

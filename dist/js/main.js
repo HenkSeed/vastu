@@ -11,12 +11,19 @@ const swiper = new Swiper('.swiper', {
 
 	// Navigation arrows
 	navigation: {
-		nextEl: '.swiper-button-prev',
-		prevEl: '.swiper-button-next',
+		nextEl: '.reviews__card__arrow-left',
+		prevEl: '.reviews__card__arrow-right',
+		// nextEl: '.swiper-button-prev',
+		// prevEl: '.swiper-button-next',
 	},
 
 	slidesPerView: 1,
 	autoHeight: true,
+	effect: 'fade',
+	fadeEffect: {
+		crossFade: true,
+		duration: 2000,
+	},
 });
 
 burger();
