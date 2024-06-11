@@ -1041,7 +1041,7 @@ ul {
 .consult__closed__img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1051,7 +1051,7 @@ ul {
   transition: all 350ms;
 }
 .consult__closed__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .consult__closed__badge {
   position: absolute;
@@ -1236,7 +1236,7 @@ ul {
 .diploma__left-img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1246,7 +1246,7 @@ ul {
   transition: all 350ms;
 }
 .diploma__left-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .diploma__main-img {
   position: relative;
@@ -1254,7 +1254,7 @@ ul {
 .diploma__main-img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1264,7 +1264,7 @@ ul {
   transition: all 350ms;
 }
 .diploma__main-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .diploma__right-img {
   position: relative;
@@ -1272,7 +1272,7 @@ ul {
 .diploma__right-img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1282,7 +1282,7 @@ ul {
   transition: all 350ms;
 }
 .diploma__right-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 
 @media (max-width: 1920px) {
@@ -1405,7 +1405,7 @@ ul {
 .about-us__main__frame a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1415,7 +1415,7 @@ ul {
   transition: all 350ms;
 }
 .about-us__main__frame a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .about-us__main__btn {
   position: absolute;
@@ -1452,7 +1452,7 @@ ul {
 .about-us__aside__first a:after, .about-us__aside__second a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1462,7 +1462,7 @@ ul {
   transition: all 350ms;
 }
 .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .about-us__aside__first, .about-us__aside__second, .about-us__aside__more {
   border-radius: 10px;
@@ -1828,7 +1828,7 @@ ul {
 .news__main__img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1838,7 +1838,7 @@ ul {
   transition: all 350ms;
 }
 .news__main__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .news__main__img img {
   width: 100%;
@@ -1894,7 +1894,7 @@ ul {
 .news__aside__img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -1904,7 +1904,7 @@ ul {
   transition: all 350ms;
 }
 .news__aside__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 
 /* .news__main__img>a {
@@ -2189,7 +2189,7 @@ ul {
 .about-us__main__frame a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -2200,7 +2200,7 @@ ul {
   transition: all 350ms;
 }
 .about-us__main__frame a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .about-us__main__btn {
   position: absolute;
@@ -2251,7 +2251,7 @@ ul {
 .about-us__aside__first a:after, .about-us__aside__second a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -2262,7 +2262,7 @@ ul {
   transition: all 350ms;
 }
 .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .about-us__aside__first, .about-us__aside__second, .about-us__aside__more {
   border-radius: 10px;
@@ -2902,7 +2902,7 @@ ul {
 .consult__closed__img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -2913,7 +2913,7 @@ ul {
   transition: all 350ms;
 }
 .consult__closed__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .consult__closed__badge {
   position: absolute;
@@ -3425,7 +3425,7 @@ ul {
 .diploma__left-img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -3436,7 +3436,7 @@ ul {
   transition: all 350ms;
 }
 .diploma__left-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .diploma__main-img {
   position: relative;
@@ -3444,7 +3444,7 @@ ul {
 .diploma__main-img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -3455,7 +3455,7 @@ ul {
   transition: all 350ms;
 }
 .diploma__main-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .diploma__right-img {
   position: relative;
@@ -3463,7 +3463,7 @@ ul {
 .diploma__right-img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -3474,7 +3474,7 @@ ul {
   transition: all 350ms;
 }
 .diploma__right-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 
 @media (max-width: 1920px) {
@@ -3989,7 +3989,7 @@ ul {
 .news__main__img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -4000,7 +4000,7 @@ ul {
   transition: all 350ms;
 }
 .news__main__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 .news__main__img img {
   width: 100%;
@@ -4063,7 +4063,7 @@ ul {
 .news__aside__img a:after {
   content: "";
   display: block;
-  background-color: rgba(138, 87, 44, 0.3);
+  background-color: rgba(138, 87, 44, 0.1);
   position: absolute;
   top: 0;
   right: 0;
@@ -4074,7 +4074,7 @@ ul {
   transition: all 350ms;
 }
 .news__aside__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
+  background-color: rgba(138, 87, 44, 0);
 }
 
 /* .news__main__img>a {

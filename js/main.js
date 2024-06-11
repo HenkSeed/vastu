@@ -20,9 +20,10 @@ const swiper = new Swiper('.swiper', {
 	slidesPerView: 1,
 	autoHeight: true,
 	effect: 'fade',
+	speed: 1000,
 	fadeEffect: {
 		crossFade: true,
-		duration: 2000,
+		// duration: 5000,
 	},
 });
 
