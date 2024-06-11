@@ -26,6 +26,11 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 
+Fancybox.bind('[data-fancybox]', {
+	// Your custom options
+	imageScale: true,
+});
+
 burger();
 
 headerDropMenu();
