@@ -23,6 +23,7 @@
 
 <body>
 
+<!-- Затемнённый фон для бургер-меню -->
 <div class="dark-bg center">
    <div class="container dark-bg__container">
 
@@ -180,14 +181,90 @@
 </div>
 
 <header class="header center">
+   <!-- Слой для создания тени выше выпадающих меню -->
+   <div class="header-copy"></div>
+   <!-- Затемнение для меню корзины -->
    <div class="dark__header dark dark--invisible"></div>
 
    <div class="container header__container">
+      <!-- Слой, из-под которого выпадают меню -->
+      <div class="header__container-copy">
+
+      </div>
+      <!-- Меню, выпадающие из nav-меню -->
+      <!-- Меню при выборе пункта в nav-меню хедера -->
+<div class="header__drop__consult header__drop__menu header__drop__hidden">
+   <ul class="header__drop__consult__menu">
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Жемчуг и серебро</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Камни для коррекций</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Спирали для
+            коррекций</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Килаки для
+            коррекций</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Лингамы</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Пирамиды</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Вазы для коррекций</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Шри янтра Солнца</a>
+      </li>
+      <li class="header__drop__consult__item">
+         <a href="" class="header__drop__consult__anchor">Другие артефакты</a>
+      </li>
+   </ul>
+</div>
+      <!-- Меню при выборе пункта в nav-меню хедера -->
+<div class="header__drop__artifacts header__drop__menu header__drop__hidden">
+   <ul class="header__drop__artifacts__menu">
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Жемчуг и серебро</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Камни для коррекций</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Спирали для
+            коррекций</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Килаки для
+            коррекций</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Лингамы</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Пирамиды</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Вазы для коррекций</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Шри янтра Солнца</a>
+      </li>
+      <li class="header__drop__artifacts__item">
+         <a href="" class="header__drop__artifacts__anchor">Другие артефакты</a>
+      </li>
+   </ul>
+</div>
 
       <div class="header__burger__icon">
    <img src="images/main/header/burger.svg" alt="Burger Icon">
 </div>
-      <a href="index.html">
+      <a href="#">
    <div class="header__logo"><span>VASTU.RU</span></div>
 
 </a>
@@ -364,6 +441,7 @@
    </div>
 </div>
 
+
    </div>
 </header>
 
@@ -377,74 +455,7 @@
          и помогаем людям меняться&nbsp;к&nbsp;лучшему
       </h2>
 
-      <!-- Меню при выборе пункта в nav-меню хедера -->
-<div class="hero__drop__consult hero__drop__menu hero__drop__hidden">
-   <ul class="hero__drop__consult__menu">
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Жемчуг и серебро</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Камни для коррекций</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Спирали для
-            коррекций</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Килаки для
-            коррекций</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Лингамы</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Пирамиды</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Вазы для коррекций</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Шри янтра Солнца</a>
-      </li>
-      <li class="hero__drop__consult__item">
-         <a href="" class="hero__drop__consult__anchor">Другие артефакты</a>
-      </li>
-   </ul>
-</div>
-      <!-- Меню при выборе пункта в nav-меню хедера -->
-<div class="hero__drop__artifacts hero__drop__menu hero__drop__hidden">
-   <ul class="hero__drop__artifacts__menu">
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Жемчуг и серебро</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Камни для коррекций</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Спирали для
-            коррекций</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Килаки для
-            коррекций</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Лингамы</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Пирамиды</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Вазы для коррекций</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Шри янтра Солнца</a>
-      </li>
-      <li class="hero__drop__artifacts__item">
-         <a href="" class="hero__drop__artifacts__anchor">Другие артефакты</a>
-      </li>
-   </ul>
-</div>
+      
 
    </div>
 </section>
@@ -815,7 +826,7 @@
 <footer class="footer center">
    <div class="container footer__container">
 
-      <a href="index.html">
+      <a href="#">
    <div class="header__logo"><span>VASTU.RU</span></div>
 
 </a>

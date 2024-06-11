@@ -2,6 +2,7 @@ import scrollTop from './scroll_top.js';
 import burger from './burger.js';
 import cart from './cart.js';
 import headerDropMenu from './headerDropMenu.js';
+import logo from './logo.js';
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
 const swiper = new Swiper('.swiper', {
@@ -33,6 +34,8 @@ Fancybox.bind('[data-fancybox]', {
 });
 
 burger();
+
+logo();
 
 headerDropMenu();
 
