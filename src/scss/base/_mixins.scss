@@ -1,4 +1,6 @@
 @mixin image-hover {
+   /* position: relative; */
+
    & a:after {
       content: "";
       display: block;

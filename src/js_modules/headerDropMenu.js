@@ -3,12 +3,17 @@ export default function headerDropMenu() {
 	const headerSection = document.querySelector('.header');
 	const headerNavItems = headerSection.querySelectorAll('.header__nav__item');
 
-	// Находим блок hero для ограничения зоны поиска элементов
-	const heroSection = document.querySelector('.hero');
+	// Находим блок header для ограничения зоны поиска элементов
+	// const headerSection = document.querySelector('.header');
 
 	// Находим в nav каждое выпадающее меню по их классу
-	const heroDropConsult = heroSection.querySelector('.hero__drop__consult');
-	const heroDropArtifacts = heroSection.querySelector('.hero__drop__artifacts');
+	const headerDropConsult = headerSection.querySelector(
+		'.header__drop__consult'
+	);
+	console.log('headerDropConsult: ', headerDropConsult);
+	const headerDropArtifacts = headerSection.querySelector(
+		'.header__drop__artifacts'
+	);
 
 	findNavItems();
 
@@ -27,22 +32,22 @@ export default function headerDropMenu() {
 	function showDropMenu(event) {
 		// Если кликнули на "Консультации"
 		if (event.target.textContent.toLowerCase().trim() == 'консультации') {
-			heroDropConsult.classList.toggle('hero__drop__shown');
-			heroDropConsult.classList.toggle('hero__drop__hidden');
+			headerDropConsult.classList.toggle('header__drop__shown');
+			headerDropConsult.classList.toggle('header__drop__hidden');
 		} else {
 			// Если кликнули на другой пункт меню навигации
-			heroDropConsult.classList.remove('hero__drop__shown');
-			heroDropConsult.classList.add('hero__drop__hidden');
+			headerDropConsult.classList.remove('header__drop__shown');
+			headerDropConsult.classList.add('header__drop__hidden');
 		}
 
 		// Если кликнули на "Артефакты"
 		if (event.target.textContent.toLowerCase().trim() == 'артефакты') {
-			heroDropArtifacts.classList.toggle('hero__drop__shown');
-			heroDropArtifacts.classList.toggle('hero__drop__hidden');
+			headerDropArtifacts.classList.toggle('header__drop__shown');
+			headerDropArtifacts.classList.toggle('header__drop__hidden');
 		} else {
 			// Если кликнули на другой пункт меню навигации
-			heroDropArtifacts.classList.remove('hero__drop__shown');
-			heroDropArtifacts.classList.add('hero__drop__hidden');
+			headerDropArtifacts.classList.remove('header__drop__shown');
+			headerDropArtifacts.classList.add('header__drop__hidden');
 		}
 
 		// Если кликнули на "О компании"

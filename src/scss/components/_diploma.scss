@@ -52,6 +52,21 @@
       gap: 30px;
       z-index: 10;
    }
+
+   &__left-img {
+      position: relative;
+      @include image-hover;
+   }
+
+   &__main-img {
+      position: relative;
+      @include image-hover;
+   }
+
+   &__right-img {
+      position: relative;
+      @include image-hover;
+   }
 }
 
 @media(max-width:1920px) {

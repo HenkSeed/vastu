@@ -1,16 +1,128 @@
 .header {
    position: relative;
-   z-index: 10;
+   /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+   z-index: 50;
    margin: 0 auto;
-   background-color: #F1C9A5;
-   box-shadow: 0px 2px 8px 4px #9B9773;
+   background-color: rgba(241, 201, 165, 0);
+
+   box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
+
+   &-copy {
+      position: absolute;
+      /* Без следующей строки этот блок будет иметь начало */
+      /* как и у контейнера, а не у левой границы экрана */
+      left: 0;
+      pointer-events: none;
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      /* Имитируем цвет header-а */
+      background-color: rgba(241, 201, 165, 1);
+      /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
+      z-index: -3;
+      /* Имитируем тень header-а */
+      box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
+   }
 
    &__container {
       position: relative;
+      z-index: 0;
       justify-content: space-between;
       align-items: center;
-      padding-top: 2.7rem;
-      padding-bottom: 2.7rem;
+      padding-top: 22px;
+      padding-bottom: 22px;
+   }
+
+   &__drop__consult {
+      position: absolute;
+      top: 0;
+      left: 26%;
+      width: 230px;
+      max-height: 274px;
+      padding: 20px 20px 27px;
+      background-color: #F1C9A5;
+      border: .5px solid rgba(139, 69, 19, .3);
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2);
+      transition: transform .5s;
+      z-index: -11;
+
+      &__menu {
+         width: 100%;
+      }
+
+      &__item {
+         display: block;
+         width: calc(100% + 40px);
+         margin-left: -20px;
+
+         &:hover {
+            background-color: #F2E8DE;
+            cursor: pointer;
+         }
+      }
+
+      &__item~&__item {
+         margin-top: 8px;
+      }
+
+      &__anchor {
+         font-size: 14px;
+         font-weight: 500;
+         color: #8B4513;
+         margin-left: 20px;
+      }
+   }
+
+   &__drop__artifacts {
+      position: absolute;
+      top: 0;
+      left: 38%;
+      width: 230px;
+      max-height: 274px;
+      padding: 20px 20px 27px;
+      background-color: #F1C9A5;
+      border: .5px solid rgba(139, 69, 19, .3);
+      border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2);
+      transition: transform .5s;
+      z-index: -11;
+
+      &__menu {
+         width: 100%;
+      }
+
+      &__item {
+         display: block;
+         width: calc(100% + 40px);
+         margin-left: -20px;
+
+         &:hover {
+            background-color: #F2E8DE;
+            cursor: pointer;
+         }
+      }
+
+      &__item~&__item {
+         margin-top: 8px;
+      }
+
+      &__anchor {
+         font-size: 14px;
+         font-weight: 500;
+         color: #8B4513;
+         margin-left: 20px;
+      }
+   }
+
+   &__drop__hidden {
+      transform: translateY(calc(-100% - 5px));
+   }
+
+   &__drop__shown {
+      transform: translateY(76px);
    }
 
    &__burger__icon {
@@ -19,6 +131,8 @@
    }
 
    &__logo {
+      /*       position: relative;
+      z-index: -200; */
       color: #fff;
       font-size: 2.4rem;
       font-weight: 500;
