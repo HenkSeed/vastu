@@ -496,41 +496,35 @@ ul {
 }
 .header {
   position: relative;
-  z-index: 10;
+  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+  z-index: 50;
   margin: 0 auto;
-  background-color: #F1C9A5;
-  /* box-shadow: 0px 2px 8px 4px #9B9773; */
-  /* box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25); */
-  /* background: #f1c9a5; */
+  background-color: rgba(241, 201, 165, 0);
+  box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
 }
 .header-copy {
   position: absolute;
+  /* Без следующей строки этот блок будет иметь начало */
+  /* как и у контейнера, а не у левой границы экрана */
+  left: 0;
   pointer-events: none;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 100;
+  /* Имитируем цвет header-а */
+  background-color: rgb(241, 201, 165);
+  /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
+  z-index: -3;
+  /* Имитируем тень header-а */
   box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
 }
 .header__container {
   position: relative;
+  z-index: 0;
   justify-content: space-between;
   align-items: center;
   padding-top: 22px;
   padding-bottom: 22px;
-  z-index: 10;
-  /* padding-top: 2.7rem; */
-  /* padding-bottom: 2.7rem; */
-}
-.header__container-copy {
-  position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  background-color: #F1C9A5;
-  /* background-color: rgba(0, 0, 0, 0); */
-  /* background-color: cyan; */
-  z-index: -10;
 }
 .header__drop__consult {
   position: absolute;
@@ -608,13 +602,15 @@ ul {
   transform: translateY(calc(-100% - 5px));
 }
 .header__drop__shown {
-  transform: translateY(82px);
+  transform: translateY(76px);
 }
 .header__burger__icon {
   display: none;
   cursor: pointer;
 }
 .header__logo {
+  /*       position: relative;
+  z-index: -200; */
   color: #fff;
   font-size: 2.4rem;
   font-weight: 500;
@@ -3594,25 +3590,33 @@ ul {
 }
 .header {
   position: relative;
-  z-index: 10;
+  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+  z-index: 50;
   margin: 0 auto;
-  background-color: #F1C9A5;
-  /* box-shadow: 0px 2px 8px 4px #9B9773; */
-  /* box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25); */
-  /* background: #f1c9a5; */
+  background-color: rgba(241, 201, 165, 0);
+  -webkit-box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
+  box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
 }
 .header-copy {
   position: absolute;
+  /* Без следующей строки этот блок будет иметь начало */
+  /* как и у контейнера, а не у левой границы экрана */
+  left: 0;
   pointer-events: none;
+  margin: 0 auto;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  z-index: 100;
+  /* Имитируем цвет header-а */
+  background-color: rgb(241, 201, 165);
+  /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
+  z-index: -3;
+  /* Имитируем тень header-а */
   -webkit-box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
   box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
 }
 .header__container {
   position: relative;
+  z-index: 0;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -3621,19 +3625,6 @@ ul {
   align-items: center;
   padding-top: 22px;
   padding-bottom: 22px;
-  z-index: 10;
-  /* padding-top: 2.7rem; */
-  /* padding-bottom: 2.7rem; */
-}
-.header__container-copy {
-  position: absolute;
-  pointer-events: none;
-  width: 100%;
-  height: 100%;
-  background-color: #F1C9A5;
-  /* background-color: rgba(0, 0, 0, 0); */
-  /* background-color: cyan; */
-  z-index: -10;
 }
 .header__drop__consult {
   position: absolute;
@@ -3721,15 +3712,17 @@ ul {
   transform: translateY(calc(-100% - 5px));
 }
 .header__drop__shown {
-  -webkit-transform: translateY(82px);
-  -ms-transform: translateY(82px);
-  transform: translateY(82px);
+  -webkit-transform: translateY(76px);
+  -ms-transform: translateY(76px);
+  transform: translateY(76px);
 }
 .header__burger__icon {
   display: none;
   cursor: pointer;
 }
 .header__logo {
+  /*       position: relative;
+  z-index: -200; */
   color: #fff;
   font-size: 2.4rem;
   font-weight: 500;

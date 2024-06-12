@@ -181,18 +181,13 @@
 </div>
 
 <header class="header center">
-   <!-- Слой для создания тени выше выпадающих меню -->
-   <div class="header-copy"></div>
    <!-- Затемнение для меню корзины -->
    <div class="dark__header dark dark--invisible"></div>
 
-   <div class="container header__container">
-      <!-- Слой, из-под которого выпадают меню -->
-      <div class="header__container-copy">
-
-      </div>
-      <!-- Меню, выпадающие из nav-меню -->
-      <!-- Меню при выборе пункта в nav-меню хедера -->
+   <!-- Слой для имитирования тени и цвета хедера выше выпадающих меню -->
+   <div class="header-copy"></div>
+   <!-- Блоки меню, выпадающие из nav-меню -->
+   <!-- Меню при выборе пункта в nav-меню хедера -->
 <div class="header__drop__consult header__drop__menu header__drop__hidden">
    <ul class="header__drop__consult__menu">
       <li class="header__drop__consult__item">
@@ -226,7 +221,7 @@
       </li>
    </ul>
 </div>
-      <!-- Меню при выборе пункта в nav-меню хедера -->
+   <!-- Меню при выборе пункта в nav-меню хедера -->
 <div class="header__drop__artifacts header__drop__menu header__drop__hidden">
    <ul class="header__drop__artifacts__menu">
       <li class="header__drop__artifacts__item">
@@ -260,6 +255,8 @@
       </li>
    </ul>
 </div>
+
+   <div class="container header__container">
 
       <div class="header__burger__icon">
    <img src="images/main/header/burger.svg" alt="Burger Icon">
@@ -441,8 +438,8 @@
    </div>
 </div>
 
-
    </div>
+
 </header>
 
 <section class="hero center">
