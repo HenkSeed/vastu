@@ -1,19 +1,12 @@
 export default function headerDropMenu() {
-	// Находим в шапке сайта пункты навигационного меню
+	// Находим блок header для ограничения зоны поиска элементов
 	const headerSection = document.querySelector('.header');
+	// Находим в шапке сайта пункты навигационного меню
 	const headerNavItems = headerSection.querySelectorAll('.header__nav__item');
 
-	// Находим блок header для ограничения зоны поиска элементов
-	// const headerSection = document.querySelector('.header');
-
 	// Находим в nav каждое выпадающее меню по их классу
-	const headerDropConsult = headerSection.querySelector(
-		'.header__drop__consult'
-	);
-	console.log('headerDropConsult: ', headerDropConsult);
-	const headerDropArtifacts = headerSection.querySelector(
-		'.header__drop__artifacts'
-	);
+	const headerDropConsult = headerSection.querySelector('.drop__consult');
+	const headerDropArtifacts = headerSection.querySelector('.drop__artifacts');
 
 	findNavItems();
 
@@ -32,22 +25,22 @@ export default function headerDropMenu() {
 	function showDropMenu(event) {
 		// Если кликнули на "Консультации"
 		if (event.target.textContent.toLowerCase().trim() == 'консультации') {
-			headerDropConsult.classList.toggle('header__drop__shown');
-			headerDropConsult.classList.toggle('header__drop__hidden');
+			headerDropConsult.classList.toggle('drop__shown');
+			headerDropConsult.classList.toggle('drop__hidden');
 		} else {
 			// Если кликнули на другой пункт меню навигации
-			headerDropConsult.classList.remove('header__drop__shown');
-			headerDropConsult.classList.add('header__drop__hidden');
+			headerDropConsult.classList.remove('drop__shown');
+			headerDropConsult.classList.add('drop__hidden');
 		}
 
 		// Если кликнули на "Артефакты"
 		if (event.target.textContent.toLowerCase().trim() == 'артефакты') {
-			headerDropArtifacts.classList.toggle('header__drop__shown');
-			headerDropArtifacts.classList.toggle('header__drop__hidden');
+			headerDropArtifacts.classList.toggle('drop__shown');
+			headerDropArtifacts.classList.toggle('drop__hidden');
 		} else {
 			// Если кликнули на другой пункт меню навигации
-			headerDropArtifacts.classList.remove('header__drop__shown');
-			headerDropArtifacts.classList.add('header__drop__hidden');
+			headerDropArtifacts.classList.remove('drop__shown');
+			headerDropArtifacts.classList.add('drop__hidden');
 		}
 
 		// Если кликнули на "О компании"

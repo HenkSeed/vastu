@@ -1,11 +1,12 @@
 .header {
-   position: relative;
-   /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
-   z-index: 50;
    margin: 0 auto;
+   /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+   position: relative;
+   z-index: 50;
+   /* Цвет имитируется в &-copy */
    background-color: rgba(241, 201, 165, 0);
-
-   box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
+   /* Тень имитируется в &-copy */
+   /* box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25); */
 
    &-copy {
       position: absolute;
@@ -33,7 +34,7 @@
       padding-bottom: 22px;
    }
 
-   &__drop__consult {
+   & .drop__consult {
       position: absolute;
       top: 0;
       left: 26%;
@@ -75,7 +76,7 @@
       }
    }
 
-   &__drop__artifacts {
+   & .drop__artifacts {
       position: absolute;
       top: 0;
       left: 38%;
@@ -117,11 +118,11 @@
       }
    }
 
-   &__drop__hidden {
+   & .drop__hidden {
       transform: translateY(calc(-100% - 5px));
    }
 
-   &__drop__shown {
+   & .drop__shown {
       transform: translateY(76px);
    }
 

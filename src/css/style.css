@@ -495,12 +495,14 @@ ul {
   }
 }
 .header {
-  position: relative;
-  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
-  z-index: 50;
   margin: 0 auto;
+  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+  position: relative;
+  z-index: 50;
+  /* Цвет имитируется в &-copy */
   background-color: rgba(241, 201, 165, 0);
-  box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
+  /* Тень имитируется в &-copy */
+  /* box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25); */
 }
 .header-copy {
   position: absolute;
@@ -526,7 +528,7 @@ ul {
   padding-top: 22px;
   padding-bottom: 22px;
 }
-.header__drop__consult {
+.header .drop__consult {
   position: absolute;
   top: 0;
   left: 26%;
@@ -541,28 +543,28 @@ ul {
   transition: transform 0.5s;
   z-index: -11;
 }
-.header__drop__consult__menu {
+.header .drop__consult__menu {
   width: 100%;
 }
-.header__drop__consult__item {
+.header .drop__consult__item {
   display: block;
   width: calc(100% + 40px);
   margin-left: -20px;
 }
-.header__drop__consult__item:hover {
+.header .drop__consult__item:hover {
   background-color: #F2E8DE;
   cursor: pointer;
 }
-.header__drop__consult__item ~ .header__drop__consult__item {
+.header .drop__consult__item ~ .header .drop__consult__item {
   margin-top: 8px;
 }
-.header__drop__consult__anchor {
+.header .drop__consult__anchor {
   font-size: 14px;
   font-weight: 500;
   color: #8B4513;
   margin-left: 20px;
 }
-.header__drop__artifacts {
+.header .drop__artifacts {
   position: absolute;
   top: 0;
   left: 38%;
@@ -577,31 +579,31 @@ ul {
   transition: transform 0.5s;
   z-index: -11;
 }
-.header__drop__artifacts__menu {
+.header .drop__artifacts__menu {
   width: 100%;
 }
-.header__drop__artifacts__item {
+.header .drop__artifacts__item {
   display: block;
   width: calc(100% + 40px);
   margin-left: -20px;
 }
-.header__drop__artifacts__item:hover {
+.header .drop__artifacts__item:hover {
   background-color: #F2E8DE;
   cursor: pointer;
 }
-.header__drop__artifacts__item ~ .header__drop__artifacts__item {
+.header .drop__artifacts__item ~ .header .drop__artifacts__item {
   margin-top: 8px;
 }
-.header__drop__artifacts__anchor {
+.header .drop__artifacts__anchor {
   font-size: 14px;
   font-weight: 500;
   color: #8B4513;
   margin-left: 20px;
 }
-.header__drop__hidden {
+.header .drop__hidden {
   transform: translateY(calc(-100% - 5px));
 }
-.header__drop__shown {
+.header .drop__shown {
   transform: translateY(76px);
 }
 .header__burger__icon {
@@ -2001,14 +2003,129 @@ ul {
 }
 .footer {
   margin: 0 auto;
-  background-color: #F1C9A5;
-  border: #9B9773 0.1rem solid;
+  /* background-color: rgb(241, 201, 165); */
+  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+  position: relative;
+  z-index: 50;
+  /* Цвет имитируется в &-copy */
+  background-color: rgba(241, 201, 165, 0);
+}
+.footer-copy {
+  position: absolute;
+  /* Без следующей строки этот блок будет иметь начало */
+  /* как и у контейнера, а не у левой границы экрана */
+  left: 0;
+  pointer-events: none;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100% + 20px);
+  /* Имитируем цвет header-а */
+  background-color: rgb(241, 201, 165);
+  /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
+  z-index: -3;
 }
 .footer__container {
   justify-content: space-between;
   align-items: center;
-  padding-top: 2.1rem;
-  padding-bottom: 2.1rem;
+  padding-top: 4.7rem;
+  padding-bottom: 4.7rem;
+}
+.footer .drop__consult {
+  position: absolute;
+  top: 0;
+  width: 230px;
+  max-height: 274px;
+  padding: 20px 20px 27px;
+  background-color: #F1C9A5;
+  border: 0.5px solid rgba(139, 69, 19, 0.3);
+  /* В этом блоке отличия от хедера */
+  left: 33%;
+  /* left: 26%; */
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  /* В футере закругляем верхние углы */
+  /*       border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  /* У футера нет тени */
+  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
+  /* Конец блока отличий */
+  transition: transform 0.5s;
+  z-index: -11;
+}
+.footer .drop__consult__menu {
+  width: 100%;
+}
+.footer .drop__consult__item {
+  display: block;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+.footer .drop__consult__item:hover {
+  background-color: #F2E8DE;
+  cursor: pointer;
+}
+.footer .drop__consult__item ~ .footer .drop__consult__item {
+  margin-top: 8px;
+}
+.footer .drop__consult__anchor {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8B4513;
+  margin-left: 20px;
+}
+.footer .drop__artifacts {
+  position: absolute;
+  top: 0;
+  width: 230px;
+  max-height: 274px;
+  padding: 20px 20px 27px;
+  background-color: #F1C9A5;
+  border: 0.5px solid rgba(139, 69, 19, 0.3);
+  /* В этом блоке отличия от хедера */
+  left: 45%;
+  /*       left: 38%; */
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  /* В футере закругляем верхние углы */
+  /*       border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px; */
+  /* У футера нет тени */
+  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
+  /* Конец блока отличий */
+  /*       transition: transform .5s; */
+  transition: transform 0.5s;
+  z-index: -11;
+}
+.footer .drop__artifacts__menu {
+  width: 100%;
+}
+.footer .drop__artifacts__item {
+  display: block;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+.footer .drop__artifacts__item:hover {
+  background-color: #F2E8DE;
+  cursor: pointer;
+}
+.footer .drop__artifacts__item ~ .footer .drop__artifacts__item {
+  margin-top: 8px;
+}
+.footer .drop__artifacts__anchor {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8B4513;
+  margin-left: 20px;
+}
+.footer .drop__hidden {
+  /* В этом блоке отличия от хедера */
+  /*       transform: translateY(calc(-100% - 5px)); */
+  transform: translateY(0);
+}
+.footer .drop__shown {
+  /* В этом блоке отличия от хедера */
+  /*       transform: translateY(76px); */
+  transform: translateY(-100%);
 }
 .footer__copyright {
   color: #8B4513;
@@ -3559,8 +3676,26 @@ ul {
 }
 .footer {
   margin: 0 auto;
-  background-color: #F1C9A5;
-  border: #9B9773 0.1rem solid;
+  /* background-color: rgb(241, 201, 165); */
+  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+  position: relative;
+  z-index: 50;
+  /* Цвет имитируется в &-copy */
+  background-color: rgba(241, 201, 165, 0);
+}
+.footer-copy {
+  position: absolute;
+  /* Без следующей строки этот блок будет иметь начало */
+  /* как и у контейнера, а не у левой границы экрана */
+  left: 0;
+  pointer-events: none;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100% + 20px);
+  /* Имитируем цвет header-а */
+  background-color: rgb(241, 201, 165);
+  /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
+  z-index: -3;
 }
 .footer__container {
   -webkit-box-pack: justify;
@@ -3569,8 +3704,115 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 2.1rem;
-  padding-bottom: 2.1rem;
+  padding-top: 4.7rem;
+  padding-bottom: 4.7rem;
+}
+.footer .drop__consult {
+  position: absolute;
+  top: 0;
+  width: 230px;
+  max-height: 274px;
+  padding: 20px 20px 27px;
+  background-color: #F1C9A5;
+  border: 0.5px solid rgba(139, 69, 19, 0.3);
+  /* В этом блоке отличия от хедера */
+  left: 33%;
+  /* left: 26%; */
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  /* В футере закругляем верхние углы */
+  /*       border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; */
+  /* У футера нет тени */
+  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
+  /* Конец блока отличий */
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: -11;
+}
+.footer .drop__consult__menu {
+  width: 100%;
+}
+.footer .drop__consult__item {
+  display: block;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+.footer .drop__consult__item:hover {
+  background-color: #F2E8DE;
+  cursor: pointer;
+}
+.footer .drop__consult__item ~ .footer .drop__consult__item {
+  margin-top: 8px;
+}
+.footer .drop__consult__anchor {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8B4513;
+  margin-left: 20px;
+}
+.footer .drop__artifacts {
+  position: absolute;
+  top: 0;
+  width: 230px;
+  max-height: 274px;
+  padding: 20px 20px 27px;
+  background-color: #F1C9A5;
+  border: 0.5px solid rgba(139, 69, 19, 0.3);
+  /* В этом блоке отличия от хедера */
+  left: 45%;
+  /*       left: 38%; */
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  /* В футере закругляем верхние углы */
+  /*       border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px; */
+  /* У футера нет тени */
+  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
+  /* Конец блока отличий */
+  /*       transition: transform .5s; */
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  z-index: -11;
+}
+.footer .drop__artifacts__menu {
+  width: 100%;
+}
+.footer .drop__artifacts__item {
+  display: block;
+  width: calc(100% + 40px);
+  margin-left: -20px;
+}
+.footer .drop__artifacts__item:hover {
+  background-color: #F2E8DE;
+  cursor: pointer;
+}
+.footer .drop__artifacts__item ~ .footer .drop__artifacts__item {
+  margin-top: 8px;
+}
+.footer .drop__artifacts__anchor {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8B4513;
+  margin-left: 20px;
+}
+.footer .drop__hidden {
+  /* В этом блоке отличия от хедера */
+  /*       transform: translateY(calc(-100% - 5px)); */
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+.footer .drop__shown {
+  /* В этом блоке отличия от хедера */
+  /*       transform: translateY(76px); */
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 .footer__copyright {
   color: #8B4513;
@@ -3589,13 +3831,14 @@ ul {
   }
 }
 .header {
-  position: relative;
-  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
-  z-index: 50;
   margin: 0 auto;
+  /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+  position: relative;
+  z-index: 50;
+  /* Цвет имитируется в &-copy */
   background-color: rgba(241, 201, 165, 0);
-  -webkit-box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
-  box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25);
+  /* Тень имитируется в &-copy */
+  /* box-shadow: 0 4px 4px 0 rgba(91, 51, 15, 0.25); */
 }
 .header-copy {
   position: absolute;
@@ -3626,7 +3869,7 @@ ul {
   padding-top: 22px;
   padding-bottom: 22px;
 }
-.header__drop__consult {
+.header .drop__consult {
   position: absolute;
   top: 0;
   left: 26%;
@@ -3645,28 +3888,28 @@ ul {
   transition: transform 0.5s, -webkit-transform 0.5s;
   z-index: -11;
 }
-.header__drop__consult__menu {
+.header .drop__consult__menu {
   width: 100%;
 }
-.header__drop__consult__item {
+.header .drop__consult__item {
   display: block;
   width: calc(100% + 40px);
   margin-left: -20px;
 }
-.header__drop__consult__item:hover {
+.header .drop__consult__item:hover {
   background-color: #F2E8DE;
   cursor: pointer;
 }
-.header__drop__consult__item ~ .header__drop__consult__item {
+.header .drop__consult__item ~ .header .drop__consult__item {
   margin-top: 8px;
 }
-.header__drop__consult__anchor {
+.header .drop__consult__anchor {
   font-size: 14px;
   font-weight: 500;
   color: #8B4513;
   margin-left: 20px;
 }
-.header__drop__artifacts {
+.header .drop__artifacts {
   position: absolute;
   top: 0;
   left: 38%;
@@ -3685,33 +3928,33 @@ ul {
   transition: transform 0.5s, -webkit-transform 0.5s;
   z-index: -11;
 }
-.header__drop__artifacts__menu {
+.header .drop__artifacts__menu {
   width: 100%;
 }
-.header__drop__artifacts__item {
+.header .drop__artifacts__item {
   display: block;
   width: calc(100% + 40px);
   margin-left: -20px;
 }
-.header__drop__artifacts__item:hover {
+.header .drop__artifacts__item:hover {
   background-color: #F2E8DE;
   cursor: pointer;
 }
-.header__drop__artifacts__item ~ .header__drop__artifacts__item {
+.header .drop__artifacts__item ~ .header .drop__artifacts__item {
   margin-top: 8px;
 }
-.header__drop__artifacts__anchor {
+.header .drop__artifacts__anchor {
   font-size: 14px;
   font-weight: 500;
   color: #8B4513;
   margin-left: 20px;
 }
-.header__drop__hidden {
+.header .drop__hidden {
   -webkit-transform: translateY(calc(-100% - 5px));
   -ms-transform: translateY(calc(-100% - 5px));
   transform: translateY(calc(-100% - 5px));
 }
-.header__drop__shown {
+.header .drop__shown {
   -webkit-transform: translateY(76px);
   -ms-transform: translateY(76px);
   transform: translateY(76px);

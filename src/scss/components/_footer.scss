@@ -1,13 +1,148 @@
 .footer {
    margin: 0 auto;
-   background-color: #F1C9A5;
-   border: #9B9773 0.1rem solid;
+   /* background-color: rgb(241, 201, 165); */
+
+   /* Поднимаем слой, чтобы выпадающее из него меню выходило поверх текста блока hero */
+   position: relative;
+   z-index: 50;
+   /* Цвет имитируется в &-copy */
+   background-color: rgba(241, 201, 165, 0);
+
+   &-copy {
+      position: absolute;
+      /* Без следующей строки этот блок будет иметь начало */
+      /* как и у контейнера, а не у левой границы экрана */
+      left: 0;
+      pointer-events: none;
+      margin: 0 auto;
+      width: 100%;
+      height: calc(100% + 20px);
+      /* Имитируем цвет header-а */
+      background-color: rgba(241, 201, 165, 1);
+      /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
+      z-index: -3;
+   }
 
    &__container {
       justify-content: space-between;
       align-items: center;
-      padding-top: 2.1rem;
-      padding-bottom: 2.1rem;
+      padding-top: 4.7rem;
+      padding-bottom: 4.7rem;
+   }
+
+   & .drop__consult {
+      position: absolute;
+      top: 0;
+      width: 230px;
+      max-height: 274px;
+      padding: 20px 20px 27px;
+      background-color: #F1C9A5;
+      border: .5px solid rgba(139, 69, 19, .3);
+
+      /* В этом блоке отличия от хедера */
+      left: 33%;
+      /* left: 26%; */
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      /* В футере закругляем верхние углы */
+      /*       border-bottom-right-radius: 10px;
+      border-bottom-left-radius: 10px; */
+      /* У футера нет тени */
+      /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
+      /* Конец блока отличий */
+
+      transition: transform .5s;
+      z-index: -11;
+
+      &__menu {
+         width: 100%;
+      }
+
+      &__item {
+         display: block;
+         width: calc(100% + 40px);
+         margin-left: -20px;
+
+         &:hover {
+            background-color: #F2E8DE;
+            cursor: pointer;
+         }
+      }
+
+      &__item~&__item {
+         margin-top: 8px;
+      }
+
+      &__anchor {
+         font-size: 14px;
+         font-weight: 500;
+         color: #8B4513;
+         margin-left: 20px;
+      }
+   }
+
+   & .drop__artifacts {
+      position: absolute;
+      top: 0;
+      width: 230px;
+      max-height: 274px;
+      padding: 20px 20px 27px;
+      background-color: #F1C9A5;
+      border: .5px solid rgba(139, 69, 19, .3);
+
+      /* В этом блоке отличия от хедера */
+      left: 45%;
+      /*       left: 38%; */
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      /* В футере закругляем верхние углы */
+      /*       border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px; */
+      /* У футера нет тени */
+      /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
+      /* Конец блока отличий */
+
+      /*       transition: transform .5s; */
+      transition: transform .5s;
+      z-index: -11;
+
+      &__menu {
+         width: 100%;
+      }
+
+      &__item {
+         display: block;
+         width: calc(100% + 40px);
+         margin-left: -20px;
+
+         &:hover {
+            background-color: #F2E8DE;
+            cursor: pointer;
+         }
+      }
+
+      &__item~&__item {
+         margin-top: 8px;
+      }
+
+      &__anchor {
+         font-size: 14px;
+         font-weight: 500;
+         color: #8B4513;
+         margin-left: 20px;
+      }
+   }
+
+   & .drop__hidden {
+      /* В этом блоке отличия от хедера */
+      /*       transform: translateY(calc(-100% - 5px)); */
+      transform: translateY(calc(0));
+   }
+
+   & .drop__shown {
+      /* В этом блоке отличия от хедера */
+      /*       transform: translateY(76px); */
+      transform: translateY(-100%);
    }
 
    &__copyright {
