@@ -547,7 +547,7 @@ ul {
   /* left: 26%; */
   left: calc(50% - 27rem);
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -573,6 +573,13 @@ ul {
 .header .drop__consult__item ~ .header .drop__consult__item {
   margin-top: 8px;
 }
+.header .drop__consult__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.header .drop__consult__item:first-child a {
+  font-size: 16px;
+}
 .header .drop__consult__anchor {
   font-size: 14px;
   font-weight: 500;
@@ -585,7 +592,7 @@ ul {
   /* left: 38%; */
   left: calc(50% - 13rem);
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -610,6 +617,13 @@ ul {
 }
 .header .drop__artifacts__item ~ .header .drop__artifacts__item {
   margin-top: 8px;
+}
+.header .drop__artifacts__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.header .drop__artifacts__item:first-child a {
+  font-size: 16px;
 }
 .header .drop__artifacts__anchor {
   font-size: 14px;
@@ -2056,10 +2070,23 @@ ul {
   margin: 0 auto;
   width: 100%;
   height: calc(100% + 20px);
+  /* height: calc(100%); */
   /* Имитируем цвет header-а */
   background-color: rgb(241, 201, 165);
   /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
   z-index: -3;
+}
+.footer__drop--cover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100% + 321px);
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: -5;
+  overflow: hidden;
 }
 .footer__container {
   justify-content: space-between;
@@ -2069,9 +2096,11 @@ ul {
 }
 .footer .drop__consult {
   position: absolute;
-  top: 0;
+  pointer-events: all;
+  /* top: 0px; */
+  top: 0px;
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -2099,6 +2128,13 @@ ul {
 .footer .drop__consult__item ~ .footer .drop__consult__item {
   margin-top: 8px;
 }
+.footer .drop__consult__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.footer .drop__consult__item:first-child a {
+  font-size: 16px;
+}
 .footer .drop__consult__anchor {
   font-size: 14px;
   font-weight: 500;
@@ -2107,9 +2143,10 @@ ul {
 }
 .footer .drop__artifacts {
   position: absolute;
+  pointer-events: all;
   top: 0;
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -2137,6 +2174,13 @@ ul {
 .footer .drop__artifacts__item ~ .footer .drop__artifacts__item {
   margin-top: 8px;
 }
+.footer .drop__artifacts__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.footer .drop__artifacts__item:first-child a {
+  font-size: 16px;
+}
 .footer .drop__artifacts__anchor {
   font-size: 14px;
   font-weight: 500;
@@ -2145,13 +2189,11 @@ ul {
 }
 .footer .drop__hidden {
   /* В этом блоке отличия от хедера */
-  /*       transform: translateY(calc(-100% - 5px)); */
-  transform: translateY(0);
+  transform: translateY(100%);
 }
 .footer .drop__shown {
   /* В этом блоке отличия от хедера */
-  /*       transform: translateY(76px); */
-  transform: translateY(-100%);
+  transform: translateY(0);
 }
 .footer__copyright {
   color: #8B4513;
@@ -3720,10 +3762,23 @@ ul {
   margin: 0 auto;
   width: 100%;
   height: calc(100% + 20px);
+  /* height: calc(100%); */
   /* Имитируем цвет header-а */
   background-color: rgb(241, 201, 165);
   /* Если z-index будет больше, чем у контейнера, то этот блок закроет содержимое контейнера header-а */
   z-index: -3;
+}
+.footer__drop--cover {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100% + 321px);
+  background-color: rgba(0, 0, 0, 0);
+  pointer-events: none;
+  z-index: -5;
+  overflow: hidden;
 }
 .footer__container {
   -webkit-box-pack: justify;
@@ -3737,9 +3792,11 @@ ul {
 }
 .footer .drop__consult {
   position: absolute;
-  top: 0;
+  pointer-events: all;
+  /* top: 0px; */
+  top: 0px;
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -3770,6 +3827,13 @@ ul {
 .footer .drop__consult__item ~ .footer .drop__consult__item {
   margin-top: 8px;
 }
+.footer .drop__consult__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.footer .drop__consult__item:first-child a {
+  font-size: 16px;
+}
 .footer .drop__consult__anchor {
   font-size: 14px;
   font-weight: 500;
@@ -3778,9 +3842,10 @@ ul {
 }
 .footer .drop__artifacts {
   position: absolute;
+  pointer-events: all;
   top: 0;
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -3811,6 +3876,13 @@ ul {
 .footer .drop__artifacts__item ~ .footer .drop__artifacts__item {
   margin-top: 8px;
 }
+.footer .drop__artifacts__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.footer .drop__artifacts__item:first-child a {
+  font-size: 16px;
+}
 .footer .drop__artifacts__anchor {
   font-size: 14px;
   font-weight: 500;
@@ -3819,17 +3891,15 @@ ul {
 }
 .footer .drop__hidden {
   /* В этом блоке отличия от хедера */
-  /*       transform: translateY(calc(-100% - 5px)); */
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
 .footer .drop__shown {
   /* В этом блоке отличия от хедера */
-  /*       transform: translateY(76px); */
-  -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
 }
 .footer__copyright {
   color: #8B4513;
@@ -3892,7 +3962,7 @@ ul {
   /* left: 26%; */
   left: calc(50% - 27rem);
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -3922,6 +3992,13 @@ ul {
 .header .drop__consult__item ~ .header .drop__consult__item {
   margin-top: 8px;
 }
+.header .drop__consult__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.header .drop__consult__item:first-child a {
+  font-size: 16px;
+}
 .header .drop__consult__anchor {
   font-size: 14px;
   font-weight: 500;
@@ -3934,7 +4011,7 @@ ul {
   /* left: 38%; */
   left: calc(50% - 13rem);
   width: 230px;
-  max-height: 274px;
+  /* max-height: 274px; */
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
@@ -3963,6 +4040,13 @@ ul {
 }
 .header .drop__artifacts__item ~ .header .drop__artifacts__item {
   margin-top: 8px;
+}
+.header .drop__artifacts__item:first-child {
+  padding-bottom: 10px;
+  border-bottom: #8B4513 2px solid;
+}
+.header .drop__artifacts__item:first-child a {
+  font-size: 16px;
 }
 .header .drop__artifacts__anchor {
   font-size: 14px;
