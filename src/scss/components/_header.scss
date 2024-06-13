@@ -26,7 +26,7 @@
    }
 
    &__container {
-      position: relative;
+      /* position: relative; - затемняет окно корзины*/
       z-index: 0;
       justify-content: space-between;
       align-items: center;
