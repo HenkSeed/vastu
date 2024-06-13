@@ -37,7 +37,8 @@
    & .drop__consult {
       position: absolute;
       top: 0;
-      left: 26%;
+      /* left: 26%; */
+      left: calc(50% - 27rem);
       width: 230px;
       max-height: 274px;
       padding: 20px 20px 27px;
@@ -80,7 +81,8 @@
    & .drop__artifacts {
       position: absolute;
       top: 0;
-      left: 38%;
+      /* left: 38%; */
+      left: calc(50% - 13rem);
       width: 230px;
       max-height: 274px;
       padding: 20px 20px 27px;

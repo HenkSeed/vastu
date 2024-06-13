@@ -41,7 +41,8 @@
       line-height: 23px;
 
       /* В этом блоке отличия от хедера */
-      left: 33%;
+      /* left: 33%; */
+      left: calc(50% - 21rem);
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
 
@@ -86,7 +87,8 @@
       line-height: 23px;
 
       /* В этом блоке отличия от хедера */
-      left: 45%;
+      /* left: 45%; */
+      left: calc(50% - 7rem);
       border-top-right-radius: 10px;
       border-top-left-radius: 10px;
       transition: transform .5s;
