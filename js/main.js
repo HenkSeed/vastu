@@ -1,4 +1,3 @@
-import scrollTop from './scroll_top.js';
 import burger from './burger.js';
 import cart from './cart.js';
 import dropMenu from './dropMenu.js';
@@ -40,5 +39,3 @@ logo();
 dropMenu();
 
 cart();
-
-scrollTop();

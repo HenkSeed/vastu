@@ -531,7 +531,8 @@ ul {
 .header .drop__consult {
   position: absolute;
   top: 0;
-  left: 26%;
+  /* left: 26%; */
+  left: calc(50% - 27rem);
   width: 230px;
   max-height: 274px;
   padding: 20px 20px 27px;
@@ -568,7 +569,8 @@ ul {
 .header .drop__artifacts {
   position: absolute;
   top: 0;
-  left: 38%;
+  /* left: 38%; */
+  left: calc(50% - 13rem);
   width: 230px;
   max-height: 274px;
   padding: 20px 20px 27px;
@@ -2062,7 +2064,8 @@ ul {
   border: 0.5px solid rgba(139, 69, 19, 0.3);
   line-height: 23px;
   /* В этом блоке отличия от хедера */
-  left: 33%;
+  /* left: 33%; */
+  left: calc(50% - 21rem);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   transition: transform 0.5s;
@@ -2099,7 +2102,8 @@ ul {
   border: 0.5px solid rgba(139, 69, 19, 0.3);
   line-height: 23px;
   /* В этом блоке отличия от хедера */
-  left: 45%;
+  /* left: 45%; */
+  left: calc(50% - 7rem);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   transition: transform 0.5s;
@@ -3726,7 +3730,8 @@ ul {
   border: 0.5px solid rgba(139, 69, 19, 0.3);
   line-height: 23px;
   /* В этом блоке отличия от хедера */
-  left: 33%;
+  /* left: 33%; */
+  left: calc(50% - 21rem);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   -webkit-transition: -webkit-transform 0.5s;
@@ -3766,7 +3771,8 @@ ul {
   border: 0.5px solid rgba(139, 69, 19, 0.3);
   line-height: 23px;
   /* В этом блоке отличия от хедера */
-  left: 45%;
+  /* left: 45%; */
+  left: calc(50% - 7rem);
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   -webkit-transition: -webkit-transform 0.5s;
@@ -3868,7 +3874,8 @@ ul {
 .header .drop__consult {
   position: absolute;
   top: 0;
-  left: 26%;
+  /* left: 26%; */
+  left: calc(50% - 27rem);
   width: 230px;
   max-height: 274px;
   padding: 20px 20px 27px;
@@ -3909,7 +3916,8 @@ ul {
 .header .drop__artifacts {
   position: absolute;
   top: 0;
-  left: 38%;
+  /* left: 38%; */
+  left: calc(50% - 13rem);
   width: 230px;
   max-height: 274px;
   padding: 20px 20px 27px;
