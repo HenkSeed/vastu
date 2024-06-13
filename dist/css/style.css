@@ -542,6 +542,7 @@ ul {
   box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, 0.2);
   transition: transform 0.5s;
   z-index: -11;
+  line-height: 23px;
 }
 .header .drop__consult__menu {
   width: 100%;
@@ -578,6 +579,7 @@ ul {
   box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, 0.2);
   transition: transform 0.5s;
   z-index: -11;
+  line-height: 23px;
 }
 .header .drop__artifacts__menu {
   width: 100%;
@@ -1743,13 +1745,33 @@ ul {
   flex-direction: column;
   border-radius: 10px;
   width: 48%;
+  /* Белый фон для смены слайдов */
+}
+.swiper__bg--white {
+  width: 100%;
+  height: 590px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* background-color: cyan; */
+  background-color: #fff;
+  position: absolute;
+  z-index: -10;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.swiper__bg-photo--white {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: -30px;
 }
 
-/* .swiper-wrapper {
-} */
 .swiper-slide {
   font-size: 24px;
   text-align: center;
+  /* background-color: #fff; */
 }
 
 @media (max-width: 1200px) {
@@ -2038,17 +2060,11 @@ ul {
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
+  line-height: 23px;
   /* В этом блоке отличия от хедера */
   left: 33%;
-  /* left: 26%; */
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  /* В футере закругляем верхние углы */
-  /*       border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px; */
-  /* У футера нет тени */
-  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
-  /* Конец блока отличий */
   transition: transform 0.5s;
   z-index: -11;
 }
@@ -2081,18 +2097,11 @@ ul {
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
+  line-height: 23px;
   /* В этом блоке отличия от хедера */
   left: 45%;
-  /*       left: 38%; */
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  /* В футере закругляем верхние углы */
-  /*       border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px; */
-  /* У футера нет тени */
-  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
-  /* Конец блока отличий */
-  /*       transition: transform .5s; */
   transition: transform 0.5s;
   z-index: -11;
 }
@@ -3715,17 +3724,11 @@ ul {
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
+  line-height: 23px;
   /* В этом блоке отличия от хедера */
   left: 33%;
-  /* left: 26%; */
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  /* В футере закругляем верхние углы */
-  /*       border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px; */
-  /* У футера нет тени */
-  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
-  /* Конец блока отличий */
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -3761,18 +3764,11 @@ ul {
   padding: 20px 20px 27px;
   background-color: #F1C9A5;
   border: 0.5px solid rgba(139, 69, 19, 0.3);
+  line-height: 23px;
   /* В этом блоке отличия от хедера */
   left: 45%;
-  /*       left: 38%; */
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  /* В футере закругляем верхние углы */
-  /*       border-bottom-right-radius: 10px;
-        border-bottom-left-radius: 10px; */
-  /* У футера нет тени */
-  /* box-shadow: 1px 4px 0px 1px rgba(139, 69, 19, .2); */
-  /* Конец блока отличий */
-  /*       transition: transform .5s; */
   -webkit-transition: -webkit-transform 0.5s;
   transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
@@ -3887,6 +3883,7 @@ ul {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   z-index: -11;
+  line-height: 23px;
 }
 .header .drop__consult__menu {
   width: 100%;
@@ -3927,6 +3924,7 @@ ul {
   transition: transform 0.5s;
   transition: transform 0.5s, -webkit-transform 0.5s;
   z-index: -11;
+  line-height: 23px;
 }
 .header .drop__artifacts__menu {
   width: 100%;
@@ -4609,13 +4607,37 @@ ul {
   flex-direction: column;
   border-radius: 10px;
   width: 48%;
+  /* Белый фон для смены слайдов */
+}
+.swiper__bg--white {
+  width: 100%;
+  height: 590px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  /* background-color: cyan; */
+  background-color: #fff;
+  position: absolute;
+  z-index: -10;
+  top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.swiper__bg-photo--white {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin-top: -30px;
 }
 
-/* .swiper-wrapper {
-} */
 .swiper-slide {
   font-size: 24px;
   text-align: center;
+  /* background-color: #fff; */
 }
 
 @media (max-width: 1200px) {
