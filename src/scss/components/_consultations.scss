@@ -1,0 +1,368 @@
+.consultations {
+
+   &__hero {
+      margin: 0 auto;
+      background: url('../images/consultations/hero_bg.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: top;
+      height: 492px;
+   }
+
+   &__title {
+      background-color: #F2E8DE;
+      margin: 0 auto;
+
+      &-container {
+         position: relative;
+      }
+
+      &-mod {
+         background-color: rgba(139, 69, 19, .5);
+         width: 45.1rem;
+         height: 25.8rem;
+         padding-top: 2.5rem;
+         position: absolute;
+         /* z-index: 100; */
+         top: 0;
+         transform: translateY(-11.5rem);
+      }
+
+      &-header {
+         font-size: 4.8rem;
+         font-weight: 400;
+         color: #fff;
+         text-transform: uppercase;
+         text-align: center;
+      }
+   }
+
+   &__chapter {
+      background-color: #F2E8DE;
+
+      &-container {
+         padding-bottom: 60px;
+         position: relative;
+
+         &.fourth {
+            padding-bottom: 120px;
+         }
+
+         &.top {
+            padding-top: 120px;
+         }
+      }
+
+      /* Центрирование по вертикали блока -info к картинке */
+      &-container.top &-info {
+         top: calc(50% + (120px - 60px) / 2);
+      }
+
+      &-container.no-top &-info {
+         top: calc(50% + (0px - 40px) / 2);
+      }
+
+      /* Нижний блок */
+      &-container.no-top &-info {
+         top: calc(50% + (0px - 120px) / 2);
+      }
+
+      &-bg-img {
+         position: relative;
+         z-index: 0;
+         pointer-events: none;
+
+         border-radius: 10px;
+         overflow: hidden;
+
+         & img {
+            width: 100%;
+         }
+
+         & a:after {
+            content: "";
+            display: block;
+            background-color: rgba(0, 0, 0, .5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+         }
+      }
+
+      &-info {
+         position: absolute;
+         /* width: 60rem; */
+         width: 600px;
+         padding: 20px 30px 40px;
+         border-radius: 10px;
+         overflow: hidden;
+         transform: translateY(-50%);
+
+         left: 0;
+         color: #fff;
+         left: 75px;
+         /* top: 180px; */
+         background-color: rgba(139, 69, 19, .7);
+         z-index: 5;
+
+         p {
+            font-size: 1.8rem;
+            line-height: 140%;
+            margin-bottom: 30px;
+         }
+      }
+
+      &-header-block {
+         width: 100%;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding-bottom: 10px;
+         border-bottom: rgba(255, 255, 255, 0.3) solid 2px;
+         /* margin-bottom: 2rem; */
+         margin-bottom: 20px;
+      }
+
+      &-header {
+         font-size: 4rem;
+      }
+
+      &-price {
+         font-size: 2.4rem;
+         line-height: 2rem;
+      }
+
+      &-btns {
+         display: flex;
+         justify-content: space-between;
+         gap: 10px;
+         text-align: center;
+      }
+
+      &-more-btn,
+      &-all-btn {
+         /* padding: 1.2rem 4.5rem; */
+         box-sizing: border-box;
+         padding-top: 12px;
+         padding-bottom: 12px;
+         padding-left: 4.5rem;
+         padding-right: 4.5rem;
+         border: #fff 1px solid;
+         border-radius: 10px;
+         font-size: 1.8rem;
+         transition: all 0.3s;
+      }
+
+      &-more-btn {
+         background-color: #fff;
+         color: #8B4513;
+
+         &:hover {
+            background-color: #F1C9A5;
+            border-color: #F1C9A5;
+         }
+      }
+
+      &-all-btn {
+         background-color: transparent;
+         color: #fff;
+         border: #fff solid 1px;
+
+         &:hover {
+            background-color: #F1C9A5;
+            border-color: #F1C9A5;
+            color: #8B4513;
+
+         }
+      }
+   }
+}
+
+@media (max-width: 1200px) {
+   .consultations {
+      &__hero {
+         height: calc(300px + (492 - 300) * ((100vw - 360px) / (1200 - 360)));
+      }
+
+      &__title {
+         &-mod {
+            width: calc(360px + (451 - 360) * ((100vw - 768px) / (1200 - 768)));
+         }
+      }
+
+      &__chapter {
+         &-container {
+            /* Для всех, без исключения, секций __chapter */
+            padding-bottom: calc(20px + (60 - 20) * ((100vw - 360px) / (1200 - 360)));
+
+            /* Для последней секции */
+            &.fourth {
+               padding-bottom: calc(60px + (120 - 60) * ((100vw - 360px) / (1200 - 360)));
+            }
+
+            /* Для верхней секции */
+            &.top {
+               padding-top: calc(60px + (120 - 60) * ((100vw - 360px) / (1200 - 360)));
+            }
+         }
+
+         /* Центрирование по вертикали блока -info к картинке */
+         &-container.top &-info {
+            top: calc(50% + (calc(60px + (120 - 60) * ((100vw - 360px) / (1200 - 360))) - calc(20px + (60 - 20) * ((100vw - 360px) / (1200 - 360)))) / 2);
+         }
+
+         &-container.no-top &-info {
+            top: calc(50% - (calc(20px + (60 - 20) * ((100vw - 360px) / (1200 - 360)))) / 2);
+         }
+
+         &-container.fourth &-info {
+            top: calc(50% - calc(60px + (120 - 60) * ((100vw - 360px) / (1200 - 360))) / 2);
+         }
+
+         &-info {
+            left: 50%;
+            transform: translate(-50%, -50%);
+         }
+
+         &-more-btn,
+         &-all-btn {
+            padding-left: calc(30px + (45 - 30) * ((100vw - 768px) / (1200 - 768)));
+            padding-right: calc(30px + (45 - 30) * ((100vw - 768px) / (1200 - 768)));
+            border-radius: 10px;
+            font-size: 18px;
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .consultations {
+      &__title {
+         &-mod {
+            width: 360px;
+            left: 50%;
+            transform: translate(-50%, -11.5rem);
+
+         }
+
+         &-header {
+            font-size: calc(34px + (35.657 - 34) * ((100vw - 360px) / (768 - 360)));
+         }
+      }
+
+      &__chapter {
+         &-container {
+            padding-left: 0;
+            padding-right: 0;
+         }
+
+         /* Для уже последней третьей секции */
+         &-container.third {
+            padding-bottom: calc(60px + (89.143 - 60) * ((100vw - 360px) / (768 - 360)));
+         }
+
+         &-container.third &-info {
+            top: calc(50% - (calc(60px + (89.143 - 60) * ((100vw - 360px) / (768 - 360)))) / 2);
+            /*             top: calc(50% - (calc(20px + (60 - 20) * ((100vw - 360px) / (1200 - 360)))) / 2); */
+         }
+
+         /* Высота блока -info */
+         &-container.top &-info {
+            height: calc(100% - (calc(60px + (120 - 60) * ((100vw - 360px) / (1200 - 360))) + calc(20px + (60 - 20) * ((100vw - 360px) / (1200 - 360)))));
+         }
+
+         &-container.no-top &-info {
+            height: calc(100% - (calc(20px + (60 - 20) * ((100vw - 360px) / (1200 - 360)))));
+         }
+
+         &-container.fourth &-info {
+            height: calc(100% - (calc(60px + (120 - 60) * ((100vw - 360px) / (1200 - 360)))));
+         }
+
+         &-container.third &-info {
+            height: calc(100% - (calc(60px + (120 - 60) * ((100vw - 360px) / (1200 - 360)))));
+         }
+
+         &-container.first &-bg-img {
+            height: 442px;
+         }
+
+         &-container.second &-bg-img {
+            height: 537px;
+         }
+
+         &-container.third &-bg-img {
+            height: 594px;
+         }
+
+         &-container.fourth {
+            display: none;
+         }
+
+         &-bg-img {
+            /* height: 630px; */
+            border-radius: 0;
+
+            & img {
+               height: 100%;
+               width: auto;
+            }
+         }
+
+         &-info {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 20px 30px;
+            /* height: calc(100% - 12rem); */
+            width: 360px;
+            border-radius: 0;
+
+
+            p {
+               /* margin-bottom: 80px; */
+               margin-bottom: 0;
+               flex: auto;
+               font-size: 14px;
+            }
+         }
+
+         &-header {
+            font-size: 30px;
+         }
+
+         &-price {
+            font-size: 20px;
+         }
+
+         &-btns {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            width: 250px;
+            align-self: center;
+            /* flex: auto; */
+         }
+
+         &-more-btn,
+         &-all-btn {
+            /* padding: 1.2rem 4.5rem; */
+            width: 100%;
+         }
+      }
+   }
+
+}
+
+@media (max-width: 500px) {
+   .consultations {
+      &__title {
+         &-header {
+            font-size: 34px;
+         }
+      }
+   }
+}

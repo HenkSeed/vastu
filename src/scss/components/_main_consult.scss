@@ -40,6 +40,7 @@
       justify-content: space-between;
 
       &__img {
+         position: relative;
          width: 48.7%;
          z-index: 10;
          margin-top: 5.6rem;
@@ -49,6 +50,9 @@
          & img {
             width: 100%;
          }
+
+         /* @include image-hover; */
+         @include image-hover-params (0.3, 0.1);
       }
 
       &__info {
@@ -66,9 +70,6 @@
          padding-left: 50rem;
          padding-right: 4rem;
          width: 1070px;
-
-         /* background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-            url("../../media/examples/lizard.png"); */
       }
 
       &__title {
