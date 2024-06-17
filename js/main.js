@@ -2,6 +2,7 @@ import burger from './burger.js';
 import cart from './cart.js';
 import dropMenu from './dropMenu.js';
 import logo from './logo.js';
+import quickOrderConsultPopup from './quickOrderConsultPopup.js';
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
 const swiper = new Swiper('.swiper', {
@@ -39,3 +40,5 @@ logo();
 dropMenu();
 
 cart();
+
+quickOrderConsultPopup();
