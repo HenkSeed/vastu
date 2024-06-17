@@ -2279,7 +2279,7 @@ ul {
   top: calc(50% + 30px);
 }
 .consultations__chapter-container.no-top .consultations__chapter-info {
-  top: calc(50% - 20px);
+  top: calc(50% - 30px);
 }
 .consultations__chapter-container.fourth .consultations__chapter-info {
   top: calc(50% - 60px);
@@ -2858,7 +2858,7 @@ ul {
   top: calc(50% + 30px);
 }
 .consultations__chapter-container.no-top .consultations__chapter-info {
-  top: calc(50% - 20px);
+  top: calc(50% - 30px);
 }
 .consultations__chapter-container.fourth .consultations__chapter-info {
   top: calc(50% - 60px);
