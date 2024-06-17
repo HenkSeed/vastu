@@ -2281,7 +2281,7 @@ ul {
 .consultations__chapter-container.no-top .consultations__chapter-info {
   top: calc(50% - 20px);
 }
-.consultations__chapter-container.no-top .consultations__chapter-info {
+.consultations__chapter-container.fourth .consultations__chapter-info {
   top: calc(50% - 60px);
 }
 .consultations__chapter-bg-img {
@@ -2860,7 +2860,7 @@ ul {
 .consultations__chapter-container.no-top .consultations__chapter-info {
   top: calc(50% - 20px);
 }
-.consultations__chapter-container.no-top .consultations__chapter-info {
+.consultations__chapter-container.fourth .consultations__chapter-info {
   top: calc(50% - 60px);
 }
 .consultations__chapter-bg-img {
