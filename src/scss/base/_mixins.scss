@@ -1,3 +1,5 @@
+/* В структуре Block > a > img для создания дополнительного слоя */
+/* над картинкой и изменения его прозрачности при наведении мыши */
 @mixin image-hover {
    /* position: relative; */
 
@@ -19,6 +21,8 @@
    }
 }
 
+/* То же, что и предыдущий, но с параметрами, определяющими непрозрачность */
+/* opb = opacity before; opa = opacity after */
 @mixin image-hover-params ($opb, $opa) {
    /* position: relative; */
 

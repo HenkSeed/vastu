@@ -4,6 +4,33 @@
 
 @@include('html_parts/header.html')
 
+<!-- Фон для быстрого заказа консультации -->
+<div class="consultations__dark dark--invisible">
+   <!-- Форма отправки -->
+   <div class="consultations__form consultations__form--invisible">
+      <div class="consultations__price">10 200 РУБ.</div>
+      <div class="consultations__header">
+         <h2>Консультация</h2>
+         <p>Васту БИЗНЕС</p>
+      </div>
+      <div class="consultations__name consultations__field">
+         <label for="#">Имя</label>
+         <input type="text" placeholder="Введите Ваше имя" class="consultations__input-name">
+      </div>
+      <div class="consultations__email consultations__field">
+         <label for="#">E-mail</label>
+         <input type="email" placeholder="Введите электронную почту" class="consultations__input-email">
+      </div>
+      <div class="consultations__phone consultations__field">
+         <label for="#">Телефон</label>
+         <input type="tel" placeholder="Введите номер телефона" class="consultations__input-phone">
+      </div>
+
+      <button type="submit" class="consultations__button">Заказать консультацию</button>
+
+   </div>
+</div>
+
 <section class="consultations__hero center">
    <div class="container consultations__hero-container">
    </div>
@@ -46,7 +73,7 @@
    </div>
 </section>
 
-<section class="consultations__chapter consultations__business center">
+<section class="consultations__chapter consultations__house center">
    <div class="container consultations__chapter-container no-top second">
       <div class="consultations__chapter-bg-img">
          <a href="#">
@@ -78,7 +105,7 @@
    </div>
 </section>
 
-<section class="consultations__chapter consultations__business center">
+<section class="consultations__chapter consultations__flat center">
    <div class="container consultations__chapter-container no-top third">
       <div class="consultations__chapter-bg-img">
          <a href="#">
@@ -113,7 +140,7 @@
    </div>
 </section>
 
-<section class="consultations__chapter consultations__business center">
+<section class="consultations__chapter consultations__artifacts center">
    <div class="container consultations__chapter-container no-top fourth">
       <div class="consultations__chapter-bg-img">
          <a href="#">
