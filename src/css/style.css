@@ -2328,7 +2328,7 @@ ul {
 .consultations__header p {
   text-transform: uppercase;
 }
-.consultations__button {
+.consultations__button--submit {
   background-color: #8B4513;
   color: #fff;
   font-size: 18px;
@@ -2339,7 +2339,7 @@ ul {
   width: 100%;
   border-radius: 10px;
 }
-.consultations__button:hover {
+.consultations__button--submit:hover {
   background-color: #A66321;
 }
 .consultations__hero {
@@ -2472,7 +2472,7 @@ ul {
   padding-right: 4.5rem;
   border: #fff 1px solid;
   border-radius: 10px;
-  font-size: 1.8rem;
+  font-size: 18px;
   transition: all 0.3s;
 }
 .consultations__chapter-more-btn {
@@ -3063,7 +3063,7 @@ ul {
 .consultations__header p {
   text-transform: uppercase;
 }
-.consultations__button {
+.consultations__button--submit {
   background-color: #8B4513;
   color: #fff;
   font-size: 18px;
@@ -3074,7 +3074,7 @@ ul {
   width: 100%;
   border-radius: 10px;
 }
-.consultations__button:hover {
+.consultations__button--submit:hover {
   background-color: #A66321;
 }
 .consultations__hero {
@@ -3222,7 +3222,7 @@ ul {
   padding-right: 4.5rem;
   border: #fff 1px solid;
   border-radius: 10px;
-  font-size: 1.8rem;
+  font-size: 18px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }

@@ -117,7 +117,7 @@
       }
    }
 
-   &__button {
+   &__button--submit {
       background-color: #8B4513;
       color: #fff;
       font-size: 18px;
@@ -286,7 +286,7 @@
          padding-right: 4.5rem;
          border: #fff 1px solid;
          border-radius: 10px;
-         font-size: 1.8rem;
+         font-size: 18px;
          transition: all 0.3s;
       }
 
