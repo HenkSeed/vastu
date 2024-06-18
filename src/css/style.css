@@ -235,6 +235,8 @@ ul {
 }
 .dark-bg__burger-consult-item:first-child {
   margin-top: 15px;
+  border-bottom: #8B4513 1px solid;
+  padding-bottom: 7px;
 }
 .dark-bg__burger-consult-item a {
   color: #8B4513;
@@ -3564,6 +3566,8 @@ ul {
 }
 .dark-bg__burger-consult-item:first-child {
   margin-top: 15px;
+  border-bottom: #8B4513 1px solid;
+  padding-bottom: 7px;
 }
 .dark-bg__burger-consult-item a {
   color: #8B4513;

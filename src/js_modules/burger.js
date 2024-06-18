@@ -16,6 +16,12 @@ export default function burger() {
 		'.dark-bg__burger-menu-cross'
 	);
 
+	// Находим первый элемент бургер-меню (ВСЕ КОНСУЛЬТАЦИИ)
+	const allConsultationsLink = document.querySelector(
+		'.dark-bg__burger-consult-item:first-child'
+	);
+	console.log('allConsultationsLink: ', allConsultationsLink);
+
 	// Находим массив элементов (якорные ссылки) бургер-меню
 	const burgerMenuItems = darkBurgerMenu.querySelectorAll(
 		'.dark-bg__burger-menu-item a'
@@ -46,6 +52,11 @@ export default function burger() {
 	const closeArtifactsItem = darkBurgerArtifacts.querySelector(
 		'.dark-bg__burger-artifacts>a'
 	);
+
+	// Отлавливаем строку "ВСЕ КОНСУЛЬТАЦИИ" в consult меню
+	allConsultationsLink.addEventListener('click', (event) => {
+		window.location.href = 'consultations.html';
+	});
 
 	// Отлавливаем нажатие на строку закрытия Artifacts меню
 	closeArtifactsItem.addEventListener('click', (event) => {
