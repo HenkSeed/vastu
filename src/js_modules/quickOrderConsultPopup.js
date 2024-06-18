@@ -58,10 +58,13 @@ export default function quickOrderConsultPopup() {
 		const bodyLimit = document.querySelector('body');
 
 		bodyLimit.addEventListener('click', (event) => {
+			console.log('Target Value: ', event.target.classList.value);
 			if (
 				// Отсеиваем клик по кнопке, который привёл к открытию этого окна
 				event.target.classList.value != 'consultations__chapter-quick-order' &&
-				event.target.classList.value != ''
+				event.target.classList.value != '' &&
+				!event.target.classList.value.includes('consultations__input') &&
+				event.target.classList.value != 'consultations__button--submit'
 			) {
 				// Закрываем окно быстрого заказа консультации
 				hideDarkHeader();
