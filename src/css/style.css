@@ -351,7 +351,7 @@ ul {
 }
 .dark--visible {
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 200;
+  z-index: 100;
 }
 .dark--invisible {
   background-color: rgba(0, 0, 0, 0);
@@ -2463,7 +2463,7 @@ ul {
   gap: 10px;
   text-align: center;
 }
-.consultations__chapter-more-btn, .consultations__chapter-all-btn {
+.consultations__chapter-more-btn, .consultations__chapter-quick-order {
   /* padding: 1.2rem 4.5rem; */
   box-sizing: border-box;
   padding-top: 12px;
@@ -2483,12 +2483,12 @@ ul {
   background-color: #F1C9A5;
   border-color: #F1C9A5;
 }
-.consultations__chapter-all-btn {
+.consultations__chapter-quick-order {
   background-color: transparent;
   color: #fff;
   border: #fff solid 1px;
 }
-.consultations__chapter-all-btn:hover {
+.consultations__chapter-quick-order:hover {
   background-color: #F1C9A5;
   border-color: #F1C9A5;
   color: #8B4513;
@@ -2639,7 +2639,7 @@ ul {
     align-self: center;
     /* flex: auto; */
   }
-  .consultations__chapter-more-btn, .consultations__chapter-all-btn {
+  .consultations__chapter-more-btn, .consultations__chapter-quick-order {
     /* padding: 1.2rem 4.5rem; */
     width: 100%;
   }
@@ -3212,7 +3212,7 @@ ul {
   gap: 10px;
   text-align: center;
 }
-.consultations__chapter-more-btn, .consultations__chapter-all-btn {
+.consultations__chapter-more-btn, .consultations__chapter-quick-order {
   /* padding: 1.2rem 4.5rem; */
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -3234,12 +3234,12 @@ ul {
   background-color: #F1C9A5;
   border-color: #F1C9A5;
 }
-.consultations__chapter-all-btn {
+.consultations__chapter-quick-order {
   background-color: transparent;
   color: #fff;
   border: #fff solid 1px;
 }
-.consultations__chapter-all-btn:hover {
+.consultations__chapter-quick-order:hover {
   background-color: #F1C9A5;
   border-color: #F1C9A5;
   color: #8B4513;
@@ -3407,7 +3407,7 @@ ul {
     align-self: center;
     /* flex: auto; */
   }
-  .consultations__chapter-more-btn, .consultations__chapter-all-btn {
+  .consultations__chapter-more-btn, .consultations__chapter-quick-order {
     /* padding: 1.2rem 4.5rem; */
     width: 100%;
   }
@@ -3691,7 +3691,7 @@ ul {
 }
 .dark--visible {
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 200;
+  z-index: 100;
 }
 .dark--invisible {
   background-color: rgba(0, 0, 0, 0);

@@ -277,7 +277,7 @@
       }
 
       &-more-btn,
-      &-all-btn {
+      &-quick-order {
          /* padding: 1.2rem 4.5rem; */
          box-sizing: border-box;
          padding-top: 12px;
@@ -300,7 +300,7 @@
          }
       }
 
-      &-all-btn {
+      &-quick-order {
          background-color: transparent;
          color: #fff;
          border: #fff solid 1px;
@@ -506,7 +506,7 @@
          }
 
          &-more-btn,
-         &-all-btn {
+         &-quick-order {
             /* padding: 1.2rem 4.5rem; */
             width: 100%;
          }
