@@ -1,7 +1,7 @@
 export default function quickOrderConsultPopup() {
 	// Находим все кнопки запуска меню быстрого заказа
-	const consultationsChapterAllBtns = document.querySelectorAll(
-		'.consultations__chapter-all-btn'
+	const consultationsquickOrderBtns = document.querySelectorAll(
+		'.consultations__chapter-quick-order'
 	);
 	// Находим тёмный фон
 	const consultationsDark = document.querySelector('.consultations__dark');
@@ -10,17 +10,16 @@ export default function quickOrderConsultPopup() {
 	const consultationsForm = document.querySelector('.consultations__form');
 
 	// Слушаем все кнопки "Быстрый заказ"
-	consultationsChapterAllBtns.forEach((consultation) => {
+	consultationsquickOrderBtns.forEach((consultation) => {
 		consultation.addEventListener('click', (event) => {
+			console.log('event: ', event);
 			quickOrder();
 		});
 	});
 
 	// Отслеживаем нажатие тёмного фона (для закрытия меню корзины)
 	consultationsDark.addEventListener('click', (event) => {
-		// hideCart();
 		chequeToCloseForm();
-		hideDarkHeader();
 	});
 
 	// Функция быстрого заказа
@@ -59,19 +58,19 @@ export default function quickOrderConsultPopup() {
 		const bodyLimit = document.querySelector('body');
 
 		bodyLimit.addEventListener('click', (event) => {
-			// if (
-			// Отсеиваем клик по иконке корзины, который привёл к открытию этого окна
-			// 	event.target.classList.value != 'header__cart' &&
-			// 	event.target.classList.value != ''
-			// ) {
-			// Закрываем окно корзины
-			// hideCart();
+			if (
+				// Отсеиваем клик по кнопке, который привёл к открытию этого окна
+				event.target.classList.value != 'consultations__chapter-quick-order' &&
+				event.target.classList.value != ''
+			) {
+				// Закрываем окно быстрого заказа консультации
+				hideDarkHeader();
+			}
 		});
 
-		// Перехватываем всплытие, если кликнули в пределах окна корзины
+		// Перехватываем всплытие, если кликнули в пределах окна заказа консультации
 		consultationsForm.addEventListener('click', (event) => {
 			event.stopPropagation();
-			console.log('Clicked');
 		});
 	}
 }
