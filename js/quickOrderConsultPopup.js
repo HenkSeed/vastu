@@ -12,7 +12,8 @@ export default function quickOrderConsultPopup() {
 	// Слушаем все кнопки "Быстрый заказ"
 	consultationsquickOrderBtns.forEach((consultation) => {
 		consultation.addEventListener('click', (event) => {
-			console.log('event: ', event);
+			console.log('event: ', event.target.dataset.order);
+			changeConsultCardName(event);
 			quickOrder();
 		});
 	});
@@ -21,6 +22,25 @@ export default function quickOrderConsultPopup() {
 	consultationsDark.addEventListener('click', (event) => {
 		chequeToCloseForm();
 	});
+
+	// Изменить название карточки
+	function changeConsultCardName(event) {
+		// Находим заголовок карточки
+		const consultationsHeaderP = document.querySelector(
+			'.consultations__form p'
+		);
+
+		// Меняем заголовок карточки в соответствии с дата-атрибутом нажатой кнопки
+		if (event.target.dataset.order == 'business') {
+			consultationsHeaderP.textContent = 'Васту БИЗНЕС';
+		} else if (event.target.dataset.order == 'house') {
+			consultationsHeaderP.textContent = 'Васту ДОМ';
+		} else if (event.target.dataset.order == 'flat') {
+			consultationsHeaderP.textContent = 'Васту КВАРТИРА';
+		} else if (event.target.dataset.order == 'artifacts') {
+			consultationsHeaderP.textContent = 'Васту АРТЕФАКТЫ';
+		}
+	}
 
 	// Функция быстрого заказа
 	function quickOrder() {
