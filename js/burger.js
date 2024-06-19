@@ -164,6 +164,22 @@ export default function burger() {
 	function showDark() {
 		darkBg.classList.add('dark-bg--shown');
 		document.body.style.overflow = 'hidden';
+		// Отслеживаем нажатие на тёмное окно:
+		darkBg.addEventListener('click', (event) => {
+			checkToCloseDarkBg();
+		});
+	}
+
+	// Проверяем нажатие на затемнённое окно
+	function checkToCloseDarkBg() {
+		const bodyLimit = document.querySelector('body');
+
+		bodyLimit.addEventListener('click', (event) => {
+			if (event.target.classList.contains('dark-bg__container')) {
+				// Закрываем окно быстрого заказа консультации
+				hideDark();
+			}
+		});
 	}
 
 	// Убираем затемнённое окно
