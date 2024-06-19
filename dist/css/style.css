@@ -1954,6 +1954,9 @@ ul {
   color: #2A2A2A;
   line-height: 135%;
 }
+.news__main__text:hover {
+  color: #8B4513;
+}
 .news__aside {
   max-width: 48%;
 }
@@ -1981,6 +1984,9 @@ ul {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 135%;
+}
+.news__aside__text:hover {
+  color: #8B4513;
 }
 .news__aside__img {
   position: relative;
@@ -5353,6 +5359,9 @@ ul {
   color: #2A2A2A;
   line-height: 135%;
 }
+.news__main__text:hover {
+  color: #8B4513;
+}
 .news__aside {
   max-width: 48%;
 }
@@ -5386,6 +5395,9 @@ ul {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 135%;
+}
+.news__aside__text:hover {
+  color: #8B4513;
 }
 .news__aside__img {
   position: relative;

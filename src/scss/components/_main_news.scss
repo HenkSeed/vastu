@@ -63,6 +63,10 @@
          font-weight: 500;
          color: #2A2A2A;
          line-height: 135%;
+
+         &:hover {
+            color: #8B4513;
+         }
       }
    }
 
@@ -97,6 +101,10 @@
          font-size: 1.8rem;
          font-weight: 500;
          line-height: 135%;
+
+         &:hover {
+            color: #8B4513;
+         }
       }
 
       &__img {
