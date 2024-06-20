@@ -90,6 +90,7 @@ ul {
 
 /* В структуре Block > a > img для создания дополнительного слоя */
 /* над картинкой и изменения его прозрачности при наведении мыши */
+/* Добавлено исключение залипания hover на мобильных */
 /* То же, что и предыдущий, но с параметрами, определяющими непрозрачность */
 /* opb = opacity before; opa = opacity after */
 /* Comments */
@@ -1088,17 +1089,39 @@ ul {
 .consult__opened__more-btn {
   background-color: #8B4513;
   color: #fff;
+  /*          &:hover {
+     background-color: #A66321;
+  } */
 }
-.consult__opened__more-btn:hover {
-  background-color: #A66321;
+@media (hover: hover) {
+  .consult__opened__more-btn:hover {
+    background-color: #A66321;
+  }
+}
+@media (hover: none) {
+  .consult__opened__more-btn:active {
+    background-color: #A66321;
+  }
 }
 .consult__opened__all-btn {
   color: #8B4513;
   background-color: #F2E8DE;
+  /*          &:hover {
+     background-color: #A66321;
+     color: #fff;
+  } */
 }
-.consult__opened__all-btn:hover {
-  background-color: #A66321;
-  color: #fff;
+@media (hover: hover) {
+  .consult__opened__all-btn:hover {
+    background-color: #A66321;
+    color: #fff;
+  }
+}
+@media (hover: none) {
+  .consult__opened__all-btn:active {
+    background-color: #A66321;
+    color: #fff;
+  }
 }
 .consult__closed {
   display: flex;
@@ -1112,6 +1135,7 @@ ul {
   max-width: 370px;
   border-radius: 10px;
   overflow: hidden;
+  /* Добавлено исключение залипания hover */
   /* position: relative; */
 }
 .consult__closed__img img {
@@ -1131,6 +1155,16 @@ ul {
 }
 .consult__closed__img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .consult__closed__img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .consult__closed__img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 .consult__closed__badge {
   position: absolute;
@@ -1328,6 +1362,16 @@ ul {
 .diploma__left-img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .diploma__left-img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .diploma__left-img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .diploma__main-img {
   position: relative;
   /* position: relative; */
@@ -1347,6 +1391,16 @@ ul {
 .diploma__main-img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .diploma__main-img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .diploma__main-img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .diploma__right-img {
   position: relative;
   /* position: relative; */
@@ -1365,6 +1419,16 @@ ul {
 }
 .diploma__right-img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .diploma__right-img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .diploma__right-img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 
 @media (max-width: 1920px) {
@@ -1500,6 +1564,16 @@ ul {
 .about-us__main__frame a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .about-us__main__frame a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .about-us__main__frame a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .about-us__main__btn {
   position: absolute;
   width: 11rem;
@@ -1547,6 +1621,16 @@ ul {
 }
 .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .about-us__aside__first a:active:after, .about-us__aside__second a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 .about-us__aside__first, .about-us__aside__second, .about-us__aside__more {
   border-radius: 10px;
@@ -1945,6 +2029,16 @@ ul {
 .news__main__img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .news__main__img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .news__main__img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .news__main__img img {
   width: 100%;
 }
@@ -2017,6 +2111,16 @@ ul {
 }
 .news__aside__img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .news__aside__img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .news__aside__img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2346,9 +2450,19 @@ ul {
   text-align: center;
   width: 100%;
   border-radius: 10px;
+  /*       &:hover {
+     background-color: #A66321;
+  } */
 }
-.consultations__button--submit:hover {
-  background-color: #A66321;
+@media (hover: hover) {
+  .consultations__button--submit:hover {
+    background-color: #A66321;
+  }
+}
+@media (hover: none) {
+  .consultations__button--submit:active {
+    background-color: #A66321;
+  }
 }
 .consultations__hero {
   margin: 0 auto;
@@ -2486,20 +2600,46 @@ ul {
 .consultations__chapter-more-btn {
   background-color: #fff;
   color: #8B4513;
+  /*          &:hover {
+     background-color: #F1C9A5;
+     border-color: #F1C9A5;
+  } */
 }
-.consultations__chapter-more-btn:hover {
-  background-color: #F1C9A5;
-  border-color: #F1C9A5;
+@media (hover: hover) {
+  .consultations__chapter-more-btn:hover {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+  }
+}
+@media (hover: none) {
+  .consultations__chapter-more-btn:active {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+  }
 }
 .consultations__chapter-quick-order {
   background-color: transparent;
   color: #fff;
   border: #fff solid 1px;
+  /*          &:hover {
+     background-color: #F1C9A5;
+     border-color: #F1C9A5;
+     color: #8B4513;
+  } */
 }
-.consultations__chapter-quick-order:hover {
-  background-color: #F1C9A5;
-  border-color: #F1C9A5;
-  color: #8B4513;
+@media (hover: hover) {
+  .consultations__chapter-quick-order:hover {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+    color: #8B4513;
+  }
+}
+@media (hover: none) {
+  .consultations__chapter-quick-order:active {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+    color: #8B4513;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2740,6 +2880,7 @@ ul {
 }
 /* В структуре Block > a > img для создания дополнительного слоя */
 /* над картинкой и изменения его прозрачности при наведении мыши */
+/* Добавлено исключение залипания hover на мобильных */
 /* То же, что и предыдущий, но с параметрами, определяющими непрозрачность */
 /* opb = opacity before; opa = opacity after */
 .center {
@@ -3081,9 +3222,19 @@ ul {
   text-align: center;
   width: 100%;
   border-radius: 10px;
+  /*       &:hover {
+     background-color: #A66321;
+  } */
 }
-.consultations__button--submit:hover {
-  background-color: #A66321;
+@media (hover: hover) {
+  .consultations__button--submit:hover {
+    background-color: #A66321;
+  }
+}
+@media (hover: none) {
+  .consultations__button--submit:active {
+    background-color: #A66321;
+  }
 }
 .consultations__hero {
   margin: 0 auto;
@@ -3237,20 +3388,46 @@ ul {
 .consultations__chapter-more-btn {
   background-color: #fff;
   color: #8B4513;
+  /*          &:hover {
+     background-color: #F1C9A5;
+     border-color: #F1C9A5;
+  } */
 }
-.consultations__chapter-more-btn:hover {
-  background-color: #F1C9A5;
-  border-color: #F1C9A5;
+@media (hover: hover) {
+  .consultations__chapter-more-btn:hover {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+  }
+}
+@media (hover: none) {
+  .consultations__chapter-more-btn:active {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+  }
 }
 .consultations__chapter-quick-order {
   background-color: transparent;
   color: #fff;
   border: #fff solid 1px;
+  /*          &:hover {
+     background-color: #F1C9A5;
+     border-color: #F1C9A5;
+     color: #8B4513;
+  } */
 }
-.consultations__chapter-quick-order:hover {
-  background-color: #F1C9A5;
-  border-color: #F1C9A5;
-  color: #8B4513;
+@media (hover: hover) {
+  .consultations__chapter-quick-order:hover {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+    color: #8B4513;
+  }
+}
+@media (hover: none) {
+  .consultations__chapter-quick-order:active {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+    color: #8B4513;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -4304,6 +4481,16 @@ ul {
 .about-us__main__frame a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .about-us__main__frame a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .about-us__main__frame a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .about-us__main__btn {
   position: absolute;
   width: 11rem;
@@ -4366,6 +4553,16 @@ ul {
 }
 .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .about-us__aside__first a:active:after, .about-us__aside__second a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 .about-us__aside__first, .about-us__aside__second, .about-us__aside__more {
   border-radius: 10px;
@@ -4792,17 +4989,39 @@ ul {
 .consult__opened__more-btn {
   background-color: #8B4513;
   color: #fff;
+  /*          &:hover {
+     background-color: #A66321;
+  } */
 }
-.consult__opened__more-btn:hover {
-  background-color: #A66321;
+@media (hover: hover) {
+  .consult__opened__more-btn:hover {
+    background-color: #A66321;
+  }
+}
+@media (hover: none) {
+  .consult__opened__more-btn:active {
+    background-color: #A66321;
+  }
 }
 .consult__opened__all-btn {
   color: #8B4513;
   background-color: #F2E8DE;
+  /*          &:hover {
+     background-color: #A66321;
+     color: #fff;
+  } */
 }
-.consult__opened__all-btn:hover {
-  background-color: #A66321;
-  color: #fff;
+@media (hover: hover) {
+  .consult__opened__all-btn:hover {
+    background-color: #A66321;
+    color: #fff;
+  }
+}
+@media (hover: none) {
+  .consult__opened__all-btn:active {
+    background-color: #A66321;
+    color: #fff;
+  }
 }
 .consult__closed {
   display: -webkit-box;
@@ -4821,6 +5040,7 @@ ul {
   max-width: 370px;
   border-radius: 10px;
   overflow: hidden;
+  /* Добавлено исключение залипания hover */
   /* position: relative; */
 }
 .consult__closed__img img {
@@ -4841,6 +5061,16 @@ ul {
 }
 .consult__closed__img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .consult__closed__img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .consult__closed__img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 .consult__closed__badge {
   position: absolute;
@@ -5088,6 +5318,16 @@ ul {
 .diploma__left-img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .diploma__left-img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .diploma__left-img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .diploma__main-img {
   position: relative;
   /* position: relative; */
@@ -5108,6 +5348,16 @@ ul {
 .diploma__main-img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .diploma__main-img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .diploma__main-img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .diploma__right-img {
   position: relative;
   /* position: relative; */
@@ -5127,6 +5377,16 @@ ul {
 }
 .diploma__right-img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .diploma__right-img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .diploma__right-img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 
 @media (max-width: 1920px) {
@@ -5350,6 +5610,16 @@ ul {
 .news__main__img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
 }
+@media (hover: hover) {
+  .news__main__img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .news__main__img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
 .news__main__img img {
   width: 100%;
 }
@@ -5430,6 +5700,16 @@ ul {
 }
 .news__aside__img a:hover:after {
   background-color: rgba(138, 87, 44, 0.1);
+}
+@media (hover: hover) {
+  .news__aside__img a:hover:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
+}
+@media (hover: none) {
+  .news__aside__img a:active:after {
+    background-color: rgba(138, 87, 44, 0.1);
+  }
 }
 
 @media (max-width: 1200px) {
