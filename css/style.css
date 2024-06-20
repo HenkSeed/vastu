@@ -88,6 +88,21 @@ ul {
   padding-right: 15px;
 }
 
+/* Ислкючение hover-бага на тач-устройствах (button) */
+/* Ислкючение hover-бага на тач-устройствах (a:after) */
+/* @mixin media-hover-after() {
+   @media (hover: hover) {
+      & a:hover:after {
+         @content;
+      }
+   }
+
+   @media (hover: none) {
+      & a:active:after {
+         @content;
+      }
+   }
+} */
 /* В структуре Block > a > img для создания дополнительного слоя */
 /* над картинкой и изменения его прозрачности при наведении мыши */
 /* Добавлено исключение залипания hover на мобильных */
@@ -1140,6 +1155,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .consult__closed__img img {
   width: 100%;
@@ -1349,6 +1365,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .diploma__left-img a:after {
   content: "";
@@ -1378,6 +1395,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .diploma__main-img a:after {
   content: "";
@@ -1407,6 +1425,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .diploma__right-img a:after {
   content: "";
@@ -1551,6 +1570,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .about-us__main__frame a:after {
   content: "";
@@ -1606,6 +1626,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .about-us__aside__first img, .about-us__aside__second img {
   width: 100%;
@@ -1639,9 +1660,19 @@ ul {
 .about-us__aside__more {
   background-color: #8B4513;
   transition: background-color 0.3s;
+  /*          &:hover {
+     background-color: #A66321;
+  } */
 }
-.about-us__aside__more:hover {
-  background-color: #A66321;
+@media (hover: hover) {
+  .about-us__aside__more:hover {
+    background-color: #A66321;
+  }
+}
+@media (hover: none) {
+  .about-us__aside__more:active {
+    background-color: #A66321;
+  }
 }
 .about-us__aside__more a {
   display: flex;
@@ -2016,6 +2047,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .news__main__img a:after {
   content: "";
@@ -2047,9 +2079,19 @@ ul {
   font-weight: 500;
   color: #2A2A2A;
   line-height: 135%;
+  /*          &:hover {
+     color: #8B4513;
+  } */
 }
-.news__main__text:hover {
-  color: #8B4513;
+@media (hover: hover) {
+  .news__main__text:hover {
+    color: #8B4513;
+  }
+}
+@media (hover: none) {
+  .news__main__text:active {
+    color: #8B4513;
+  }
 }
 .news__aside {
   max-width: 48%;
@@ -2078,9 +2120,19 @@ ul {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 135%;
+  /*          &:hover {
+     color: #8B4513;
+  } */
 }
-.news__aside__text:hover {
-  color: #8B4513;
+@media (hover: hover) {
+  .news__aside__text:hover {
+    color: #8B4513;
+  }
+}
+@media (hover: none) {
+  .news__aside__text:active {
+    color: #8B4513;
+  }
 }
 .news__aside__img {
   position: relative;
@@ -2091,6 +2143,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .news__aside__img a {
   display: block;
@@ -2878,6 +2931,21 @@ ul {
     font-size: calc(5px + 5 * (100vw - 360px) / 840);
   }
 }
+/* Ислкючение hover-бага на тач-устройствах (button) */
+/* Ислкючение hover-бага на тач-устройствах (a:after) */
+/* @mixin media-hover-after() {
+   @media (hover: hover) {
+      & a:hover:after {
+         @content;
+      }
+   }
+
+   @media (hover: none) {
+      & a:active:after {
+         @content;
+      }
+   }
+} */
 /* В структуре Block > a > img для создания дополнительного слоя */
 /* над картинкой и изменения его прозрачности при наведении мыши */
 /* Добавлено исключение залипания hover на мобильных */
@@ -4467,6 +4535,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .about-us__main__frame a:after {
   content: "";
@@ -4537,6 +4606,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .about-us__aside__first img, .about-us__aside__second img {
   width: 100%;
@@ -4572,9 +4642,19 @@ ul {
   background-color: #8B4513;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+  /*          &:hover {
+     background-color: #A66321;
+  } */
 }
-.about-us__aside__more:hover {
-  background-color: #A66321;
+@media (hover: hover) {
+  .about-us__aside__more:hover {
+    background-color: #A66321;
+  }
+}
+@media (hover: none) {
+  .about-us__aside__more:active {
+    background-color: #A66321;
+  }
 }
 .about-us__aside__more a {
   display: -webkit-box;
@@ -5045,6 +5125,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .consult__closed__img img {
   width: 100%;
@@ -5304,6 +5385,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .diploma__left-img a:after {
   content: "";
@@ -5334,6 +5416,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .diploma__main-img a:after {
   content: "";
@@ -5364,6 +5447,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .diploma__right-img a:after {
   content: "";
@@ -5596,6 +5680,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .news__main__img a:after {
   content: "";
@@ -5628,9 +5713,19 @@ ul {
   font-weight: 500;
   color: #2A2A2A;
   line-height: 135%;
+  /*          &:hover {
+     color: #8B4513;
+  } */
 }
-.news__main__text:hover {
-  color: #8B4513;
+@media (hover: hover) {
+  .news__main__text:hover {
+    color: #8B4513;
+  }
+}
+@media (hover: none) {
+  .news__main__text:active {
+    color: #8B4513;
+  }
 }
 .news__aside {
   max-width: 48%;
@@ -5665,9 +5760,19 @@ ul {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 135%;
+  /*          &:hover {
+     color: #8B4513;
+  } */
 }
-.news__aside__text:hover {
-  color: #8B4513;
+@media (hover: hover) {
+  .news__aside__text:hover {
+    color: #8B4513;
+  }
+}
+@media (hover: none) {
+  .news__aside__text:active {
+    color: #8B4513;
+  }
 }
 .news__aside__img {
   position: relative;
@@ -5678,6 +5783,7 @@ ul {
   /*    & a:hover:after {
      background-color: rgba(138, 87, 44, 0.1);
   } */
+  /* Исправляем hover-баг для мобильных */
 }
 .news__aside__img a {
   display: block;
