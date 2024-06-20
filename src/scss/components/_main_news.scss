@@ -64,9 +64,15 @@
          color: #2A2A2A;
          line-height: 135%;
 
-         &:hover {
+         /*          &:hover {
+            color: #8B4513;
+         } */
+
+         @include media-hover() {
             color: #8B4513;
          }
+
+         ;
       }
    }
 
@@ -102,7 +108,11 @@
          font-weight: 500;
          line-height: 135%;
 
-         &:hover {
+         /*          &:hover {
+            color: #8B4513;
+         } */
+
+         @include media-hover() {
             color: #8B4513;
          }
       }

@@ -1,4 +1,4 @@
-// Ислкючение hover-бага на тач-устройствах (button)
+/* Ислкючение hover-бага на тач-устройствах (button) */
 @mixin media-hover() {
    @media (hover: hover) {
       &:hover {
@@ -13,8 +13,8 @@
    }
 }
 
-// Ислкючение hover-бага на тач-устройствах (a:after)
-@mixin media-hover-after() {
+/* Ислкючение hover-бага на тач-устройствах (a:after) */
+/* @mixin media-hover-after() {
    @media (hover: hover) {
       & a:hover:after {
          @content;
@@ -26,7 +26,7 @@
          @content;
       }
    }
-}
+} */
 
 /* В структуре Block > a > img для создания дополнительного слоя */
 /* над картинкой и изменения его прозрачности при наведении мыши */
@@ -51,7 +51,7 @@
       background-color: rgba(138, 87, 44, 0.1);
    } */
 
-   // Исправляем hover-баг для мобильных
+   /* Исправляем hover-баг для мобильных */
    @media (hover: hover) {
       & a:hover:after {
          background-color: rgba(138, 87, 44, 0.1);

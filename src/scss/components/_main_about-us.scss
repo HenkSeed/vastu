@@ -121,9 +121,15 @@
          background-color: #8B4513;
          transition: background-color 0.3s;
 
-         &:hover {
+         /*          &:hover {
+            background-color: #A66321;
+         } */
+
+         @include media-hover() {
             background-color: #A66321;
          }
+
+         ;
 
          & a {
             display: flex;
