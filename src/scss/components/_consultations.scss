@@ -128,9 +128,14 @@
       width: 100%;
       border-radius: 10px;
 
-      &:hover {
+      /*       &:hover {
+         background-color: #A66321;
+      } */
+
+      @include media-hover() {
          background-color: #A66321;
       }
+
    }
 
    &__hero {
@@ -294,7 +299,12 @@
          background-color: #fff;
          color: #8B4513;
 
-         &:hover {
+         /*          &:hover {
+            background-color: #F1C9A5;
+            border-color: #F1C9A5;
+         } */
+
+         @include media-hover() {
             background-color: #F1C9A5;
             border-color: #F1C9A5;
          }
@@ -305,12 +315,18 @@
          color: #fff;
          border: #fff solid 1px;
 
-         &:hover {
+         /*          &:hover {
             background-color: #F1C9A5;
             border-color: #F1C9A5;
             color: #8B4513;
+         } */
 
+         @include media-hover() {
+            background-color: #F1C9A5;
+            border-color: #F1C9A5;
+            color: #8B4513;
          }
+
       }
    }
 }

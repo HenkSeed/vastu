@@ -112,7 +112,11 @@
          background-color: #8B4513;
          color: #fff;
 
-         &:hover {
+         /*          &:hover {
+            background-color: #A66321;
+         } */
+
+         @include media-hover() {
             background-color: #A66321;
          }
       }
@@ -121,10 +125,14 @@
          color: #8B4513;
          background-color: #F2E8DE;
 
-         &:hover {
+         /*          &:hover {
             background-color: #A66321;
             color: #fff;
+         } */
 
+         @include media-hover() {
+            background-color: #A66321;
+            color: #fff;
          }
       }
    }
@@ -146,6 +154,7 @@
             width: 100%;
          }
 
+         /* Добавлено исключение залипания hover */
          @include image-hover;
       }
 

@@ -1,5 +1,36 @@
+// Ислкючение hover-бага на тач-устройствах (button)
+@mixin media-hover() {
+   @media (hover: hover) {
+      &:hover {
+         @content;
+      }
+   }
+
+   @media (hover: none) {
+      &:active {
+         @content;
+      }
+   }
+}
+
+// Ислкючение hover-бага на тач-устройствах (a:after)
+@mixin media-hover-after() {
+   @media (hover: hover) {
+      & a:hover:after {
+         @content;
+      }
+   }
+
+   @media (hover: none) {
+      & a:active:after {
+         @content;
+      }
+   }
+}
+
 /* В структуре Block > a > img для создания дополнительного слоя */
 /* над картинкой и изменения его прозрачности при наведении мыши */
+/* Добавлено исключение залипания hover на мобильных */
 @mixin image-hover {
    /* position: relative; */
 
@@ -18,6 +49,18 @@
 
    & a:hover:after {
       background-color: rgba(138, 87, 44, 0.1);
+   }
+
+   @media (hover: hover) {
+      & a:hover:after {
+         background-color: rgba(138, 87, 44, 0.1);
+      }
+   }
+
+   @media (hover: none) {
+      & a:active:after {
+         background-color: rgba(138, 87, 44, 0.1);
+      }
    }
 }
 
