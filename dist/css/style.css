@@ -1137,6 +1137,9 @@ ul {
   overflow: hidden;
   /* Добавлено исключение залипания hover */
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .consult__closed__img img {
   width: 100%;
@@ -1152,9 +1155,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.consult__closed__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .consult__closed__img a:hover:after {
@@ -1346,6 +1346,9 @@ ul {
 .diploma__left-img {
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .diploma__left-img a:after {
   content: "";
@@ -1358,9 +1361,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.diploma__left-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .diploma__left-img a:hover:after {
@@ -1375,6 +1375,9 @@ ul {
 .diploma__main-img {
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .diploma__main-img a:after {
   content: "";
@@ -1387,9 +1390,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.diploma__main-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .diploma__main-img a:hover:after {
@@ -1404,6 +1404,9 @@ ul {
 .diploma__right-img {
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .diploma__right-img a:after {
   content: "";
@@ -1416,9 +1419,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.diploma__right-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .diploma__right-img a:hover:after {
@@ -1548,6 +1548,9 @@ ul {
   /* top: 50%; */
   /* transform: translateY(-50%); */
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .about-us__main__frame a:after {
   content: "";
@@ -1560,9 +1563,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.about-us__main__frame a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .about-us__main__frame a:hover:after {
@@ -1603,6 +1603,9 @@ ul {
   width: 100%;
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .about-us__aside__first img, .about-us__aside__second img {
   width: 100%;
@@ -1618,9 +1621,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
@@ -2013,6 +2013,9 @@ ul {
   border-radius: 10px;
   overflow: hidden;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .news__main__img a:after {
   content: "";
@@ -2025,9 +2028,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.news__main__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .news__main__img a:hover:after {
@@ -2088,6 +2088,9 @@ ul {
   border-radius: 10px;
   overflow: hidden;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .news__aside__img a {
   display: block;
@@ -2108,9 +2111,6 @@ ul {
   left: 0;
   z-index: 1;
   transition: all 350ms;
-}
-.news__aside__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .news__aside__img a:hover:after {
@@ -4464,6 +4464,9 @@ ul {
   /* top: 50%; */
   /* transform: translateY(-50%); */
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .about-us__main__frame a:after {
   content: "";
@@ -4477,9 +4480,6 @@ ul {
   z-index: 1;
   -webkit-transition: all 350ms;
   transition: all 350ms;
-}
-.about-us__main__frame a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .about-us__main__frame a:hover:after {
@@ -4534,6 +4534,9 @@ ul {
   width: 100%;
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .about-us__aside__first img, .about-us__aside__second img {
   width: 100%;
@@ -4550,9 +4553,6 @@ ul {
   z-index: 1;
   -webkit-transition: all 350ms;
   transition: all 350ms;
-}
-.about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .about-us__aside__first a:hover:after, .about-us__aside__second a:hover:after {
@@ -5042,6 +5042,9 @@ ul {
   overflow: hidden;
   /* Добавлено исключение залипания hover */
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .consult__closed__img img {
   width: 100%;
@@ -5058,9 +5061,6 @@ ul {
   z-index: 1;
   -webkit-transition: all 350ms;
   transition: all 350ms;
-}
-.consult__closed__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .consult__closed__img a:hover:after {
@@ -5301,6 +5301,9 @@ ul {
 .diploma__left-img {
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .diploma__left-img a:after {
   content: "";
@@ -5315,9 +5318,6 @@ ul {
   -webkit-transition: all 350ms;
   transition: all 350ms;
 }
-.diploma__left-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
-}
 @media (hover: hover) {
   .diploma__left-img a:hover:after {
     background-color: rgba(138, 87, 44, 0.1);
@@ -5331,6 +5331,9 @@ ul {
 .diploma__main-img {
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .diploma__main-img a:after {
   content: "";
@@ -5345,9 +5348,6 @@ ul {
   -webkit-transition: all 350ms;
   transition: all 350ms;
 }
-.diploma__main-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
-}
 @media (hover: hover) {
   .diploma__main-img a:hover:after {
     background-color: rgba(138, 87, 44, 0.1);
@@ -5361,6 +5361,9 @@ ul {
 .diploma__right-img {
   position: relative;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .diploma__right-img a:after {
   content: "";
@@ -5374,9 +5377,6 @@ ul {
   z-index: 1;
   -webkit-transition: all 350ms;
   transition: all 350ms;
-}
-.diploma__right-img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .diploma__right-img a:hover:after {
@@ -5593,6 +5593,9 @@ ul {
   border-radius: 10px;
   overflow: hidden;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .news__main__img a:after {
   content: "";
@@ -5606,9 +5609,6 @@ ul {
   z-index: 1;
   -webkit-transition: all 350ms;
   transition: all 350ms;
-}
-.news__main__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .news__main__img a:hover:after {
@@ -5675,6 +5675,9 @@ ul {
   border-radius: 10px;
   overflow: hidden;
   /* position: relative; */
+  /*    & a:hover:after {
+     background-color: rgba(138, 87, 44, 0.1);
+  } */
 }
 .news__aside__img a {
   display: block;
@@ -5697,9 +5700,6 @@ ul {
   z-index: 1;
   -webkit-transition: all 350ms;
   transition: all 350ms;
-}
-.news__aside__img a:hover:after {
-  background-color: rgba(138, 87, 44, 0.1);
 }
 @media (hover: hover) {
   .news__aside__img a:hover:after {
