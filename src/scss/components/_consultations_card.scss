@@ -1,0 +1,398 @@
+.consultations-card {
+   .hero {
+      background-image: url('../images/consultations_card/hero/bg_img.png');
+      height: 49.2rem;
+
+      &__container {
+         position: relative;
+      }
+
+      &__title {
+         font-size: 9.6rem;
+         font-weight: 400;
+         color: #fff;
+         /* margin-left: 25.5rem; */
+         text-transform: uppercase;
+         position: absolute;
+         left: 25.5rem;
+         top: 18.3rem;
+      }
+
+      &__text {
+         font-size: 4.8rem;
+         color: rgba(241, 201, 165, .48);
+         font-weight: 400;
+         text-transform: uppercase;
+         position: absolute;
+         top: 17.8rem;
+         left: 0;
+      }
+   }
+
+   .crowd {
+      background-color: #F2E8DE;
+      background-image: url('../images/consultations_card/crowd/bg_img.svg');
+      background-position: center 12rem;
+      background-repeat: no-repeat;
+      background-size: auto;
+
+      &__container {
+         padding-top: 15.4rem;
+         padding-bottom: 12rem;
+         display: flex;
+         justify-content: space-between;
+         height: calc(46.8rem + 15.4rem + 12rem);
+      }
+
+      &__info {
+         width: 39%;
+         margin-right: 8.1%;
+         margin-top: 3.4rem;
+      }
+
+      &__header {
+         font-size: 40px;
+         color: #8B4513;
+         margin-bottom: 2rem;
+      }
+
+      &__text {
+         font-size: 18px;
+         color: #8B4513;
+         line-height: 137%;
+      }
+
+      &__img {
+
+         &--1 {
+            width: 19.7%;
+            align-self: self-end;
+
+            & img {
+               width: 100%;
+               border-radius: 10px;
+            }
+         }
+
+         &--2 {
+            width: 25.6%;
+
+            & img {
+               width: 100%;
+               border-radius: 10px;
+            }
+         }
+      }
+   }
+
+   .green {
+      /*       padding-left: calc(50% - 58.5rem);
+         padding-right: calc(50% - 58.5rem); */
+      background-color: #F2E8DE;
+      padding-bottom: 12rem;
+
+      &__container {
+         position: relative;
+         flex-direction: column;
+         justify-content: space-between;
+         background-image: url('../images/consultations_card/green/bg_img.png');
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: cover;
+         /* background-size: 97.4%; */
+         border-radius: 10px;
+         height: calc(60rem);
+         padding-left: 7.5rem;
+         padding-top: 6.4rem;
+         padding-bottom: 7.7rem;
+
+         &::after {
+            content: "";
+            display: block;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            transition: all 350ms;
+            pointer-events: none;
+            border-radius: 10px;
+         }
+      }
+
+      &__slogan {
+         /* Поднимаем над полутенью */
+         position: relative;
+         z-index: 5;
+
+         width: 72.2%;
+         font-size: 32px;
+         line-height: 180%;
+         color: #fff;
+      }
+
+      &__btn {
+         /* Поднимаем над полутенью */
+         position: relative;
+         z-index: 5;
+
+         background-color: transparent;
+         color: #fff;
+         border: #fff solid 1px;
+
+         box-sizing: border-box;
+         padding-top: 19px;
+         padding-bottom: 19px;
+         padding-left: 3rem;
+         padding-right: 3rem;
+         max-width: 340px;
+         text-align: center;
+         border: #fff 1px solid;
+         border-radius: 10px;
+         font-size: 24px;
+         transition: all 0.3s
+      }
+   }
+
+   .cups {
+      background-color: #F2E8DE;
+      padding-bottom: 12rem;
+
+      &__container {
+         gap: 30px;
+
+         & p {
+            font-size: 18px;
+            color: #8B4513;
+            line-height: 140%;
+         }
+
+         & p~p {
+            margin-top: 2.6rem;
+         }
+
+      }
+
+      &__left {
+         width: 40.1%;
+      }
+
+      &__left-image {
+         width: 100%;
+         margin-bottom: 34px;
+
+         & img {
+            width: 100%;
+            border-radius: 10px;
+         }
+      }
+
+      &__left-text {
+         text-align: right;
+         margin-left: 8px;
+      }
+
+      &__right {
+         width: 57.2%;
+      }
+
+      &__right-info {}
+
+      &__right-header {
+         font-size: 40px;
+         color: #8B4513;
+         line-height: 140%;
+         margin-bottom: 20px;
+      }
+
+      &__right-text {
+         margin-bottom: 4rem;
+      }
+
+      &__right-images {
+         display: flex;
+         justify-content: space-between;
+
+         &--1 {
+            width: 52.8%;
+            margin-top: 3.8rem;
+
+            & img {
+               width: 100%;
+               border-radius: 10px;
+            }
+         }
+
+         &--2 {
+            width: 41.9%;
+
+            & img {
+               width: 100%;
+               border-radius: 10px;
+            }
+         }
+      }
+   }
+
+   .city-view {
+      background-color: #F2E8DE;
+
+      padding-bottom: 12rem;
+
+      &__container {
+         position: relative;
+         height: 65rem;
+
+         & p {
+            font-size: 18px;
+            color: #8B4513;
+            line-height: 140%;
+         }
+      }
+
+      &__info {
+         background-color: rgba(241, 201, 165, .6);
+         background-image: url('../images/consultations_card/city_view/bg_img.png');
+         background-position: center;
+         /* background-position: center 12rem; */
+         background-repeat: no-repeat;
+         background-size: auto 100%;
+
+         width: 93.1%;
+         position: absolute;
+         top: 0;
+         right: 15px;
+         border-radius: 10px;
+         padding-top: 8rem;
+         padding-right: 6rem;
+         padding-bottom: 21.6rem;
+         /* padding-left: 55rem; */
+         padding-left: 50.4%;
+      }
+
+      &__header {
+         font-size: 40px;
+         color: #8B4513;
+         line-height: 140%;
+         margin-bottom: 20px;
+      }
+
+      &__text {}
+
+      &__img {
+         width: 48.7%;
+         position: absolute;
+         left: 15px;
+         bottom: 0;
+         z-index: 5;
+         border-radius: 10px;
+         overflow: hidden;
+
+         & img {
+            width: 100%;
+            border-radius: 10px;
+         }
+      }
+   }
+
+   .flower {
+      background-color: #F2E8DE;
+      background-image: url('../images/consultations_card/flower/bg_img.svg');
+      background-position: center 1rem;
+      background-repeat: no-repeat;
+      background-size: auto;
+
+      &__container {
+         /* padding-top: 15.4rem; */
+         padding-bottom: 12rem;
+         display: flex;
+         /* justify-content: space-between; */
+
+         height: calc(46.8rem + 12rem);
+         gap: 4rem;
+      }
+
+      &__img {
+
+         &--1 {
+            width: 25.6%;
+            align-self: self-start;
+
+            & img {
+               width: 100%;
+               border-radius: 10px;
+            }
+         }
+
+         &--2 {
+            width: 19.7%;
+            align-self: self-end;
+
+            & img {
+               width: 100%;
+               border-radius: 10px;
+            }
+         }
+      }
+
+      &__info {
+         width: 47%;
+         /* margin-right: 8.1%; */
+         margin-top: 3.4rem;
+         padding-left: 9rem;
+         padding-right: 1rem;
+      }
+
+      &__header {
+         font-size: 40px;
+         color: #8B4513;
+         margin-bottom: 2rem;
+      }
+
+      &__text {
+         font-size: 18px;
+         color: #8B4513;
+         line-height: 137%;
+      }
+   }
+
+   .candle {
+
+      &__container {}
+
+      &__img {}
+
+      &__form {}
+
+      &__price {}
+
+      &__header {}
+
+      &__name {}
+
+      &__field {}
+
+      &__input-name {}
+
+      &__email {}
+
+      &__input-email {}
+
+      &__phone {}
+
+      &__input-phone {}
+
+      &__button {
+
+         &--submit {}
+      }
+   }
+
+
+   .center {}
+
+   .container {}
+
+}
