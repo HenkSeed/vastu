@@ -119,6 +119,7 @@
 
    &__button--submit {
       background-color: #8B4513;
+      border-color: #8B4513;
       color: #fff;
       font-size: 18px;
       /* padding: 13px 75px; */
@@ -134,6 +135,7 @@
 
       @include media-hover() {
          background-color: #A66321;
+         border-color: #A66321;
       }
 
    }

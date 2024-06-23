@@ -13,21 +13,6 @@
    }
 }
 
-/* Ислкючение hover-бага на тач-устройствах (a:after) */
-/* @mixin media-hover-after() {
-   @media (hover: hover) {
-      & a:hover:after {
-         @content;
-      }
-   }
-
-   @media (hover: none) {
-      & a:active:after {
-         @content;
-      }
-   }
-} */
-
 /* В структуре Block > a > img для создания дополнительного слоя */
 /* над картинкой и изменения его прозрачности при наведении мыши */
 /* Добавлено исключение залипания hover на мобильных */

@@ -37,23 +37,24 @@
       background-size: auto;
 
       &__container {
-         padding-top: 15.4rem;
+         padding-top: 12rem;
          padding-bottom: 12rem;
          display: flex;
+         flex-wrap: wrap;
          justify-content: space-between;
-         height: calc(46.8rem + 15.4rem + 12rem);
+         height: calc(468px + 12rem + 12rem);
       }
 
       &__info {
          width: 39%;
-         margin-right: 8.1%;
-         margin-top: 3.4rem;
+         margin-right: 95px;
+         margin-top: 34px;
       }
 
       &__header {
          font-size: 40px;
          color: #8B4513;
-         margin-bottom: 2rem;
+         margin-bottom: 20px;
       }
 
       &__text {
@@ -62,10 +63,17 @@
          line-height: 137%;
       }
 
+      &__images {
+         display: flex;
+         justify-content: space-between;
+         gap: 4rem;
+      }
+
       &__img {
 
          &--1 {
-            width: 19.7%;
+            /* width: 19.7%; */
+            width: 230px;
             align-self: self-end;
 
             & img {
@@ -75,7 +83,8 @@
          }
 
          &--2 {
-            width: 25.6%;
+            /* width: 25.6%; */
+            width: 300px;
 
             & img {
                width: 100%;
@@ -92,6 +101,11 @@
       padding-bottom: 12rem;
 
       &__container {
+         padding: 0 15px;
+      }
+
+      &__wrapper {
+         display: flex;
          position: relative;
          flex-direction: column;
          justify-content: space-between;
@@ -102,7 +116,7 @@
          /* background-size: 97.4%; */
          border-radius: 10px;
          height: calc(60rem);
-         padding-left: 7.5rem;
+         padding-left: 6rem;
          padding-top: 6.4rem;
          padding-bottom: 7.7rem;
 
@@ -359,40 +373,285 @@
    }
 
    .candle {
+      background-color: #F2E8DE;
+      padding-bottom: 12rem;
 
-      &__container {}
+      &__container {
+         max-height: 71.8rem;
+         overflow: hidden;
+      }
 
-      &__img {}
+      &__img {
+         width: 60.7%;
 
-      &__form {}
+         & img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+         }
+      }
 
-      &__price {}
+      &__form {
+         flex-shrink: 0;
+         background-color: rgb(241, 201, 165);
+         width: 39%;
+         padding: 40px 40px 80px;
+         border-top-right-radius: 10px;
+         border-bottom-right-radius: 10px;
+         overflow: hidden;
 
-      &__header {}
+         & label {
+            color: #8B4513;
+            font-size: 16px;
+            margin-left: 15px;
+         }
+
+         & input {
+            height: 50px;
+            border-radius: 10px;
+            border: none;
+            font-size: 16px;
+            color: #8B4513;
+            padding-left: 50px;
+
+            &::placeholder {
+               color: #D3D3D3;
+            }
+         }
+      }
+
+      &__price {
+         width: 190px;
+         background-color: rgba(139, 69, 19, .5);
+         color: #fff;
+         padding: 8px 20px;
+         margin-left: -40px;
+         margin-bottom: 20px;
+         font-size: 24px;
+         text-align: right;
+         border-top-right-radius: 10px;
+         border-bottom-right-radius: 10px;
+      }
+
+      &__header {
+         margin-bottom: 50px;
+
+         & h2,
+         p {
+            font-size: 32px;
+            font-weight: 500;
+            line-height: 140%;
+            color: #8B4513;
+         }
+
+         & p {
+            text-transform: uppercase;
+         }
+      }
 
       &__name {}
 
-      &__field {}
+      &__field {
+         display: flex;
+         flex-direction: column;
+         gap: 7px;
+         margin-bottom: 20px;
 
-      &__input-name {}
+         &:last-of-type {
+            margin-bottom: 70px;
+         }
+      }
+
+      &__input-name {
+         background: url('../images/consultations/form_name_icon.svg') #fff no-repeat 10px center;
+      }
 
       &__email {}
 
-      &__input-email {}
+      &__input-email {
+         background: url('../images/consultations/form_email_icon.svg') #fff no-repeat 10px center;
+      }
 
       &__phone {}
 
-      &__input-phone {}
+      &__input-phone {
+         background: url('../images/consultations/form_phone_icon.svg') #fff no-repeat 10px center;
+      }
 
       &__button {
+         &--submit {
+            background-color: #8B4513;
+            color: #fff;
+            font-size: 18px;
+            /* padding: 13px 75px; */
+            padding-top: 13px;
+            padding-bottom: 13px;
+            text-align: center;
+            width: 100%;
+            border-color: #8B4513;
+            border-radius: 10px;
 
-         &--submit {}
+            /*       &:hover {
+                           background-color: #A66321;
+                        } */
+
+            @include media-hover() {
+               background-color: #A66321;
+               border-color: #A66321;
+            }
+         }
       }
    }
+}
 
+@media(max-width: 1200px) {
+   .consultations-card {
 
-   .center {}
+      .hero {
+         height: calc(300px + (492 - 300) * ((100vw - 360px) / (1200 - 360)));
+      }
 
-   .container {}
+      .crowd {
+         background-size: calc(161px + (290 - 161) * ((100vw - 360px) / (1200 - 360))) calc(164px + (296 - 164) * ((100vw - 360px) / (1200 - 360)));
 
+         &__container {
+            height: calc(calc(393px + (468 - 393) * ((100vw - 768px) / (1200 - 768))) + 12rem + 12rem);
+            /*             height: calc(calc(515px - (515 - 468) * ((100vw - 768px) / (1200 - 768))) + 12rem + 12rem); */
+         }
+
+         &__info {
+            margin-right: calc(0px + (95 - 0) * ((100vw - 768px) / (1200 - 768)));
+            margin-top: calc(0px + (34 - 0) * ((100vw - 768px) / (1200 - 768)));
+         }
+
+         &__header {
+            font-size: calc(30px + (40 - 30) * ((100vw - 360px) / (1200 - 360)));
+            margin-bottom: 2rem;
+         }
+
+         &__text {
+            font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__images {}
+
+         &__img {
+
+            &--1 {
+               /* width: 19.7%; */
+               width: 23rem;
+               align-self: self-end;
+
+               & img {
+                  width: 100%;
+                  border-radius: 10px;
+               }
+            }
+
+            &--2 {
+               /* width: 25.6%; */
+               width: 30rem;
+               margin-bottom: 40px;
+
+               & img {
+                  width: 100%;
+                  border-radius: 10px;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media(max-width: 900px) {
+   .consultations-card {
+      .green {
+         &__slogan {
+            font-size: calc(17px + (32 - 17) * ((100vw - 360px) / (900 - 360)));
+         }
+      }
+   }
+}
+
+@media(max-width: 768px) {
+   .consultations-card {
+
+      .crowd {
+         background-position: calc(15px + (250 - 15) * ((100vw - 360px) / (768 - 360))) calc(305px - (305 - 252) * ((100vw - 360px) / (768 - 360)));
+
+         &__container {
+            height: calc(515px + 12rem + 12rem);
+            flex-direction: column;
+         }
+
+         &__info {
+            margin-right: 0px;
+            margin-top: 0px;
+            width: 100%;
+         }
+
+         &__img {
+            &--1 {
+               width: calc(130px + (170 - 130) * ((100vw - 360px) / (768 - 360)));
+            }
+
+            &--2 {
+               width: calc(170px + (223 - 170) * ((100vw - 360px) / (768 - 360)));
+               margin-bottom: 40px;
+            }
+         }
+
+      }
+
+      .green {
+         &__container {
+            padding: 0 0;
+            /* border-radius: 0; */
+         }
+
+         &__wrapper {
+            border-radius: 0;
+            min-height: 360px;
+            padding-top: calc(60px - (60 - 47.5) * ((100vw - 360px) / (768 - 360)));
+            padding-right: calc(20px - (20 - 0) * ((100vw - 360px) / (768 - 360)));
+            padding-bottom: calc(30px + (57 - 30) * ((100vw - 360px) / (768 - 360)));
+            padding-left: calc(20px + (44.5 - 20) * ((100vw - 360px) / (768 - 360)));
+
+            &::after {
+               border-radius: 0;
+            }
+         }
+
+         &__slogan {
+            width: 100%;
+            font-weight: 300;
+            line-height: 145%;
+         }
+
+         &__btn {
+            max-width: calc(250px + (340 - 250) * ((100vw - 360px) / (768 - 360)));
+            padding-top: calc(12px + (19 - 12) * ((100vw - 360px) / (768 - 360)));
+            padding-bottom: calc(12px + (19 - 12) * ((100vw - 360px) / (768 - 360)));
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: calc(18px + (24 - 18) * ((100vw - 360px) / (768 - 360)));
+            font-weight: 300;
+         }
+      }
+
+   }
+}
+
+@media(max-width: 360px) {
+   .consultations-card {
+      .crowd {
+         &__header {
+            font-size: 30px;
+         }
+
+         &__text {
+            font-size: 14px;
+         }
+      }
+   }
 }
