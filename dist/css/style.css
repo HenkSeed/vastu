@@ -4000,7 +4000,7 @@ ul {
   padding-bottom: 12rem;
 }
 .consultations-card .candle__container {
-  max-height: 71.8rem;
+  /* max-height: 71.8rem; */
   overflow: hidden;
 }
 .consultations-card .candle__img {
@@ -4015,7 +4015,9 @@ ul {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   background-color: rgb(241, 201, 165);
-  width: 39%;
+  /* width: 39%; */
+  width: 460px;
+  height: 700px;
   padding: 40px 40px 80px;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -4098,6 +4100,7 @@ ul {
   background: url("../images/consultations/form_phone_icon.svg") #fff no-repeat 10px center;
 }
 .consultations-card .candle__button--submit {
+  /* margin-top: 70px; */
   background-color: #8B4513;
   color: #fff;
   font-size: 18px;
@@ -4108,9 +4111,6 @@ ul {
   width: 100%;
   border-color: #8B4513;
   border-radius: 10px;
-  /*       &:hover {
-                 background-color: #A66321;
-              } */
 }
 @media (hover: hover) {
   .consultations-card .candle__button--submit:hover {
@@ -4197,6 +4197,20 @@ ul {
   }
   .consultations-card .flower__text {
     font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+  .consultations-card .candle__form {
+    /* width: auto; */
+    padding-top: calc(30px + 10 * (100vw - 768px) / 432);
+    padding-right: calc(20px + 20 * (100vw - 768px) / 432);
+    padding-bottom: calc(40px + 40 * (100vw - 768px) / 432);
+    padding-left: calc(20px + 20 * (100vw - 768px) / 432);
+  }
+  .consultations-card .candle__header h2,
+  .consultations-card .candle__header p {
+    font-size: calc(28px + 4 * (100vw - 360px) / 840);
+  }
+  .consultations-card .candle__field:last-of-type {
+    margin-bottom: calc(60px + 10 * (100vw - 768px) / 432);
   }
 }
 @media (max-width: 900px) {
@@ -4303,6 +4317,33 @@ ul {
   .consultations-card .flower__img--1 {
     /* margin-bottom: 39px; */
     margin-bottom: 8rem;
+  }
+  .consultations-card .candle__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .consultations-card .candle__img {
+    width: 100%;
+  }
+  .consultations-card .candle__img img {
+    /*                border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px; */
+    border-radius: 0;
+  }
+  .consultations-card .candle__form {
+    border-radius: 0;
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    width: calc(360px + 100 * (100vw - 360px) / 408);
   }
 }
 @media (max-width: 576px) {
