@@ -3751,8 +3751,6 @@ ul {
   border-radius: 10px;
 }
 .consultations-card .green {
-  /*       padding-left: calc(50% - 58.5rem);
-     padding-right: calc(50% - 58.5rem); */
   background-color: #F2E8DE;
   padding-bottom: 12rem;
 }
@@ -3898,7 +3896,7 @@ ul {
 }
 .consultations-card .city-view__container {
   position: relative;
-  height: 65rem;
+  height: 650px;
 }
 .consultations-card .city-view__container p {
   font-size: 18px;
@@ -3909,7 +3907,6 @@ ul {
   background-color: rgba(241, 201, 165, 0.6);
   background-image: url("../images/consultations_card/city_view/bg_img.png");
   background-position: center;
-  /* background-position: center 12rem; */
   background-repeat: no-repeat;
   background-size: auto 100%;
   width: 93.1%;
@@ -3917,9 +3914,9 @@ ul {
   top: 0;
   right: 15px;
   border-radius: 10px;
-  padding-top: 8rem;
-  padding-right: 6rem;
-  padding-bottom: 21.6rem;
+  padding-top: 80px;
+  padding-right: 60px;
+  padding-bottom: 216px;
   /* padding-left: 55rem; */
   padding-left: 50.4%;
 }
@@ -3950,17 +3947,24 @@ ul {
   background-size: auto;
 }
 .consultations-card .flower__container {
-  /* padding-top: 15.4rem; */
   padding-bottom: 12rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 58.8rem;
+  /* gap: 4rem; */
+}
+.consultations-card .flower__images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* justify-content: space-between; */
-  height: 58.8rem;
-  gap: 4rem;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 51%;
 }
 .consultations-card .flower__img--1 {
-  width: 25.6%;
+  width: 52.6%;
   -ms-flex-item-align: self-start;
   align-self: self-start;
 }
@@ -3969,7 +3973,7 @@ ul {
   border-radius: 10px;
 }
 .consultations-card .flower__img--2 {
-  width: 19.7%;
+  width: 40.4%;
   -ms-flex-item-align: self-end;
   align-self: self-end;
 }
@@ -3978,11 +3982,8 @@ ul {
   border-radius: 10px;
 }
 .consultations-card .flower__info {
-  width: 47%;
-  /* margin-right: 8.1%; */
+  width: 39.2%;
   margin-top: 3.4rem;
-  padding-left: 9rem;
-  padding-right: 1rem;
 }
 .consultations-card .flower__header {
   font-size: 40px;
@@ -4141,7 +4142,7 @@ ul {
   }
   .consultations-card .crowd__header {
     font-size: calc(30px + 10 * (100vw - 360px) / 840);
-    margin-bottom: 2rem;
+    margin-bottom: 20px;
   }
   .consultations-card .crowd__text {
     font-size: calc(14px + 4 * (100vw - 360px) / 840);
@@ -4164,6 +4165,38 @@ ul {
   .consultations-card .crowd__img--2 img {
     width: 100%;
     border-radius: 10px;
+  }
+  .consultations-card .cups__container p {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+  .consultations-card .cups__right-header {
+    font-size: calc(30px + 10 * (100vw - 360px) / 840);
+  }
+  .consultations-card .city-view__container {
+    height: calc(425px + 225 * (100vw - 768px) / 432);
+  }
+  .consultations-card .city-view__container p {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+  .consultations-card .city-view__info {
+    /*             background-size: cover;
+    background-image: none; */
+    padding-top: calc(30px + 50 * (100vw - 768px) / 432);
+    padding-right: calc(20px + 40 * (100vw - 768px) / 432);
+    padding-bottom: calc(34px + 182 * (100vw - 768px) / 432);
+  }
+  .consultations-card .city-view__header {
+    font-size: calc(30px + 10 * (100vw - 360px) / 840);
+  }
+  .consultations-card .flower {
+    background-size: calc(161px + 108 * (100vw - 360px) / 840) calc(164px + 110 * (100vw - 360px) / 840);
+  }
+  .consultations-card .flower__header {
+    font-size: calc(30px + 10 * (100vw - 360px) / 840);
+    margin-bottom: 20px;
+  }
+  .consultations-card .flower__text {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
   }
 }
 @media (max-width: 900px) {
@@ -4223,6 +4256,69 @@ ul {
     font-size: calc(18px + 6 * (100vw - 360px) / 408);
     font-weight: 300;
   }
+  .consultations-card .city-view__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .consultations-card .city-view__info {
+    position: static;
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 0;
+    background-image: none;
+  }
+  .consultations-card .city-view__img {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+  }
+  .consultations-card .city-view__img img {
+    border-radius: 0;
+  }
+  .consultations-card .flower {
+    background-position: right calc(0px + 50 * (100vw - 360px) / 408) bottom calc(165px + 285 * (100vw - 360px) / 408);
+  }
+  .consultations-card .flower__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    height: auto;
+    gap: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .consultations-card .flower__info {
+    margin-top: 0;
+    width: 100%;
+  }
+  .consultations-card .flower__images {
+    width: 100%;
+  }
+  .consultations-card .flower__img--1 {
+    /* margin-bottom: 39px; */
+    margin-bottom: 8rem;
+  }
+}
+@media (max-width: 576px) {
+  .consultations-card .cups__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .consultations-card .cups__left, .consultations-card .cups__right {
+    width: 100%;
+  }
+  .consultations-card .cups__left-text {
+    text-align: left;
+    margin-left: 0;
+  }
 }
 @media (max-width: 360px) {
   .consultations-card .crowd__header {
@@ -4230,6 +4326,12 @@ ul {
   }
   .consultations-card .crowd__text {
     font-size: 14px;
+  }
+  .consultations-card .city-view__container p {
+    font-size: 14px;
+  }
+  .consultations-card .city-view__header {
+    font-size: 30px;
   }
 }
 .dark-bg {

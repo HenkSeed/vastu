@@ -95,8 +95,6 @@
    }
 
    .green {
-      /*       padding-left: calc(50% - 58.5rem);
-         padding-right: calc(50% - 58.5rem); */
       background-color: #F2E8DE;
       padding-bottom: 12rem;
 
@@ -257,7 +255,7 @@
 
       &__container {
          position: relative;
-         height: 65rem;
+         height: 650px;
 
          & p {
             font-size: 18px;
@@ -270,7 +268,6 @@
          background-color: rgba(241, 201, 165, .6);
          background-image: url('../images/consultations_card/city_view/bg_img.png');
          background-position: center;
-         /* background-position: center 12rem; */
          background-repeat: no-repeat;
          background-size: auto 100%;
 
@@ -279,9 +276,9 @@
          top: 0;
          right: 15px;
          border-radius: 10px;
-         padding-top: 8rem;
-         padding-right: 6rem;
-         padding-bottom: 21.6rem;
+         padding-top: 80px;
+         padding-right: 60px;
+         padding-bottom: 216px;
          /* padding-left: 55rem; */
          padding-left: 50.4%;
       }
@@ -319,19 +316,22 @@
       background-size: auto;
 
       &__container {
-         /* padding-top: 15.4rem; */
          padding-bottom: 12rem;
-         display: flex;
-         /* justify-content: space-between; */
+         justify-content: space-between;
 
          height: calc(46.8rem + 12rem);
-         gap: 4rem;
+         /* gap: 4rem; */
+      }
+
+      &__images {
+         display: flex;
+         justify-content: space-between;
+         width: 51%;
       }
 
       &__img {
-
          &--1 {
-            width: 25.6%;
+            width: 52.6%;
             align-self: self-start;
 
             & img {
@@ -341,7 +341,7 @@
          }
 
          &--2 {
-            width: 19.7%;
+            width: 40.4%;
             align-self: self-end;
 
             & img {
@@ -352,11 +352,8 @@
       }
 
       &__info {
-         width: 47%;
-         /* margin-right: 8.1%; */
+         width: 39.2%;
          margin-top: 3.4rem;
-         padding-left: 9rem;
-         padding-right: 1rem;
       }
 
       &__header {
@@ -526,7 +523,7 @@
 
          &__header {
             font-size: calc(30px + (40 - 30) * ((100vw - 360px) / (1200 - 360)));
-            margin-bottom: 2rem;
+            margin-bottom: 20px;
          }
 
          &__text {
@@ -558,6 +555,55 @@
                   border-radius: 10px;
                }
             }
+         }
+      }
+
+      .cups {
+         &__container {
+
+            & p {
+               font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+            }
+         }
+
+         &__right-header {
+            font-size: calc(30px + (40 - 30) * ((100vw - 360px) / (1200 - 360)));
+         }
+      }
+
+      .city-view {
+
+         &__container {
+            height: calc(425px + (650 - 425) * ((100vw - 768px) / (1200 - 768)));
+
+            & p {
+               font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+            }
+         }
+
+         &__info {
+            /*             background-size: cover;
+            background-image: none; */
+            padding-top: calc(30px + (80 - 30) * ((100vw - 768px) / (1200 - 768)));
+            padding-right: calc(20px + (60 - 20) * ((100vw - 768px) / (1200 - 768)));
+            padding-bottom: calc(34px + (216 - 34) * ((100vw - 768px) / (1200 - 768)));
+         }
+
+         &__header {
+            font-size: calc(30px + (40 - 30) * ((100vw - 360px) / (1200 - 360)));
+         }
+      }
+
+      .flower {
+         background-size: calc(161px + (269 - 161) * ((100vw - 360px) / (1200 - 360))) calc(164px + (274 - 164) * ((100vw - 360px) / (1200 - 360)));
+
+         &__header {
+            font-size: calc(30px + (40 - 30) * ((100vw - 360px) / (1200 - 360)));
+            margin-bottom: 20px;
+         }
+
+         &__text {
+            font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
          }
       }
    }
@@ -639,6 +685,81 @@
          }
       }
 
+      .city-view {
+         &__container {
+            flex-direction: column;
+            height: auto;
+            padding-left: 0;
+            padding-right: 0;
+         }
+
+         &__info {
+            position: static;
+            width: 100%;
+            padding: 30px 20px;
+            border-radius: 0;
+            background-image: none;
+         }
+
+         &__img {
+            position: static;
+            width: 100%;
+            border-radius: 0;
+
+            & img {
+               border-radius: 0;
+            }
+         }
+      }
+
+      .flower {
+         background-position: right calc(0px + (50 - 0) * ((100vw - 360px) / (768 - 360))) bottom calc(165px + (450 - 165) * ((100vw - 360px) / (768 - 360)));
+
+         &__container {
+            flex-direction: column-reverse;
+            height: auto;
+            gap: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+         }
+
+         &__info {
+            margin-top: 0;
+            width: 100%;
+         }
+
+         &__images {
+            width: 100%;
+         }
+
+         &__img {
+            &--1 {
+               /* margin-bottom: 39px; */
+               margin-bottom: 8rem;
+            }
+         }
+      }
+
+   }
+}
+
+@media(max-width: 576px) {
+   .consultations-card {
+      .cups {
+         &__container {
+            flex-direction: column;
+         }
+
+         &__left,
+         &__right {
+            width: 100%;
+         }
+
+         &__left-text {
+            text-align: left;
+            margin-left: 0;
+         }
+      }
    }
 }
 
@@ -651,6 +772,18 @@
 
          &__text {
             font-size: 14px;
+         }
+      }
+
+      .city-view {
+         &__container {
+            & p {
+               font-size: 14px;
+            }
+         }
+
+         &__header {
+            font-size: 30px;
          }
       }
    }
