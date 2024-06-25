@@ -374,7 +374,7 @@
       padding-bottom: 12rem;
 
       &__container {
-         /* max-height: 71.8rem; */
+         max-height: 700px;
          overflow: hidden;
       }
 
@@ -772,6 +772,7 @@
             align-items: center;
             padding-left: 0;
             padding-right: 0;
+            max-height: 1490px;
          }
 
          &__img {
