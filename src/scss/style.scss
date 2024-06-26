@@ -4,18 +4,18 @@
 'scss/base/variables'
 ;
 
-@import 'scss/components/main',
-'scss/components/dark-bg',
+@import 'scss/components/dark-bg',
 'scss/components/dark',
 'scss/components/cart-menu',
 'scss/components/header',
-'scss/components/main_hero',
-'scss/components/main_about',
-'scss/components/main_consult',
-'scss/components/main_diploma',
-'scss/components/main_about-us',
-'scss/components/main_reviews',
-'scss/components/main_news',
+'scss/components/main/main',
+'scss/components/main/main_hero',
+'scss/components/main/main_about',
+'scss/components/main/main_consult',
+'scss/components/main/main_diploma',
+'scss/components/main/main_about-us',
+'scss/components/main/main_reviews',
+'scss/components/main/main_news',
 'scss/components/footer',
 'scss/components/consultations'
 ;

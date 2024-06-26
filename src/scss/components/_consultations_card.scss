@@ -486,12 +486,14 @@
             color: #fff;
             font-size: 18px;
             margin-top: 10px;
-            padding-top: 13px;
-            padding-bottom: 13px;
+            padding-top: 15px;
+            padding-bottom: 15px;
             text-align: center;
             width: 100%;
-            border-color: #8B4513;
             border-radius: 10px;
+            border-width: 0;
+            border-style: none;
+            border-image: none;
 
             @include media-hover() {
                background-color: #A66321;
@@ -613,6 +615,18 @@
 
          &__wrapper {}
 
+         &__img {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+               display: block;
+               width: 721px;
+            }
+         }
+
          &__form {
             padding-top: calc(30px + (40 - 30) * ((100vw - 992px) / (1200 - 992)));
             padding-right: calc(20px + (40 - 20) * ((100vw - 992px) / (1200 - 992)));
@@ -620,8 +634,7 @@
             padding-left: calc(20px + (40 - 20) * ((100vw - 992px) / (1200 - 992)));
 
             & input {
-               height: calc(40px + (50 - 40) * ((100vw - 992px) / (1200 - 992)));
-               width: 100%;
+               height: 50px;
             }
          }
 
@@ -638,7 +651,7 @@
          &__field {
 
             &:last-of-type {
-               margin-bottom: calc(33px + (70 - 33) * ((100vw - 992px) / (1200 - 992)));
+               margin-bottom: calc(60px + (70 - 60) * ((100vw - 992px) / (1200 - 992)));
             }
          }
       }
@@ -650,26 +663,25 @@
       .candle {
          &__container {
             max-height: none;
-            /* height: auto; */
-         }
-
-         &__wrapper {
-            flex-direction: column-reverse;
          }
 
          &__img {
-            width: 100%;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
          }
 
          &__form {
             padding-top: 30px;
             padding-bottom: 40px;
-
-            padding-left: calc(50% - 160px);
-            padding-right: calc(50% - 160px);
+            padding-left: 20px;
+            padding-right: 20px;
+            min-width: 320px;
 
             & input {
-               height: 40px;
+               height: 50px;
             }
          }
 
@@ -680,13 +692,10 @@
          &__field {
 
             &:last-of-type {
-               margin-bottom: 33px;
+               margin-bottom: 60px;
             }
          }
 
-         &__button {
-            &--submit {}
-         }
       }
    }
 }
@@ -826,10 +835,33 @@
          &__container {
             padding-left: 0;
             padding-right: 0;
+            height: auto;
          }
 
          &__wrapper {
             border-radius: 0;
+            flex-direction: column-reverse;
+         }
+
+         &__img {
+            width: 100%;
+
+            & img {
+               display: inline;
+               width: 100%;
+            }
+         }
+
+         &__form {
+            min-width: none;
+            /* padding-left: calc(50% - 160px);
+               padding-right: calc(50% - 160px); */
+         }
+
+         &__button {
+            &--submit {
+               max-width: 320px;
+            }
          }
       }
 
