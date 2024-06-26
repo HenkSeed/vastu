@@ -1,3 +1,4 @@
+import sendOrder from './sendOrder.js';
 export default function quickOrderConsultPopup() {
 	// Находим все кнопки запуска меню быстрого заказа
 	const consultationsquickOrderBtns = document.querySelectorAll(
@@ -12,7 +13,6 @@ export default function quickOrderConsultPopup() {
 	// Слушаем все кнопки "Быстрый заказ"
 	consultationsquickOrderBtns.forEach((consultation) => {
 		consultation.addEventListener('click', (event) => {
-			console.log('event: ', event.target.dataset.order);
 			changeConsultCardName(event);
 			quickOrder();
 		});
@@ -62,6 +62,15 @@ export default function quickOrderConsultPopup() {
 	function showForm() {
 		consultationsForm.classList.add('consultations__form--visible');
 		consultationsForm.classList.remove('consultations__form--invisible');
+		// Находим кнопку отправки формы
+		const consultationsButtonSubmit = document.querySelector(
+			'.consultations__button--submit'
+		);
+		// Отслеживаем кнопку отправки формы
+		consultationsButtonSubmit.addEventListener('click', (event) => {
+			// Отправляем форму
+			sendOrder();
+		});
 	}
 
 	// Функция скрытия тёмного фона
