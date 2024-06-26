@@ -20,7 +20,6 @@ export default function burger() {
 	const allConsultationsLink = document.querySelector(
 		'.dark-bg__burger-consult-item:first-child'
 	);
-	console.log('allConsultationsLink: ', allConsultationsLink);
 
 	// Находим массив элементов (якорные ссылки) бургер-меню
 	const burgerMenuItems = darkBurgerMenu.querySelectorAll(
@@ -85,7 +84,6 @@ export default function burger() {
 
 	// Функция закрытия Consult меню
 	function closeConsultMenu() {
-		console.log('Нажат элемент закрытия меню консультации');
 		darkBurgerConsult.classList.toggle('get-invisible');
 		darkBurgerConsult.classList.toggle('get-visible');
 
@@ -94,7 +92,6 @@ export default function burger() {
 
 	// Функция закрытия Artifacts меню
 	function closeArtifactsMenu() {
-		console.log('Нажат элемент закрытия меню артефактов');
 		darkBurgerArtifacts.classList.toggle('get-invisible');
 		darkBurgerArtifacts.classList.toggle('get-visible');
 
@@ -149,7 +146,6 @@ export default function burger() {
 
 	// Делаем основное бургер-меню невидимым
 	function getBurgerMenuInvisible() {
-		console.log('darkBurgerMenu: ', darkBurgerMenu);
 		darkBurgerMenu.classList.add('get-invisible');
 		darkBurgerMenu.classList.remove('get-visible');
 	}
