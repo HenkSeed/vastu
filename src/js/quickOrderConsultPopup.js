@@ -18,11 +18,6 @@ export default function quickOrderConsultPopup() {
 		});
 	});
 
-	// Отслеживаем нажатие тёмного фона (для закрытия меню корзины)
-	// consultationsDark.addEventListener('click', (event) => {
-	// 	chequeToCloseForm();
-	// });
-
 	// Изменить название карточки
 	function changeConsultCardName(event) {
 		// Находим заголовок карточки
@@ -80,17 +75,17 @@ export default function quickOrderConsultPopup() {
 		document.body.style.overflow = '';
 	}
 
-	// Функция скрытия формы
+	// Функция скрытия формы (если потребуется добавить эффекты)
 	function hideForm() {
 		consultationsForm.classList.add('consultations__form--invisible');
 		consultationsForm.classList.remove('consultations__form--visible');
 	}
 
+	// Функция проверки, нет ли команды на закрытие формы
 	function chequeToCloseForm() {
 		const bodyLimit = document.querySelector('body');
 
 		bodyLimit.addEventListener('click', (event) => {
-			// console.log('Target Value: ', event.target.classList.value);
 			if (
 				// Отсеиваем клик по кнопке, который привёл к открытию этого окна
 				event.target.classList.value != 'consultations__chapter-quick-order' &&

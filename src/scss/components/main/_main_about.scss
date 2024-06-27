@@ -6,9 +6,7 @@
 
    &__container {
       width: 100%;
-      /* min-height: 76.0rem; */
       min-height: 58.0rem;
-      /* background-color: cyan; */
       position: relative;
    }
 
@@ -36,7 +34,6 @@
       overflow: hidden;
       z-index: 10;
       background-color: rgba(241, 201, 165, 0.6);
-      /* opacity: 0.6; */
 
       &__header {
          color: #8B4513;
@@ -44,7 +41,6 @@
          font-weight: 500;
          opacity: 1.0;
          margin-bottom: 2rem;
-         /* margin-top: 4rem; */
       }
 
       &__text {

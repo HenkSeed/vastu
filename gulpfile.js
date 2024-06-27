@@ -39,7 +39,7 @@ export const deploy = (cb) => {
 
 export const styles = () => {
 	return (
-		src('src//**/*.scss')
+		src('src/**/*.scss')
 			// src('src/style.scss')
 			// .pipe(concat('style.min.css'))
 			.pipe(concat('style.css'))

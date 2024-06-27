@@ -210,8 +210,6 @@
          width: 57.2%;
       }
 
-      &__right-info {}
-
       &__right-header {
          font-size: 40px;
          color: #8B4513;
@@ -289,8 +287,6 @@
          line-height: 140%;
          margin-bottom: 20px;
       }
-
-      &__text {}
 
       &__img {
          width: 48.7%;
@@ -373,10 +369,6 @@
       background-color: #F2E8DE;
       padding-bottom: 12rem;
 
-      &__container {
-         /* max-height: 718px; */
-      }
-
       &__wrapper {
          display: flex;
          border-radius: 10px;
@@ -451,8 +443,6 @@
          }
       }
 
-      &__name {}
-
       &__field {
          display: flex;
          flex-direction: column;
@@ -468,13 +458,9 @@
          background: url('../images/consultations/form_name_icon.svg') #fff no-repeat 10px center;
       }
 
-      &__email {}
-
       &__input-email {
          background: url('../images/consultations/form_email_icon.svg') #fff no-repeat 10px center;
       }
-
-      &__phone {}
 
       &__input-phone {
          background: url('../images/consultations/form_phone_icon.svg') #fff no-repeat 10px center;
@@ -491,9 +477,6 @@
             text-align: center;
             width: 100%;
             border-radius: 10px;
-            border-width: 0;
-            border-style: none;
-            border-image: none;
 
             @include media-hover() {
                background-color: #A66321;
@@ -532,8 +515,6 @@
          &__text {
             font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
          }
-
-         &__images {}
 
          &__img {
 
@@ -611,10 +592,6 @@
       }
 
       .candle {
-         &__container {}
-
-         &__wrapper {}
-
          &__img {
             overflow: hidden;
             display: flex;
