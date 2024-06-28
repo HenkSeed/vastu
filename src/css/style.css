@@ -2966,10 +2966,7 @@ ul {
 .artifacts .hero {
   background-image: url("../images/artifacts/hero/bg_img.png");
   height: 49.2rem;
-  /*       height: calc(470px + -55.28*(100vw - 360px) / 408);
-  background-position-y: top;
-  background-size: calc(684px + 84*(100vw - 360px) / 408) 100%;
-  background-position-x: calc(-128px + 128*(100vw - 360px) / 408); */
+  background-position: center center;
 }
 .artifacts .title-unit {
   background-color: #F2E8DE;
@@ -3022,9 +3019,63 @@ ul {
   left: 15px;
   border-radius: 10px;
   overflow: hidden;
+  /* Серое покрывало на блок */
+  /*          &:after {
+     content: "";
+     display: block;
+     background-color: rgba(138, 87, 44, 0.3);
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 0;
+     z-index: 1;
+     transition: all 350ms;
+  } */
 }
 .artifacts .carousel__image img {
   width: 100%;
+}
+.artifacts .carousel__arrows {
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  justify-self: center;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  z-index: 50;
+  gap: 20px;
+  /* Следующая строка для стыковки блоков в нахлёст */
+  /* margin-top: -10px; */
+}
+.artifacts .carousel__arrow-left, .artifacts .carousel__arrow-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: #F1C9A5;
+  stroke: #8B4513;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.artifacts .carousel__arrow-left:hover, .artifacts .carousel__arrow-right:hover {
+  background-color: #A66321;
+  stroke: #fff;
 }
 .artifacts .carousel__info {
   position: absolute;
@@ -3079,6 +3130,16 @@ ul {
 .artifacts .carousel__more-btn {
   background-color: #8B4513;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: 8px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   /*          &:hover {
            background-color: #A66321;
         } */
@@ -3122,6 +3183,7 @@ ul {
   background-color: #F2E8DE;
   margin: 0 auto;
   padding-bottom: 12rem;
+  /* Серое покрывало на блок */
 }
 .artifacts .jewelry__container {
   padding-left: 15px;
@@ -3146,6 +3208,7 @@ ul {
   flex-direction: column;
   gap: 20px;
   max-width: 370px;
+  min-width: 360px;
 }
 .artifacts .jewelry__product:nth-child(even) {
   -webkit-box-orient: vertical;
@@ -3162,6 +3225,21 @@ ul {
   width: 100%;
   border-radius: 10px;
 }
+.artifacts .jewelry__img:after {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border: none;
+  border-radius: 10px;
+  -webkit-transition: all 350ms;
+  transition: all 350ms;
+}
 .artifacts .jewelry__price {
   position: absolute;
   top: 20px;
@@ -3172,6 +3250,7 @@ ul {
   color: #2A2A2A;
   font-size: 24px;
   padding: 13px 44px;
+  z-index: 10;
 }
 .artifacts .jewelry__btns {
   position: absolute;
@@ -3190,11 +3269,18 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  z-index: 10;
 }
 .artifacts .jewelry__cart-btn {
   background-color: #fff;
   padding: 13px 22px;
   border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.artifacts .jewelry__cart-btn:hover {
+  background-color: #F1C9A5;
 }
 .artifacts .jewelry__details-btn {
   -webkit-box-sizing: border-box;
@@ -3206,17 +3292,23 @@ ul {
   padding-right: 19px;
   border: #fff 1px solid;
   border-radius: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  text-align: center;
+  color: #fff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.artifacts .jewelry__details-btn a {
-  color: #fff;
-  font-size: 1.8rem;
+.artifacts .jewelry__details-btn:hover {
+  background-color: #F1C9A5;
+  border-color: #F1C9A5;
+  color: #8B4513;
 }
 .artifacts .jewelry__header {
   font-size: 32px;
   color: #8B4513;
   margin-bottom: 10px;
+  text-align: center;
 }
 .artifacts .jewelry__text {
   font-size: 18px;
@@ -3231,6 +3323,7 @@ ul {
 .artifacts .correction__container {
   position: relative;
   height: 650px;
+  /* height: fit-content; */
 }
 .artifacts .correction__container p {
   font-size: 18px;
@@ -3244,21 +3337,25 @@ ul {
   background-repeat: no-repeat;
   background-size: auto 100%;
   width: 93.1%;
-  max-height: 570px;
+  height: 570px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   position: absolute;
   top: 0;
   right: 15px;
   border-radius: 10px;
   padding-top: 80px;
   padding-right: 60px;
-  padding-bottom: 216px;
+  padding-bottom: 41px;
   /* padding-left: 55rem; */
-  padding-left: 50.4%;
+  padding-left: 569px;
+  /* padding-left: 47.4%; */
 }
 .artifacts .correction__header {
   font-size: 40px;
   color: #8B4513;
-  line-height: 140%;
+  line-height: 108%;
   margin-bottom: 20px;
 }
 .artifacts .correction__img {
@@ -3271,7 +3368,8 @@ ul {
   overflow: hidden;
 }
 .artifacts .correction__img img {
-  width: 100%;
+  /* width: 100%; */
+  width: auto;
   border-radius: 10px;
 }
 .artifacts .cards {
@@ -3385,6 +3483,90 @@ ul {
   text-align: center;
 }
 
+@media (max-width: 1920px) {
+  .artifacts .hero {
+    /*          height: calc(300px + (492 - 300) * ((100vw - 1600px) / (1920 - 1600))); */
+  }
+}
+@media (max-width: 1600px) {
+  .artifacts .hero {
+    height: calc(300px + 192 * (100vw - 1200px) / 400);
+  }
+}
+@media (max-width: 1200px) {
+  .artifacts .hero {
+    height: 300px;
+  }
+  .artifacts .correction__container {
+    /*             height: calc(425px + (650 - 425) * ((100vw - 768px) / (1200 - 768))); */
+  }
+  .artifacts .correction__container p {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+  .artifacts .correction__info {
+    /*             background-size: cover;
+             background-image: none; */
+    padding-top: calc(20px + 60 * (100vw - 768px) / 432);
+    padding-right: calc(20px + 40 * (100vw - 768px) / 432);
+    padding-bottom: calc(34px + 7 * (100vw - 768px) / 432);
+    padding-left: calc(375px + 194 * (100vw - 768px) / 432);
+  }
+  .artifacts .correction__header {
+    font-size: calc(30px + 10 * (100vw - 768px) / 432);
+  }
+  .artifacts .correction__img img {
+    margin-left: calc(-120px + 120 * (100vw - 768px) / 432);
+  }
+}
+@media (max-width: 768px) {
+  .artifacts .hero {
+    background-size: auto 145%;
+    background-position: right 0 top -70px;
+  }
+  .artifacts .correction__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .artifacts .correction__info {
+    position: static;
+    border-radius: 0;
+    width: 100%;
+    padding: 30px 20px 30px;
+    background-image: none;
+  }
+  .artifacts .correction__info p {
+    font-size: calc(14px + 2 * (100vw - 360px) / 408);
+  }
+  .artifacts .correction__header {
+    font-size: 30px;
+  }
+  .artifacts .correction__img {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+  }
+  .artifacts .correction__img img {
+    border-radius: 0;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .artifacts .hero {
+    background-size: auto 145%;
+    background-position: right calc(-125px + 125 * (100vw - 360px) / 216) top calc(-95px + 25 * (100vw - 360px) / 216);
+  }
+}
 .cart-menu {
   position: relative;
   z-index: 150;

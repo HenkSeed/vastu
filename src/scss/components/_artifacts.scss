@@ -4,11 +4,7 @@
    .hero {
       background-image: url('../images/artifacts/hero/bg_img.png');
       height: 49.2rem;
-
-      /*       height: calc(470px + -55.28*(100vw - 360px) / 408);
-      background-position-y: top;
-      background-size: calc(684px + 84*(100vw - 360px) / 408) 100%;
-      background-position-x: calc(-128px + 128*(100vw - 360px) / 408); */
+      background-position: center center;
    }
 
    .title-unit {
@@ -57,8 +53,6 @@
          width: 100%;
          height: 72rem;
          position: relative;
-
-
       }
 
       &__image {
@@ -69,8 +63,55 @@
          border-radius: 10px;
          overflow: hidden;
 
+         /* Серое покрывало на блок */
+         /*          &:after {
+            content: "";
+            display: block;
+            background-color: rgba(138, 87, 44, 0.3);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            transition: all 350ms;
+         } */
+
          & img {
             width: 100%;
+         }
+      }
+
+      &__arrows {
+         background-color: transparent;
+         display: flex;
+         justify-content: center;
+         align-self: center;
+         justify-self: center;
+         position: absolute;
+         right: 20px;
+         bottom: 20px;
+         z-index: 50;
+         gap: 20px;
+         /* Следующая строка для стыковки блоков в нахлёст */
+         /* margin-top: -10px; */
+      }
+
+      &__arrow-left,
+      &__arrow-right {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 36px;
+         height: 36px;
+         background-color: #F1C9A5;
+         stroke: #8B4513;
+         cursor: pointer;
+         transition: all 0.3s;
+
+         &:hover {
+            background-color: #A66321;
+            stroke: #fff;
          }
       }
 
@@ -127,6 +168,10 @@
       &__more-btn {
          background-color: #8B4513;
          color: #fff;
+         display: flex;
+         justify-content: center;
+         gap: 8px;
+         align-items: center;
 
          /*          &:hover {
                   background-color: #A66321;
@@ -177,19 +222,37 @@
          flex-direction: column;
          gap: 20px;
          max-width: 370px;
+         min-width: 360px;
 
          &:nth-child(even) {
             flex-direction: column-reverse;
             align-self: self-start;
          }
+
       }
 
+      /* Серое покрывало на блок */
       &__img {
          position: relative;
 
          &>img {
             width: 100%;
             border-radius: 10px;
+         }
+
+         &:after {
+            content: "";
+            display: block;
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 1;
+            border: none;
+            border-radius: 10px;
+            transition: all 350ms;
          }
       }
 
@@ -203,6 +266,7 @@
          color: #2A2A2A;
          font-size: 24px;
          padding: 13px 44px;
+         z-index: 10;
       }
 
       &__btns {
@@ -214,12 +278,19 @@
          justify-content: center;
          gap: 20px;
          align-items: center;
+         z-index: 10;
       }
 
       &__cart-btn {
          background-color: #fff;
          padding: 13px 22px;
          border-radius: 10px;
+         transition: all 0.3s;
+         cursor: pointer;
+
+         &:hover {
+            background-color: #F1C9A5;
+         }
       }
 
       &__details-btn {
@@ -231,20 +302,24 @@
          padding-right: 19px;
          border: #fff 1px solid;
          border-radius: 10px;
+         cursor: pointer;
+         font-size: 18px;
+         text-align: center;
+         color: #fff;
          transition: all 0.3s;
 
-         a {
-            color: #fff;
-            font-size: 1.8rem;
+         &:hover {
+            background-color: #F1C9A5;
+            border-color: #F1C9A5;
+            color: #8B4513;
          }
       }
-
-      &__info {}
 
       &__header {
          font-size: 32px;
          color: #8B4513;
          margin-bottom: 10px;
+         text-align: center;
       }
 
       &__text {
@@ -262,6 +337,7 @@
       &__container {
          position: relative;
          height: 650px;
+         /* height: fit-content; */
 
          & p {
             font-size: 18px;
@@ -278,26 +354,26 @@
          background-size: auto 100%;
 
          width: 93.1%;
-         max-height: 570px;
+         height: 570px;
+         height: fit-content;
          position: absolute;
          top: 0;
          right: 15px;
          border-radius: 10px;
          padding-top: 80px;
          padding-right: 60px;
-         padding-bottom: 216px;
+         padding-bottom: 41px;
          /* padding-left: 55rem; */
-         padding-left: 50.4%;
+         padding-left: 569px;
+         /* padding-left: 47.4%; */
       }
 
       &__header {
          font-size: 40px;
          color: #8B4513;
-         line-height: 140%;
+         line-height: 108%;
          margin-bottom: 20px;
       }
-
-      &__text {}
 
       &__img {
          width: 48.7%;
@@ -309,7 +385,8 @@
          overflow: hidden;
 
          & img {
-            width: 100%;
+            /* width: 100%; */
+            width: auto;
             border-radius: 10px;
          }
       }
@@ -419,6 +496,113 @@
          text-align: center;
       }
    }
+}
 
+@media (max-width: 1920px) {
+   .artifacts {
+      .hero {
+         /*          height: calc(300px + (492 - 300) * ((100vw - 1600px) / (1920 - 1600))); */
+      }
+   }
+}
 
+@media (max-width: 1600px) {
+   .artifacts {
+      .hero {
+         height: calc(300px + (492 - 300) * ((100vw - 1200px) / (1600 - 1200)));
+      }
+   }
+}
+
+@media (max-width: 1200px) {
+   .artifacts {
+      .hero {
+         height: 300px;
+      }
+
+      .correction {
+         &__container {
+            /*             height: calc(425px + (650 - 425) * ((100vw - 768px) / (1200 - 768))); */
+
+            & p {
+               font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+            }
+         }
+
+         &__info {
+            /*             background-size: cover;
+                     background-image: none; */
+            padding-top: calc(20px + (80 - 20) * ((100vw - 768px) / (1200 - 768)));
+            padding-right: calc(20px + (60 - 20) * ((100vw - 768px) / (1200 - 768)));
+            padding-bottom: calc(34px + (41 - 34) * ((100vw - 768px) / (1200 - 768)));
+            padding-left: calc(375px + (569 - 375) * ((100vw - 768px) / (1200 - 768)));
+         }
+
+         &__header {
+            font-size: calc(30px + (40 - 30) * ((100vw - 768px) / (1200 - 768)));
+         }
+
+         &__img {
+            & img {
+               margin-left: calc(-120px + (0 - (-120)) * ((100vw - 768px) / (1200 - 768)));
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 768px) {
+   .artifacts {
+      .hero {
+         background-size: auto 145%;
+         background-position: right 0 top -70px;
+      }
+
+      .correction {
+         &__container {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            padding-left: 0;
+            padding-right: 0;
+         }
+
+         &__info {
+            position: static;
+            border-radius: 0;
+            width: 100%;
+            padding: 30px 20px 30px;
+            background-image: none;
+
+            & p {
+               font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (768 - 360)));
+            }
+         }
+
+         &__header {
+            font-size: 30px;
+         }
+
+         &__img {
+            position: static;
+            width: 100%;
+            border-radius: 0;
+
+            & img {
+               border-radius: 0;
+               width: 100%;
+               margin-left: 0;
+            }
+         }
+      }
+   }
+}
+
+@media (max-width: 576px) {
+   .artifacts {
+      .hero {
+         background-size: auto 145%;
+         background-position: right calc(-125px + (125 - 0) * ((100vw - 360px) / (576 - 360))) top calc(-95px + (95 - 70) * ((100vw - 360px) / (576 - 360)));
+      }
+   }
 }
