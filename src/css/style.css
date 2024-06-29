@@ -100,6 +100,14 @@ ul {
 /* Добавлено исключение залипания hover на мобильных */
 /* То же, что и предыдущий, но с параметрами, определяющими непрозрачность */
 /* opb = opacity before; opa = opacity after */
+/* Масштабируем элемент в зависимости от вьюпорта */
+/* $el - элемент HTML */
+/* $bfor - значение элемента в начале трансформации */
+/* $aftr - значение элемента в конце трансформации */
+/* значение элементов вводятся без размерности (px) */
+/* @mixin calc-scale-1236 ($el, $bfor, $aftr) {
+   $el: calc(($bfor)px + ($bfor - $aftr) * ((100vw - 360px) / (1200 - 360)));
+} */
 .dark-bg {
   position: fixed;
   transform: translateX(-100%);
@@ -2946,6 +2954,14 @@ ul {
 /* Добавлено исключение залипания hover на мобильных */
 /* То же, что и предыдущий, но с параметрами, определяющими непрозрачность */
 /* opb = opacity before; opa = opacity after */
+/* Масштабируем элемент в зависимости от вьюпорта */
+/* $el - элемент HTML */
+/* $bfor - значение элемента в начале трансформации */
+/* $aftr - значение элемента в конце трансформации */
+/* значение элементов вводятся без размерности (px) */
+/* @mixin calc-scale-1236 ($el, $bfor, $aftr) {
+   $el: calc(($bfor)px + ($bfor - $aftr) * ((100vw - 360px) / (1200 - 360)));
+} */
 .center {
   padding-left: calc(50% - 60rem);
   padding-right: calc(50% - 60rem);
@@ -3220,10 +3236,13 @@ ul {
 }
 .artifacts .jewelry__img {
   position: relative;
+  border-width: 0;
 }
 .artifacts .jewelry__img > img {
+  display: block;
   width: 100%;
   border-radius: 10px;
+  border-width: 0;
 }
 .artifacts .jewelry__img:after {
   content: "";
@@ -3421,6 +3440,9 @@ ul {
   margin-bottom: 16px;
   font-size: 16px;
   color: #333333;
+  -webkit-box-flex: 2;
+  -ms-flex-positive: 2;
+  flex-grow: 2;
 }
 .artifacts .cards__price {
   margin-bottom: 10px;
@@ -3450,10 +3472,19 @@ ul {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.artifacts .cards__btn:hover {
+  background-color: #A66321;
 }
 .artifacts .back {
   background-image: url("../images/artifacts/back/bg_img.png");
-  height: 50.6rem;
+  /* background-size: 1632px auto; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -485px;
+  height: 506px;
 }
 .artifacts .back__container {
   position: relative;
@@ -3461,7 +3492,7 @@ ul {
 }
 .artifacts .back__info {
   position: absolute;
-  right: 8.5%;
+  right: 102px;
   top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -3484,8 +3515,8 @@ ul {
 }
 
 @media (max-width: 1920px) {
-  .artifacts .hero {
-    /*          height: calc(300px + (492 - 300) * ((100vw - 1600px) / (1920 - 1600))); */
+  .artifacts .back {
+    background-position: 0 calc(-240px - 245 * (100vw - 1200px) / 720);
   }
 }
 @media (max-width: 1600px) {
@@ -3496,6 +3527,12 @@ ul {
 @media (max-width: 1200px) {
   .artifacts .hero {
     height: 300px;
+  }
+  .artifacts .jewelry__container {
+    gap: calc(30px + 30 * (100vw - 992px) / 208);
+  }
+  .artifacts .jewelry__product {
+    max-width: 445px;
   }
   .artifacts .correction__container {
     /*             height: calc(425px + (650 - 425) * ((100vw - 768px) / (1200 - 768))); */
@@ -3516,6 +3553,54 @@ ul {
   }
   .artifacts .correction__img img {
     margin-left: calc(-120px + 120 * (100vw - 768px) / 432);
+  }
+  .artifacts .cards__container {
+    gap: calc(15px + 15 * (100vw - 360px) / 840) calc(10px + 20 * (100vw - 360px) / 840);
+  }
+  .artifacts .cards__item {
+    width: calc(155px + 115 * (100vw - 360px) / 840);
+  }
+  .artifacts .cards__title {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+  .artifacts .cards__text {
+    font-size: calc(12px + 4 * (100vw - 360px) / 840);
+  }
+  .artifacts .cards__price {
+    font-size: calc(15px + 5 * (100vw - 360px) / 840);
+    width: calc(100px + 50 * (100vw - 360px) / 840);
+  }
+  .artifacts .cards__btn {
+    font-size: calc(14px + 2 * (100vw - 360px) / 840);
+    width: calc(130px + 70 * (100vw - 360px) / 840);
+  }
+  .artifacts .back {
+    height: calc(340px + 166 * (100vw - 360px) / 840);
+    background-position: 0 calc(-45px - 195 * (100vw - 768px) / 432);
+  }
+  .artifacts .back__info {
+    width: calc(320px + 196 * (100vw - 360px) / 840);
+    right: calc(264px - 162 * (100vw - 992px) / 208);
+  }
+  .artifacts .back__header {
+    font-size: calc(30px + 10 * (100vw - 360px) / 840);
+  }
+  .artifacts .back__text {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+}
+@media (max-width: 992px) {
+  .artifacts .jewelry__container {
+    gap: calc(15px + 15 * (100vw - 768px) / 224);
+  }
+  .artifacts .jewelry__product {
+    max-width: calc(360px + 85 * (100vw - 768px) / 224);
+  }
+  .artifacts .back__info {
+    right: 50%;
+    -webkit-transform: translate(50%, -50%);
+    -ms-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
   }
 }
 @media (max-width: 768px) {
@@ -3559,6 +3644,26 @@ ul {
     border-radius: 0;
     width: 100%;
     margin-left: 0;
+  }
+  .artifacts .jewelry__container {
+    gap: 40px;
+  }
+  .artifacts .jewelry__product {
+    max-width: calc(360px + 85 * (100vw - 360px) / 408);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .artifacts .jewelry__img > img {
+    border-radius: 0;
+  }
+  .artifacts .jewelry__img:after {
+    border-radius: 0;
+  }
+  .artifacts .back {
+    background-position: calc(-96px + 96 * (100vw - 360px) / 408);
+    /*          background-position: calc(-96px + (96 - 0) * ((100vw - 360px) / (768 - 360))) calc(0px - (45 - 0) * ((100vw - 360px) / (768 - 360))); */
   }
 }
 @media (max-width: 576px) {

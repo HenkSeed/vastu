@@ -234,10 +234,13 @@
       /* Серое покрывало на блок */
       &__img {
          position: relative;
+         border-width: 0;
 
          &>img {
+            display: block;
             width: 100%;
             border-radius: 10px;
+            border-width: 0;
          }
 
          &:after {
@@ -435,6 +438,7 @@
          margin-bottom: 16px;
          font-size: 16px;
          color: #333333;
+         flex-grow: 2;
       }
 
       &__price {
@@ -460,12 +464,21 @@
          gap: 8px;
          align-items: center;
          border-radius: 10px;
+         transition: all 0.3s;
+
+         &:hover {
+            background-color: #A66321;
+         }
       }
    }
 
    .back {
       background-image: url('../images/artifacts/back/bg_img.png');
-      height: 50.6rem;
+      /* background-size: 1632px auto; */
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 -485px;
+      height: 506px;
 
       &__container {
          position: relative;
@@ -474,7 +487,7 @@
 
       &__info {
          position: absolute;
-         right: 8.5%;
+         right: 102px;
          top: 50%;
          transform: translateY(-50%);
          padding: 45px 18px 51px;
@@ -500,8 +513,8 @@
 
 @media (max-width: 1920px) {
    .artifacts {
-      .hero {
-         /*          height: calc(300px + (492 - 300) * ((100vw - 1600px) / (1920 - 1600))); */
+      .back {
+         background-position: 0 calc(-240px - (485 - 240) * ((100vw - 1200px) / (1920 - 1200)));
       }
    }
 }
@@ -518,6 +531,16 @@
    .artifacts {
       .hero {
          height: 300px;
+      }
+
+      .jewelry {
+         &__container {
+            gap: calc(30px + (60 - 30) * ((100vw - 992px) / (1200 - 992)));
+         }
+
+         &__product {
+            max-width: 445px;
+         }
       }
 
       .correction {
@@ -546,6 +569,75 @@
             & img {
                margin-left: calc(-120px + (0 - (-120)) * ((100vw - 768px) / (1200 - 768)));
             }
+         }
+      }
+
+      .cards {
+         &__container {
+            gap: calc(15px + (30 - 15) * ((100vw - 360px) / (1200 - 360))) calc(10px + (30 - 10) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__item {
+            width: calc(155px + (270 - 155) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__title {
+            font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__text {
+            font-size: calc(12px + (16 - 12) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__price {
+            font-size: calc(15px + (20 - 15) * ((100vw - 360px) / (1200 - 360)));
+            width: calc(100px + (150 - 100) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__btn {
+            font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (1200 - 360)));
+            width: calc(130px + (200 - 130) * ((100vw - 360px) / (1200 - 360)));
+         }
+      }
+
+
+      .back {
+         height: calc(340px + (506 - 340) * ((100vw - 360px) / (1200 - 360)));
+         background-position: 0 calc(-45px - (240 - 45) * ((100vw - 768px) / (1200 - 768)));
+
+         &__info {
+            width: calc(320px + (516 - 320) * ((100vw - 360px) / (1200 - 360)));
+
+            right: calc(264px - (264 - 102) * ((100vw - 992px) / (1200 - 992)));
+         }
+
+         &__header {
+            font-size: calc(30px + (40 - 30) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__text {
+            font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+         }
+      }
+   }
+}
+
+@media (max-width: 992px) {
+   .artifacts {
+      .jewelry {
+         &__container {
+            gap: calc(15px + (30 - 15) * ((100vw - 768px) / (992 - 768)));
+         }
+
+         &__product {
+            max-width: calc(360px + (445 - 360) * ((100vw - 768px) / (992 - 768)));
+         }
+      }
+
+      .back {
+         &__info {
+            right: 50%;
+            transform: translate(50%, -50%);
          }
       }
    }
@@ -594,6 +686,33 @@
                margin-left: 0;
             }
          }
+      }
+
+      .jewelry {
+         &__container {
+            gap: 40px;
+         }
+
+         &__product {
+            max-width: calc(360px + (445 - 360) * ((100vw - 360px) / (768 - 360)));
+            flex-direction: column-reverse;
+         }
+
+         &__img {
+
+            &>img {
+               border-radius: 0;
+            }
+
+            &:after {
+               border-radius: 0;
+            }
+         }
+      }
+
+      .back {
+         background-position: calc(-96px + (96 - 0) * ((100vw - 360px) / (768 - 360)));
+         /*          background-position: calc(-96px + (96 - 0) * ((100vw - 360px) / (768 - 360))) calc(0px - (45 - 0) * ((100vw - 360px) / (768 - 360))); */
       }
    }
 }
