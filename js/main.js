@@ -29,6 +29,25 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 
+const carouselSwiper = new Swiper('.carousel__image', {
+	loop: true,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.carousel__arrow-left',
+		prevEl: '.carousel__arrow-right',
+	},
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.carousel__pagination',
+		clickable: true,
+	},
+});
+
 Fancybox.bind('[data-fancybox]', {
 	// Your custom options
 	imageScale: true,
