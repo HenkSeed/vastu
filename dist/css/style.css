@@ -1111,9 +1111,6 @@ ul {
 .consult__opened__more-btn {
   background-color: #8B4513;
   color: #fff;
-  /*          &:hover {
-     background-color: #A66321;
-  } */
 }
 @media (hover: hover) {
   .consult__opened__more-btn:hover {
@@ -1128,10 +1125,6 @@ ul {
 .consult__opened__all-btn {
   color: #8B4513;
   background-color: #F2E8DE;
-  /*          &:hover {
-     background-color: #A66321;
-     color: #fff;
-  } */
 }
 @media (hover: hover) {
   .consult__opened__all-btn:hover {
@@ -3033,24 +3026,13 @@ ul {
   z-index: 10;
   width: 48.72%;
   left: 15px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   overflow: hidden;
-  /* Серое покрывало на блок */
-  /*          &:after {
-     content: "";
-     display: block;
-     background-color: rgba(138, 87, 44, 0.3);
-     position: absolute;
-     top: 0;
-     right: 0;
-     bottom: 0;
-     left: 0;
-     z-index: 1;
-     transition: all 350ms;
-  } */
 }
 .artifacts .carousel__image img {
   width: 100%;
+  border-radius: 10px;
+  /* height: 100%; */
 }
 .artifacts .carousel__arrows {
   background-color: transparent;
@@ -3065,7 +3047,7 @@ ul {
   justify-self: center;
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 60px;
   z-index: 50;
   gap: 20px;
   /* Следующая строка для стыковки блоков в нахлёст */
@@ -3093,31 +3075,39 @@ ul {
   background-color: #A66321;
   stroke: #fff;
 }
+.artifacts .carousel__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 20px;
+}
 .artifacts .carousel__info {
   position: absolute;
   width: 57.26%;
   right: 10px;
-  /* top: 50%; */
   top: 60px;
   /* transform: translateY(-50%); */
-  padding: 4rem 6rem 4rem 13rem;
-  border-radius: 1rem;
+  padding: 40px 60px 40px 130px;
+  border-radius: 10px;
   overflow: hidden;
   z-index: 5;
   background-color: rgba(241, 201, 165, 0.6);
 }
 .artifacts .carousel__header {
   color: #8B4513;
-  font-size: 4.8rem;
+  font-size: 48px;
   font-weight: 500;
   opacity: 1;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 .artifacts .carousel__text {
   color: #2A2A2A;
   font-size: 1.8rem;
   line-height: 130%;
-  margin-bottom: 16.3rem;
+  margin-bottom: 163px;
 }
 .artifacts .carousel__btns {
   display: -webkit-box;
@@ -3135,11 +3125,13 @@ ul {
   box-sizing: border-box;
   padding-top: 12px;
   padding-bottom: 12px;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-left: 15px;
+  padding-right: 8px;
+  width: 48%;
+  text-align: center;
   border: #8B4513 1px solid;
   border-radius: 10px;
-  font-size: 1.8rem;
+  font-size: 18px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -3513,6 +3505,17 @@ ul {
   color: #2A2A2A;
   text-align: center;
 }
+.artifacts .swiper-pagination-bullet {
+  width: 20px;
+  height: 20px;
+  line-height: 20;
+  border-radius: 3px;
+  background-color: #fff;
+  opacity: 1;
+}
+.artifacts .swiper-pagination-bullet-active {
+  background-color: #F1C9A5;
+}
 
 @media (max-width: 1920px) {
   .artifacts .back {
@@ -3527,6 +3530,17 @@ ul {
 @media (max-width: 1200px) {
   .artifacts .hero {
     height: 300px;
+  }
+  .artifacts .carousel__info {
+    padding-right: calc(20px + 40 * (100vw - 768px) / 432);
+    padding-left: calc(100px + 30 * (100vw - 768px) / 432);
+  }
+  .artifacts .carousel__header {
+    font-size: calc(30px + 10 * (100vw - 360px) / 840);
+  }
+  .artifacts .carousel__text {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+    margin-bottom: calc(60px + 103 * (100vw - 768px) / 432);
   }
   .artifacts .jewelry__container {
     gap: calc(30px + 30 * (100vw - 992px) / 208);
@@ -3590,6 +3604,17 @@ ul {
   }
 }
 @media (max-width: 992px) {
+  .artifacts .carousel__btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+  }
+  .artifacts .carousel__more-btn, .artifacts .carousel__all-btn {
+    width: 100%;
+  }
   .artifacts .jewelry__container {
     gap: calc(15px + 15 * (100vw - 768px) / 224);
   }
@@ -3607,6 +3632,24 @@ ul {
   .artifacts .hero {
     background-size: auto 145%;
     background-position: right 0 top -70px;
+  }
+  .artifacts .carousel__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    gap: 30px;
+  }
+  .artifacts .carousel__image {
+    position: static;
+    width: 100%;
+  }
+  .artifacts .carousel__info {
+    position: static;
+    width: 100%;
   }
   .artifacts .correction__container {
     display: -webkit-box;
@@ -6606,9 +6649,6 @@ ul {
 .consult__opened__more-btn {
   background-color: #8B4513;
   color: #fff;
-  /*          &:hover {
-     background-color: #A66321;
-  } */
 }
 @media (hover: hover) {
   .consult__opened__more-btn:hover {
@@ -6623,10 +6663,6 @@ ul {
 .consult__opened__all-btn {
   color: #8B4513;
   background-color: #F2E8DE;
-  /*          &:hover {
-     background-color: #A66321;
-     color: #fff;
-  } */
 }
 @media (hover: hover) {
   .consult__opened__all-btn:hover {
