@@ -28,7 +28,7 @@
          padding-top: 2.5rem;
          position: absolute;
          /* z-index: 100; */
-         top: 0;
+         top: 7px;
          transform: translateY(-11.5rem);
       }
 
@@ -92,12 +92,13 @@
          align-items: center;
          width: 36px;
          height: 36px;
+         border-radius: 3px;
          background-color: #F1C9A5;
          stroke: #8B4513;
          cursor: pointer;
          transition: all 0.3s;
 
-         &:hover {
+         @include media-hover() {
             background-color: #A66321;
             stroke: #fff;
          }
@@ -168,10 +169,6 @@
          justify-content: center;
          gap: 8px;
          align-items: center;
-
-         /*          &:hover {
-                  background-color: #A66321;
-               } */
 
          @include media-hover() {
             background-color: #A66321;
@@ -287,9 +284,10 @@
          transition: all 0.3s;
          cursor: pointer;
 
-         &:hover {
+         @include media-hover() {
             background-color: #F1C9A5;
          }
+
       }
 
       &__details-btn {
@@ -307,7 +305,7 @@
          color: #fff;
          transition: all 0.3s;
 
-         &:hover {
+         @include media-hover() {
             background-color: #F1C9A5;
             border-color: #F1C9A5;
             color: #8B4513;
@@ -462,7 +460,7 @@
          border-radius: 10px;
          transition: all 0.3s;
 
-         &:hover {
+         @include media-hover() {
             background-color: #A66321;
          }
       }
@@ -506,7 +504,8 @@
       }
    }
 
-   .swiper-pagination-bullet {
+   /* Добавляем имя класса слайдера, чтобы отличить буллеты от разных слайдеров на одной странице, так как буллеты создаются свайпером, и мы не можем добавить к ним дополнительный класс непосредственно */
+   .carousel__image .swiper-pagination-bullet {
       width: 20px;
       height: 20px;
       line-height: 20;
@@ -543,6 +542,8 @@
       }
 
       .carousel {
+         padding-bottom: 0;
+
          &__info {
             padding-right: calc(20px + (60 - 20) * ((100vw - 768px) / (1200 - 768)));
             padding-left: calc(100px + (130 - 100) * ((100vw - 768px) / (1200 - 768)));
@@ -555,6 +556,10 @@
          &__text {
             font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
             margin-bottom: calc(60px + (163 - 60) * ((100vw - 768px) / (1200 - 768)));
+         }
+
+         &__rectangle {
+            display: none;
          }
       }
 
@@ -685,9 +690,20 @@
       .hero {
          background-size: auto 145%;
          background-position: right 0 top -70px;
+         margin-bottom: 12rem;
+      }
+
+      .title-unit {
+         &__title-mod {
+            top: -11rem;
+         }
       }
 
       .carousel {
+         padding-bottom: 12rem;
+         padding-top: 0;
+         /* margin-top: 12rem; */
+
          &__container {
             flex-direction: column-reverse;
             height: fit-content;
@@ -699,9 +715,39 @@
             width: 100%;
          }
 
+         &__arrows {
+            right: 35px;
+         }
+
          &__info {
             position: static;
             width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+         }
+
+         &__ground {
+            /* background-color: #fff; */
+            background-color: $project-bg;
+            border-radius: 10px;
+         }
+
+         &__text {
+            margin-bottom: 30px;
+         }
+
+         &__btns {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+         }
+
+         &__more-btn,
+         &__all-btn {
+            display: block;
+            width: calc(200px + (370 - 200) * ((100vw - 360px) / (768 - 360)));
          }
       }
 
@@ -767,7 +813,6 @@
 
       .back {
          background-position: calc(-96px + (96 - 0) * ((100vw - 360px) / (768 - 360)));
-         /*          background-position: calc(-96px + (96 - 0) * ((100vw - 360px) / (768 - 360))) calc(0px - (45 - 0) * ((100vw - 360px) / (768 - 360))); */
       }
    }
 }

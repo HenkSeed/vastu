@@ -48,6 +48,110 @@ const carouselSwiper = new Swiper('.carousel__image', {
 	},
 });
 
+const cardsSwiper1 = new Swiper('.cards__swiper-1', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
+const cardsSwiper2 = new Swiper('.cards__swiper-2', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
+const cardsSwiper3 = new Swiper('.cards__swiper-3', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
+const cardsSwiper4 = new Swiper('.cards__swiper-4', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
+const cardsSwiper5 = new Swiper('.cards__swiper-5', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
+const cardsSwiper6 = new Swiper('.cards__swiper-6', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
+const cardsSwiper7 = new Swiper('.cards__swiper-7', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
+const cardsSwiper8 = new Swiper('.cards__swiper-8', {
+	loop: true,
+
+	slidesPerView: 1,
+	// autoHeight: true,
+	speed: 600,
+
+	pagination: {
+		el: '.cards__pagination',
+		clickable: true,
+	},
+});
+
 Fancybox.bind('[data-fancybox]', {
 	// Your custom options
 	imageScale: true,

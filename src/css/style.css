@@ -2971,6 +2971,7 @@ ul {
 
 .artifacts {
   background-color: #F2E8DE;
+  /* Добавляем имя класса слайдера, чтобы отличить буллеты от разных слайдеров на одной странице, так как буллеты создаются свайпером, и мы не можем добавить к ним дополнительный класс непосредственно */
 }
 .artifacts .hero {
   background-image: url("../images/artifacts/hero/bg_img.png");
@@ -2996,7 +2997,7 @@ ul {
   padding-top: 2.5rem;
   position: absolute;
   /* z-index: 100; */
-  top: 0;
+  top: 7px;
   -webkit-transform: translateY(-11.5rem);
   -ms-transform: translateY(-11.5rem);
   transform: translateY(-11.5rem);
@@ -3065,15 +3066,24 @@ ul {
   align-items: center;
   width: 36px;
   height: 36px;
+  border-radius: 3px;
   background-color: #F1C9A5;
   stroke: #8B4513;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.artifacts .carousel__arrow-left:hover, .artifacts .carousel__arrow-right:hover {
-  background-color: #A66321;
-  stroke: #fff;
+@media (hover: hover) {
+  .artifacts .carousel__arrow-left:hover, .artifacts .carousel__arrow-right:hover {
+    background-color: #A66321;
+    stroke: #fff;
+  }
+}
+@media (hover: none) {
+  .artifacts .carousel__arrow-left:active, .artifacts .carousel__arrow-right:active {
+    background-color: #A66321;
+    stroke: #fff;
+  }
 }
 .artifacts .carousel__pagination {
   display: -webkit-box;
@@ -3148,9 +3158,6 @@ ul {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  /*          &:hover {
-           background-color: #A66321;
-        } */
 }
 @media (hover: hover) {
   .artifacts .carousel__more-btn:hover {
@@ -3290,8 +3297,15 @@ ul {
   transition: all 0.3s;
   cursor: pointer;
 }
-.artifacts .jewelry__cart-btn:hover {
-  background-color: #F1C9A5;
+@media (hover: hover) {
+  .artifacts .jewelry__cart-btn:hover {
+    background-color: #F1C9A5;
+  }
+}
+@media (hover: none) {
+  .artifacts .jewelry__cart-btn:active {
+    background-color: #F1C9A5;
+  }
 }
 .artifacts .jewelry__details-btn {
   -webkit-box-sizing: border-box;
@@ -3310,10 +3324,19 @@ ul {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.artifacts .jewelry__details-btn:hover {
-  background-color: #F1C9A5;
-  border-color: #F1C9A5;
-  color: #8B4513;
+@media (hover: hover) {
+  .artifacts .jewelry__details-btn:hover {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+    color: #8B4513;
+  }
+}
+@media (hover: none) {
+  .artifacts .jewelry__details-btn:active {
+    background-color: #F1C9A5;
+    border-color: #F1C9A5;
+    color: #8B4513;
+  }
 }
 .artifacts .jewelry__header {
   font-size: 32px;
@@ -3467,8 +3490,15 @@ ul {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.artifacts .cards__btn:hover {
-  background-color: #A66321;
+@media (hover: hover) {
+  .artifacts .cards__btn:hover {
+    background-color: #A66321;
+  }
+}
+@media (hover: none) {
+  .artifacts .cards__btn:active {
+    background-color: #A66321;
+  }
 }
 .artifacts .back {
   background-image: url("../images/artifacts/back/bg_img.png");
@@ -3505,7 +3535,7 @@ ul {
   color: #2A2A2A;
   text-align: center;
 }
-.artifacts .swiper-pagination-bullet {
+.artifacts .carousel__image .swiper-pagination-bullet {
   width: 20px;
   height: 20px;
   line-height: 20;
@@ -3513,7 +3543,7 @@ ul {
   background-color: #fff;
   opacity: 1;
 }
-.artifacts .swiper-pagination-bullet-active {
+.artifacts .carousel__image .swiper-pagination-bullet-active {
   background-color: #F1C9A5;
 }
 
@@ -3531,6 +3561,9 @@ ul {
   .artifacts .hero {
     height: 300px;
   }
+  .artifacts .carousel {
+    padding-bottom: 0;
+  }
   .artifacts .carousel__info {
     padding-right: calc(20px + 40 * (100vw - 768px) / 432);
     padding-left: calc(100px + 30 * (100vw - 768px) / 432);
@@ -3541,6 +3574,9 @@ ul {
   .artifacts .carousel__text {
     font-size: calc(14px + 4 * (100vw - 360px) / 840);
     margin-bottom: calc(60px + 103 * (100vw - 768px) / 432);
+  }
+  .artifacts .carousel__rectangle {
+    display: none;
   }
   .artifacts .jewelry__container {
     gap: calc(30px + 30 * (100vw - 992px) / 208);
@@ -3632,6 +3668,15 @@ ul {
   .artifacts .hero {
     background-size: auto 145%;
     background-position: right 0 top -70px;
+    margin-bottom: 12rem;
+  }
+  .artifacts .title-unit__title-mod {
+    top: -11rem;
+  }
+  .artifacts .carousel {
+    padding-bottom: 12rem;
+    padding-top: 0;
+    /* margin-top: 12rem; */
   }
   .artifacts .carousel__container {
     -webkit-box-orient: vertical;
@@ -3647,9 +3692,40 @@ ul {
     position: static;
     width: 100%;
   }
+  .artifacts .carousel__arrows {
+    right: 35px;
+  }
   .artifacts .carousel__info {
     position: static;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .artifacts .carousel__ground {
+    /* background-color: #fff; */
+    background-color: #F2E8DE;
+    border-radius: 10px;
+  }
+  .artifacts .carousel__text {
+    margin-bottom: 30px;
+  }
+  .artifacts .carousel__btns {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .artifacts .carousel__more-btn, .artifacts .carousel__all-btn {
+    display: block;
+    width: calc(200px + 170 * (100vw - 360px) / 408);
   }
   .artifacts .correction__container {
     display: -webkit-box;
@@ -3706,7 +3782,6 @@ ul {
   }
   .artifacts .back {
     background-position: calc(-96px + 96 * (100vw - 360px) / 408);
-    /*          background-position: calc(-96px + (96 - 0) * ((100vw - 360px) / (768 - 360))) calc(0px - (45 - 0) * ((100vw - 360px) / (768 - 360))); */
   }
 }
 @media (max-width: 576px) {
