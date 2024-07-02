@@ -127,3 +127,43 @@
       }
    }
 }
+
+@media (max-width: 1200px) {
+   .artifacts-subcategory {
+      .cards {
+         &__container {
+            gap: calc(15px + (30 - 15) * ((100vw - 360px) / (1200 - 360))) calc(10px + (30 - 10) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__item {
+            width: calc(155px + (270 - 155) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__title {
+            font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__text {
+            font-size: calc(12px + (16 - 12) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__price {
+            font-size: calc(15px + (20 - 15) * ((100vw - 360px) / (1200 - 360)));
+            width: calc(100px + (150 - 100) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__btn {
+            font-size: calc(14px + (16 - 14) * ((100vw - 360px) / (1200 - 360)));
+            width: calc(130px + (200 - 130) * ((100vw - 360px) / (1200 - 360)));
+         }
+      }
+
+      .text-info {
+         &__container {
+            & p {
+               font-size: calc(14px + (18 - 14) * ((100vw - 360px) / (1200 - 360)));
+            }
+         }
+      }
+   }
+}

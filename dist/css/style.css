@@ -3933,6 +3933,31 @@ ul {
   margin-top: 2.4rem;
 }
 
+@media (max-width: 1200px) {
+  .artifacts-subcategory .cards__container {
+    gap: calc(15px + 15 * (100vw - 360px) / 840) calc(10px + 20 * (100vw - 360px) / 840);
+  }
+  .artifacts-subcategory .cards__item {
+    width: calc(155px + 115 * (100vw - 360px) / 840);
+  }
+  .artifacts-subcategory .cards__title {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+  .artifacts-subcategory .cards__text {
+    font-size: calc(12px + 4 * (100vw - 360px) / 840);
+  }
+  .artifacts-subcategory .cards__price {
+    font-size: calc(15px + 5 * (100vw - 360px) / 840);
+    width: calc(100px + 50 * (100vw - 360px) / 840);
+  }
+  .artifacts-subcategory .cards__btn {
+    font-size: calc(14px + 2 * (100vw - 360px) / 840);
+    width: calc(130px + 70 * (100vw - 360px) / 840);
+  }
+  .artifacts-subcategory .text-info__container p {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+}
 .cart-menu {
   position: relative;
   z-index: 150;
