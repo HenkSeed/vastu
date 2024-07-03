@@ -6,7 +6,8 @@ export default function cart() {
 	const darkHeader = document.querySelector('.dark__header');
 
 	// Находим блок меню корзины
-	const cartMenu = document.querySelector('.cart-menu');
+	const cartMenu = document.querySelector('.common.cart-menu');
+	console.log('cartMenu: ', cartMenu);
 
 	// Отслеживаем нажатие иконки корзины
 	headerCartIcon.addEventListener('click', (event) => {
