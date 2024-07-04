@@ -76,7 +76,10 @@ export default function shadow() {
 		const bodyLimit = document.querySelector('body');
 
 		bodyLimit.addEventListener('click', (event) => {
-			if (event.target.classList.contains('shadow__container')) {
+			if (
+				event.target.classList.contains('shadow__container') ||
+				event.target.classList.contains('shadow')
+			) {
 				// Закрываем окно быстрого заказа консультации
 				hideShadow();
 			}

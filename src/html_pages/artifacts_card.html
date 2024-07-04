@@ -1,0 +1,37 @@
+@@include('html_parts/head.html')
+
+@@include('html_parts/main_dark-bg.html')
+
+@@include('html_parts/shadow.html')
+
+@@include('html_parts/header.html')
+
+<!-- Оболочка страницы -->
+<div class="artifacts-card">
+
+   <section class="hero center">
+      <div class="container hero__container">
+
+      </div>
+   </section>
+
+   <section class="title-unit center">
+      <div class="container title-unit__container">
+         <div class="title-unit__title-mod">
+            <h2 class="title-unit__title-header">Артефакты</h2>
+         </div>
+      </div>
+   </section>
+
+
+
+   <section class="cards center">
+      <div class="container cards__container">
+         @@loop('html_parts/artifacts/artifacts_card.html','../files/artifacts_cards.json')
+      </div>
+   </section>
+</div>
+
+@@include('html_parts/footer.html')
+
+@@include('html_parts/foot.html')

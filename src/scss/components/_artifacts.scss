@@ -170,6 +170,10 @@
          gap: 8px;
          align-items: center;
 
+         /*          & img {
+            pointer-events: none;
+         } */
+
          @include media-hover() {
             background-color: #A66321;
          }
@@ -459,6 +463,10 @@
          align-items: center;
          border-radius: 10px;
          transition: all 0.3s;
+
+         & img {
+            pointer-events: none;
+         }
 
          @include media-hover() {
             background-color: #A66321;

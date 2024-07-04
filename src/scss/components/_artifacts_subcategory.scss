@@ -104,6 +104,10 @@
          border-radius: 10px;
          transition: all 0.3s;
 
+         & img {
+            pointer-events: none;
+         }
+
          @include media-hover() {
             background-color: #A66321;
          }

@@ -43,6 +43,11 @@
       }
    }
 
+   &__header {
+      & a {
+         pointer-events: none;
+      }
+   }
 
    /*  &__items {}
 
@@ -50,7 +55,6 @@
 
    &__info {}
 
-   &__header {}
 
    &__price-block {}
 
