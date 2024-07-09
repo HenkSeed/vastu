@@ -5,6 +5,8 @@ import logo from './logo.js';
 import quickOrderConsultPopup from './quickOrderConsultPopup.js';
 import consultationOrder from './consultationOrder.js';
 import shadow from './shadow.js';
+import uCash from './uCash.js';
+import tabs from './tabs.js';
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs';
 
 const swiper = new Swiper('.swiper', {
@@ -47,6 +49,30 @@ const carouselSwiper = new Swiper('.carousel__image', {
 		el: '.carousel__pagination',
 		clickable: true,
 	},
+});
+
+const artifactsSlider = new Swiper('.artifacts-card .slider-swiper', {
+	loop: true,
+
+	// Navigation arrows
+	navigation: {
+		nextEl: '.artifacts-card .arrow-left',
+		prevEl: '.artifacts-card .arrow-right',
+	},
+
+	slidesPerView: 1,
+	breakpoints: {
+		360: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+		},
+		769: {
+			slidesPerView: 3,
+			spaceBetween: 15,
+		},
+	},
+	// autoHeight: true,
+	speed: 600,
 });
 
 const cardsSwiper1 = new Swiper('.cards__swiper-1', {
@@ -171,3 +197,7 @@ quickOrderConsultPopup();
 consultationOrder();
 
 shadow();
+
+uCash();
+
+tabs();

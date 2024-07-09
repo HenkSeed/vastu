@@ -77,6 +77,7 @@ ul {
    list-style: none;
 }
 
+/* Изменение rem при экранах от 1200px до 360px */
 @media(max-width:1200px) {
 
    html,

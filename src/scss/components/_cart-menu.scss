@@ -64,9 +64,13 @@
    &__price-block {
       display: flex;
       align-items: center;
-      font-size: 16px;
+      /* font-size: 16px; */
       font-weight: 500;
       color: #2A2A2A;
+
+      &>.cart-menu__price {
+         font-size: 16px;
+      }
    }
 
    &__plus,
