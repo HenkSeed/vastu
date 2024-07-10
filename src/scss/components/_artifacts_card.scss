@@ -161,7 +161,7 @@
          box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.4);
          background: #f2e8de;
          border-radius: 10px;
-         pointer-events: none;
+         /* pointer-events: none; */
          transition: all 0.5s;
 
          & p {
@@ -315,9 +315,6 @@
          border-top: 2px solid #8B4513;
          margin-left: 20px;
          align-self: center;
-         /* width: 100%; */
-         /*          margin: 0;
-         padding: 0; */
       }
    }
 
@@ -640,7 +637,7 @@
             padding-right: calc(16px + (32 - 16) * ((100vw - 360px) / (576 - 360)));
          }
 
-         &__texts {}
+         /* &__texts {} */
       }
 
       .title-block {

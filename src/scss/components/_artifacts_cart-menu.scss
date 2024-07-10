@@ -16,15 +16,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       transition: transform 0.5s;
-
-      /*       &__visible {
-         transform: translateY(100%);
-      }
-
-      &--invisible {
-
-      } */
-
    }
 }
 
@@ -56,29 +47,6 @@
          pointer-events: none;
       }
    }
-
-   /*  &__items {}
-
-   &__item {}
-
-   &__info {}
-
-
-   &__price-block {}
-
-   &__price {}
-
-   &__minus {}
-
-   &__counter {}
-
-   &__plus {}
-
-   &__delete {}
-
-   &__result-price {}
-
-   &__text {} */
 
    &__buttons {
       display: flex;
