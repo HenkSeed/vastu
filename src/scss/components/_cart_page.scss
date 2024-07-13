@@ -1,0 +1,196 @@
+.cart-page {
+   background-color: #F5F5F5;
+
+   .line-header {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      overflow: hidden;
+
+      &__container {
+         position: relative;
+         overflow: visible;
+      }
+
+      &__title {
+         font-size: 48px;
+         color: #8B4513;
+      }
+
+      &__line {
+         position: absolute;
+         top: 32px;
+         /* left: calc(50vw - 120px); */
+         left: calc(50% - 110px);
+         width: 6000px;
+         right: 6000px;
+         border: none;
+         border-top: 2px solid #8B4513;
+         margin-left: 20px;
+         align-self: center;
+      }
+   }
+
+   .order-items {
+      padding-bottom: 20px;
+
+      &__container {
+         border-bottom: #F1C9A5 2px solid;
+         padding-bottom: 40px;
+         flex-wrap: wrap;
+         gap: 30px;
+         justify-content: center;
+      }
+
+      .cart-menu {
+         &__img {
+            border-radius: 10px;
+            overflow: hidden;
+            width: 170px;
+            height: auto;
+
+            /* height: 170px; */
+            & img {
+               width: 100%;
+               border-radius: 10px;
+            }
+         }
+
+         &__minus svg {
+            margin-bottom: 1px;
+         }
+
+         &__item {
+            background-color: #F1C9A5;
+            padding-right: 122px;
+            border-radius: 10px;
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   .price-result {
+      padding-bottom: 40px;
+
+      &__container {
+         flex-direction: column;
+         align-items: end;
+         gap: 10px;
+
+         & span {
+            font-size: 22px;
+            color: #2A2A2A;
+         }
+      }
+   }
+
+   .conditions {
+      padding-bottom: 40px;
+
+      &__container {
+         flex-wrap: wrap;
+         justify-content: space-between;
+      }
+
+      &__delivery,
+      &__pay {
+         width: 570px;
+         padding: 20px 20px 50px;
+         border-radius: 10px;
+         background-color: #F1C9A5;
+      }
+
+      &__header {
+         margin-bottom: 25px;
+         font-size: 24px;
+         color: #333333;
+      }
+
+      .form-unit {
+
+         & label {
+            display: block;
+            font-size: 16px;
+            color: #333333;
+         }
+
+         .custom-radio {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+         }
+
+         .custom-radio+label {
+            display: inline-flex;
+            align-items: center;
+            user-select: none;
+            cursor: pointer;
+         }
+
+         .custom-radio+label::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: #8B4513 1px solid;
+            border-radius: 2px;
+            margin-right: 10px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 10px 10px;
+         }
+
+         .custom-radio:checked+label::before {
+            background-image: url('../images/cart_page/conditions/checked.png');
+         }
+      }
+
+      .cdek,
+      .rf-post,
+      .u-cash {
+         position: relative;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         &__img {
+            position: absolute;
+            left: 190px;
+         }
+
+         & span {
+            display: block;
+            font-size: 16px;
+            color: #333333;
+         }
+
+
+      }
+
+      .cdek,
+      .u-cash {
+         margin-bottom: 20px;
+      }
+
+      .custom-radio {
+         width: 20px;
+         height: 20px;
+      }
+   }
+}
+
+@media(max-width: 1200px) {
+   .cart-page {
+      .line-header {
+         &__title {
+            font-size: calc(34px + (48 - 34) * ((100vw - 360px) / (1200 - 360)));
+         }
+
+         &__line {
+            left: calc(50vw + calc(98px + (-120 - 90) * ((100vw - 576px) / (1200 - 576))));
+            top: calc(25px + (32 - 25) * ((100vw - 576px) / (1200 - 576)));
+         }
+      }
+   }
+}
