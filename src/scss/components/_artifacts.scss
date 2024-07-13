@@ -2,18 +2,14 @@
    background-color: $project-bg;
 
    .hero {
-      background-image: url('../images/artifacts/hero/bg_img.png');
+      background-image: url("../images/artifacts/hero/bg_img.png");
       height: 49.2rem;
       background-position: center center;
    }
 
    .title-unit {
-      background-color: #F2E8DE;
+      background-color: #f2e8de;
       margin: 0 auto;
-
-      /*       &-container {
-         position: relative;
-      } */
 
       &__container {
          position: relative;
@@ -22,7 +18,7 @@
       }
 
       &__title-mod {
-         background-color: rgba(139, 69, 19, .5);
+         background-color: rgba(139, 69, 19, 0.5);
          width: 45.1rem;
          height: 25.8rem;
          padding-top: 2.5rem;
@@ -42,9 +38,9 @@
    }
 
    .carousel {
-      background-color: #F2E8DE;
-      padding-top: 12.0rem;
-      padding-bottom: 6.0rem;
+      background-color: #f2e8de;
+      padding-top: 12rem;
+      padding-bottom: 6rem;
       /* height: 76rem; */
 
       &__container {
@@ -93,13 +89,13 @@
          width: 36px;
          height: 36px;
          border-radius: 3px;
-         background-color: #F1C9A5;
-         stroke: #8B4513;
+         background-color: #f1c9a5;
+         stroke: #8b4513;
          cursor: pointer;
          transition: all 0.3s;
 
          @include media-hover() {
-            background-color: #A66321;
+            background-color: #a66321;
             stroke: #fff;
          }
       }
@@ -121,19 +117,18 @@
          overflow: hidden;
          z-index: 5;
          background-color: rgba(241, 201, 165, 0.6);
-
       }
 
       &__header {
-         color: #8B4513;
+         color: #8b4513;
          font-size: 48px;
          font-weight: 500;
-         opacity: 1.0;
+         opacity: 1;
          margin-bottom: 20px;
       }
 
       &__text {
-         color: #2A2A2A;
+         color: #2a2a2a;
          font-size: 1.8rem;
          line-height: 130%;
          margin-bottom: 163px;
@@ -156,14 +151,14 @@
          padding-right: 8px;
          width: 48%;
          text-align: center;
-         border: #8B4513 1px solid;
+         border: #8b4513 1px solid;
          border-radius: 10px;
          font-size: 18px;
          transition: all 0.3s;
       }
 
       &__more-btn {
-         background-color: #8B4513;
+         background-color: #8b4513;
          color: #fff;
          display: flex;
          justify-content: center;
@@ -175,16 +170,16 @@
          } */
 
          @include media-hover() {
-            background-color: #A66321;
+            background-color: #a66321;
          }
       }
 
       &__all-btn {
-         color: #8B4513;
-         background-color: #F2E8DE;
+         color: #8b4513;
+         background-color: #f2e8de;
 
          @include media-hover() {
-            background-color: #A66321;
+            background-color: #a66321;
             color: #fff;
          }
       }
@@ -195,13 +190,13 @@
          top: 115px;
          min-width: 180px;
          min-height: 600px;
-         background-color: #F1C9A5;
+         background-color: #f1c9a5;
          border-radius: 10px;
       }
    }
 
    .jewelry {
-      background-color: #F2E8DE;
+      background-color: #f2e8de;
       margin: 0 auto;
       padding-bottom: 12rem;
 
@@ -225,7 +220,6 @@
             flex-direction: column-reverse;
             align-self: self-start;
          }
-
       }
 
       /* Серое покрывало на блок */
@@ -233,7 +227,7 @@
          position: relative;
          border-width: 0;
 
-         &>img {
+         & > img {
             display: block;
             width: 100%;
             border-radius: 10px;
@@ -262,8 +256,8 @@
          left: 0;
          border-top-right-radius: 10px;
          border-bottom-right-radius: 10px;
-         background-color: rgba(241, 201, 165, .8);
-         color: #2A2A2A;
+         background-color: rgba(241, 201, 165, 0.8);
+         color: #2a2a2a;
          font-size: 24px;
          padding: 13px 44px;
          z-index: 10;
@@ -289,9 +283,8 @@
          cursor: pointer;
 
          @include media-hover() {
-            background-color: #F1C9A5;
+            background-color: #f1c9a5;
          }
-
       }
 
       &__details-btn {
@@ -310,15 +303,15 @@
          transition: all 0.3s;
 
          @include media-hover() {
-            background-color: #F1C9A5;
-            border-color: #F1C9A5;
-            color: #8B4513;
+            background-color: #f1c9a5;
+            border-color: #f1c9a5;
+            color: #8b4513;
          }
       }
 
       &__header {
          font-size: 32px;
-         color: #8B4513;
+         color: #8b4513;
          margin-bottom: 10px;
          text-align: center;
       }
@@ -326,13 +319,13 @@
       &__text {
          font-size: 18px;
          line-height: 140%;
-         color: #2A2A2A;
+         color: #2a2a2a;
          text-align: center;
       }
    }
 
    .correction {
-      background-color: #F2E8DE;
+      background-color: #f2e8de;
       padding-bottom: 12rem;
 
       &__container {
@@ -342,14 +335,14 @@
 
          & p {
             font-size: 18px;
-            color: #8B4513;
+            color: #8b4513;
             line-height: 140%;
          }
       }
 
       &__info {
-         background-color: rgba(241, 201, 165, .6);
-         background-image: url('../images/artifacts/correction/bg_img.png');
+         background-color: rgba(241, 201, 165, 0.6);
+         background-image: url("../images/artifacts/correction/bg_img.png");
          background-position: center;
          background-repeat: no-repeat;
          background-size: auto 100%;
@@ -371,7 +364,7 @@
 
       &__header {
          font-size: 40px;
-         color: #8B4513;
+         color: #8b4513;
          line-height: 108%;
          margin-bottom: 20px;
       }
@@ -401,7 +394,6 @@
          flex-wrap: wrap;
          gap: 30px;
          justify-content: center;
-
       }
 
       &__item {
@@ -410,7 +402,7 @@
          align-items: center;
          max-width: 270px;
          padding: 10px 10px 20px;
-         background-color: #F1C9A5;
+         background-color: #f1c9a5;
          border-radius: 10px;
          text-align: center;
       }
@@ -426,7 +418,7 @@
 
       &__title {
          padding-bottom: 5px;
-         border-bottom: #F2E8DE 2px solid;
+         border-bottom: #f2e8de 2px solid;
          margin-bottom: 10px;
          font-size: 18px;
          color: #333333;
@@ -444,7 +436,7 @@
          width: 150px;
          border-radius: 10px;
          font-size: 20px;
-         color: #2A2A2A;
+         color: #2a2a2a;
          /* padding: 5px 28px; */
          padding: 7px;
          text-align: center;
@@ -452,7 +444,7 @@
       }
 
       &__btn {
-         background-color: #8B4513;
+         background-color: #8b4513;
          color: #fff;
          font-size: 16px;
          width: 200px;
@@ -469,13 +461,13 @@
          }
 
          @include media-hover() {
-            background-color: #A66321;
+            background-color: #a66321;
          }
       }
    }
 
    .back {
-      background-image: url('../images/artifacts/back/bg_img.png');
+      background-image: url("../images/artifacts/back/bg_img.png");
       /* background-size: 1632px auto; */
       background-repeat: no-repeat;
       background-size: cover;
@@ -494,12 +486,12 @@
          transform: translateY(-50%);
          padding: 45px 18px 51px;
          max-width: 516px;
-         background-color: rgba(241, 201, 165, .6);
+         background-color: rgba(241, 201, 165, 0.6);
       }
 
       &__header {
          font-size: 40px;
-         color: #8B4513;
+         color: #8b4513;
          margin-bottom: 20px;
          text-align: center;
       }
@@ -507,7 +499,7 @@
       &__text {
          font-size: 18px;
          line-height: 140%;
-         color: #2A2A2A;
+         color: #2a2a2a;
          text-align: center;
       }
    }
@@ -522,7 +514,7 @@
       opacity: 1;
 
       &-active {
-         background-color: #F1C9A5;
+         background-color: #f1c9a5;
       }
    }
 }
@@ -612,7 +604,8 @@
 
       .cards {
          &__container {
-            gap: calc(15px + (30 - 15) * ((100vw - 360px) / (1200 - 360))) calc(10px + (30 - 10) * ((100vw - 360px) / (1200 - 360)));
+            gap: calc(15px + (30 - 15) * ((100vw - 360px) / (1200 - 360)))
+               calc(10px + (30 - 10) * ((100vw - 360px) / (1200 - 360)));
          }
 
          &__item {
@@ -808,8 +801,7 @@
          }
 
          &__img {
-
-            &>img {
+            & > img {
                border-radius: 0;
             }
 
@@ -829,7 +821,8 @@
    .artifacts {
       .hero {
          background-size: auto 145%;
-         background-position: right calc(-125px + (125 - 0) * ((100vw - 360px) / (576 - 360))) top calc(-95px + (95 - 70) * ((100vw - 360px) / (576 - 360)));
+         background-position: right calc(-125px + (125 - 0) * ((100vw - 360px) / (576 - 360))) top
+            calc(-95px + (95 - 70) * ((100vw - 360px) / (576 - 360)));
       }
    }
 }
