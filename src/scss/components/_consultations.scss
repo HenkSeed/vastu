@@ -128,10 +128,6 @@
       width: 100%;
       border-radius: 10px;
 
-      /*       &:hover {
-         background-color: #A66321;
-      } */
-
       @include media-hover() {
          background-color: #a66321;
          border-color: #a66321;

@@ -2658,9 +2658,6 @@ ul {
   text-align: center;
   width: 100%;
   border-radius: 10px;
-  /*       &:hover {
-     background-color: #A66321;
-  } */
 }
 @media (hover: hover) {
   .consultations__button--submit:hover {
@@ -4137,13 +4134,166 @@ ul {
   display: block;
 }
 
-.about-us .hero {
+.about-page .hero {
   padding-top: 0;
-  background-image: url("../images/artifacts/hero/bg_img.png");
+  background-image: url("../images/about-us/hero/bg_img.png");
   height: 49.2rem;
   background-position: center center;
 }
+.about-page .hero__container {
+  position: relative;
+}
+.about-page .hero__title {
+  font-size: 9.6rem;
+  font-weight: 400;
+  color: #fff;
+  /* margin-left: 25.5rem; */
+  text-transform: uppercase;
+  position: absolute;
+  left: 25.5rem;
+  top: 18.3rem;
+}
+.about-page .hero__text {
+  font-size: 4.8rem;
+  color: rgba(241, 201, 165, 0.48);
+  font-weight: 400;
+  text-transform: uppercase;
+  position: absolute;
+  top: 17.8rem;
+  left: 0;
+}
+.about-page .corner {
+  background-color: #F2E8DE;
+  padding-top: 7.4rem;
+  padding-bottom: 12rem;
+}
+.about-page .corner__info {
+  padding: 6rem 500px 43px 102px;
+  border-radius: 10px;
+  /* padding-right: 30px; */
+  width: 100%;
+  background-color: rgba(241, 201, 165, 0.6);
+}
+.about-page .corner__text {
+  position: relative;
+}
+.about-page .corner__text p {
+  font-size: 18px;
+  line-height: 140%;
+  color: #8b4513;
+}
+.about-page .corner__text p ~ p {
+  margin-top: 28px;
+}
+.about-page .corner__img {
+  position: absolute;
+  overflow: hidden;
+  right: -875px;
+  top: 0;
+  /* margin-right: -44rem; */
+  width: 845px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.about-page .corner__img img {
+  position: relative;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
 
+@media (max-width: 1920px) {
+  .about-page .corner {
+    overflow: hidden;
+  }
+  .about-page .corner__img img {
+    right: calc(360px + -360 * (100vw - 1200px) / 720);
+  }
+}
+@media (max-width: 1200px) {
+  .about-page .hero {
+    height: calc(300px + 192 * (100vw - 360px) / 840);
+  }
+  .about-page .hero__title {
+    font-size: calc(34px + 62 * (100vw - 360px) / 840);
+    left: calc(102px + 153 * (100vw - 360px) / 840);
+    top: calc(252px + -69 * (100vw - 360px) / 840);
+  }
+  .about-page .hero__text {
+    font-size: calc(24px + 24 * (100vw - 360px) / 840);
+    left: calc(20px + -20 * (100vw - 360px) / 840);
+    top: calc(235px + -57 * (100vw - 360px) / 840);
+  }
+  .about-page .corner__info {
+    padding-left: calc(20px + 82 * (100vw - 768px) / 432);
+    padding-right: calc(360px + 140 * (100vw - 768px) / 432);
+  }
+  .about-page .corner__text p {
+    font-size: calc(14px + 4 * (100vw - 360px) / 840);
+  }
+  .about-page .corner__text p ~ p {
+    margin-top: calc(25px + 3 * (100vw - 768px) / 432);
+  }
+  .about-page .corner__img {
+    right: calc(-860px + -15 * (100vw - 768px) / 432);
+  }
+  .about-page .corner__img img {
+    border-radius: 10px;
+    right: calc(520px + -160 * (100vw - 768px) / 432);
+  }
+}
+@media (max-width: 768px) {
+  .about-page .corner__info {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .about-page .corner__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .about-page .corner__img {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .about-page .corner__img img {
+    position: static;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .about-page .corner {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .about-page .corner__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .about-page .corner__info {
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+  .about-page .corner__text p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-page .corner__img {
+    border-radius: 0;
+  }
+  .about-page .corner__img img {
+    border-radius: 0;
+  }
+}
 .artifacts {
   background-color: #F2E8DE;
   /* Добавляем имя класса слайдера, чтобы отличить буллеты от разных слайдеров на одной странице, так как буллеты создаются свайпером, и мы не можем добавить к ним дополнительный класс непосредственно */
@@ -6609,9 +6759,6 @@ ul {
   text-align: center;
   width: 100%;
   border-radius: 10px;
-  /*       &:hover {
-     background-color: #A66321;
-  } */
 }
 @media (hover: hover) {
   .consultations__button--submit:hover {
