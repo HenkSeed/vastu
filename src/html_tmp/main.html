@@ -21,7 +21,9 @@
    <script type="module" src="js/main.js" defer></script>
 </head>
 
-<body> <!-- Затемнённый фон для бургер-меню -->
+<body>
+
+<!-- Затемнённый фон для бургер-меню -->
 <div class="dark-bg center">
    <div class="container dark-bg__container">
 
@@ -184,6 +186,7 @@
 
    </div>
 </div>
+
 <header class="header center">
    <!-- Затемнение для меню корзины -->
    <div class="dark__header dark dark--invisible"></div>
@@ -451,233 +454,392 @@
 
 </header>
 
-<!-- Фон для быстрого заказа консультации -->
-<div class="consultations__dark dark--invisible">
-  <!-- Форма отправки -->
-  <div class="consultations__form consultations__form--invisible">
-    <div class="consultations__price">10 200 РУБ.</div>
-    <div class="consultations__header">
-      <h2>Консультация</h2>
-      <p>Васту БИЗНЕС</p>
-    </div>
-    <div class="consultations__name consultations__field">
-      <label for="consultations-name">Имя</label>
-      <input
-        type="text"
-        id="consultations-name"
-        placeholder="Введите Ваше имя"
-        class="consultations__input-name"
-        autocomplete="off"
-      />
-    </div>
-    <div class="consultations__email consultations__field">
-      <label for="consultations-email">E-mail</label>
-      <input
-        type="email"
-        id="consultations-email"
-        placeholder="Введите электронную почту"
-        class="consultations__input-email"
-        autocomplete="off"
-      />
-    </div>
-    <div class="consultations__phone consultations__field">
-      <label for="consultations-phone">Телефон</label>
-      <input
-        type="tel"
-        id="consultations-phone"
-        placeholder="Введите номер телефона"
-        class="consultations__input-phone"
-        autocomplete="off"
-      />
-    </div>
+<section class="hero center">
+   <div class="container hero__container">
+      <h1 class="hero__container__title">
+         Vastu
+      </h1>
+      <h2 class="hero__container__text">
+         Улучшаем энергию дома<br>
+         и помогаем людям меняться&nbsp;к&nbsp;лучшему
+      </h2>
 
-    <button type="submit" class="consultations__button--submit">
-      Заказать консультацию
-    </button>
-  </div>
-</div>
-
-<section class="consultations__hero center">
-  <div class="container consultations__hero-container"></div>
+   </div>
 </section>
 
-<div class="consultations__title center">
-  <div class="container consultations__title-container">
-    <div class="consultations__title-mod">
-      <h2 class="consultations__title-header">Консультации</h2>
-    </div>
-  </div>
-</div>
-
-<section class="consultations__chapter consultations__business center">
-  <div class="container consultations__chapter-container top first">
-    <div class="consultations__chapter-bg-img">
-      <a href="#">
-        <img
-          src="images/consultations/chapter_business_img.png"
-          alt="Business Bg Image"
-        />
-      </a>
-    </div>
-    <div class="consultations__chapter-info">
-      <div class="consultations__chapter-header-block">
-        <span class="consultations__chapter-header">Бизнес</span>
-        <span class="consultations__chapter-price">17 500 РУБ.</span>
+<section class="about center">
+   <div class="container about__container">
+      <div class="about__image">
+         <img src="images/main/about/about_img.jpg" alt="about image" class="img">
       </div>
-      <p>
-        Наши консультации по Васту для бизнеса предназначены для
-        предпринимателей и руководителей, желающих оптимизировать рабочее
-        пространство и повысить эффективность своего бизнеса. Наши эксперты
-        помогут вам создать гармоничное и энергетически благоприятное рабочее
-        окружение, которое способствует успеху и процветанию.
-      </p>
-
-      <div class="consultations__chapter-btns">
-        <a
-          href="consultations_card.html"
-          class="consultations__chapter-more-btn"
-        >
-          Узнать подробнее
-        </a>
-        <button
-          data-order="business"
-          class="consultations__chapter-quick-order"
-        >
-          Быстрый заказ
-        </button>
+      <div class="about__info">
+         <div class="about__info__header">О компании</div>
+         <div class="about__info__text">
+            <p>Добро пожаловать в нашу компанию, специализирующуюся на консультационных услугах
+               по Васту - древней индийской науке о
+               гармонизации пространства. Мы помогаем нашим клиентам создать гармоничное и энергетически
+               сбалансированное
+               окружение в
+               их домах, офисах и других местах. Наша команда профессионалов с большим опытом предлагает индивидуальные
+               консультации,
+               анализируя расположение помещения, организацию мебели и другие аспекты, чтобы создать благоприятную среду
+               для жизни и
+               работы.</p>
+         </div>
       </div>
-    </div>
-  </div>
+      <div class="about__rectangle"></div>
+   </div>
 </section>
 
-<section class="consultations__chapter consultations__house center">
-  <div class="container consultations__chapter-container no-top second">
-    <div class="consultations__chapter-bg-img">
-      <a href="#">
-        <img
-          src="images/consultations/chapter_house_img.png"
-          alt="Business Bg Image"
-        />
-      </a>
-    </div>
-    <div class="consultations__chapter-info">
-      <div class="consultations__chapter-header-block">
-        <span class="consultations__chapter-header">Дом</span>
-        <span class="consultations__chapter-price">17 500 РУБ.</span>
-      </div>
-      <p>
-        Наша консультация по Васту для вашего дома представляет собой
-        индивидуальный подход к созданию гармоничного пространства,
-        способствующего вашему благополучию и энергетической гармонии. Мы
-        проведем анализ вашего дома, учитывая его уникальные особенности, и
-        предоставим вам рекомендации по оптимизации расположения мебели,
-        использованию цветовой гаммы и выбору символов и элементов дизайна. С
-        нашей помощью ваш дом станет местом, где вы будете чувствовать себя
-        комфортно и защищенно, привлекая гармонию и успех в свою жизнь.
-      </p>
+<section class="consult center">
+   <div class="container consult__container">
 
-      <div class="consultations__chapter-btns">
-        <a
-          href="consultations_card.html"
-          class="consultations__chapter-more-btn"
-        >
-          Узнать подробнее
-        </a>
-        <button data-order="house" class="consultations__chapter-quick-order">
-          Быстрый заказ
-        </button>
+      <div class="consult__title">
+         <h2 class="consult__header">Консультации</h2>
+         <div class="consult__line"></div>
       </div>
-    </div>
-  </div>
+
+      <div class="consult__opened">
+         <div class="consult__opened__img">
+            <a href="#">
+               <img src="images/main/consult/busines.png" alt="Business Image">
+            </a>
+         </div>
+         <div class="consult__opened__info">
+            <h3 class="consult__opened__title">Бизнес</h3>
+            <div class="consult__opened__text">
+               <p>Наши консультации по Васту для бизнеса предназначены для предпринимателей
+                  и руководителей, желающих оптимизировать
+                  рабочее пространство и повысить эффективность своего бизнеса. Наши эксперты помогут вам создать
+                  гармоничное
+                  и энергетически благоприятное рабочее окружение, которое способствует успеху и процветанию.</p>
+            </div>
+            <div class="consult__opened__btns">
+               <a href="consultations_card.html" class="consult__opened__more-btn">
+                  Узнать подробнее
+               </a>
+               <!-- <button class="consult__opened__more-btn">Узнать подробнее</button> -->
+               <a href="consultations.html" class="consult__opened__all-btn">
+                  Все консультации
+               </a>
+
+               <!-- <button class="consult__opened__all-btn">Все консультации</button> -->
+            </div>
+         </div>
+      </div>
+
+      <div class="consult__closed">
+         <div class="consult__closed__img img-1">
+            <a href="#">
+               <img src="images/main/consult/house.png" alt="House Image">
+               <div class="consult__closed__badge">Дом</div>
+            </a>
+         </div>
+
+         <div class="consult__closed__img img-2">
+            <a href="#">
+               <img src="images/main/consult/apartment.png" alt="Apartment Image">
+               <div class="consult__closed__badge">Квартира</div>
+            </a>
+         </div>
+
+         <div class="consult__closed__img img-3">
+            <a href="#">
+               <img src="images/main/consult/artifacts.png" alt="Artifacts Image">
+               <div class="consult__closed__badge">Артефакты</div>
+            </a>
+         </div>
+      </div>
+   </div>
 </section>
 
-<section class="consultations__chapter consultations__flat center">
-  <div class="container consultations__chapter-container no-top third">
-    <div class="consultations__chapter-bg-img">
-      <a href="consultations_card.html">
-        <img
-          src="images/consultations/chapter_flat_img.png"
-          alt="Business Bg Image"
-        />
-      </a>
-    </div>
-    <div class="consultations__chapter-info">
-      <div class="consultations__chapter-header-block">
-        <span class="consultations__chapter-header">Квартира</span>
-        <span class="consultations__chapter-price">17 500 РУБ.</span>
+<section class="diploma center">
+   <div class="diploma__bg-img">
+      <img src="images/main/diploma/bg_img.png" alt="Cap Img">
+   </div>
+   <div class="container diploma__container">
+      <div class="diploma__title">
+         <h2 class="diploma__header">Наши дипломы</h2>
+         <div class="diploma__line"></div>
       </div>
-      <p>
-        Хотите преобразить свою квартиру в гармоничное и энергетически
-        благоприятное пространство? Наши консультации по Васту для квартиры
-        помогут вам создать дом, который способствует вашему благополучию и
-        гармонии. Мы проведем анализ вашего жилища, учитывая его особенности, и
-        предоставим вам рекомендации по оптимизации расположения мебели, выбору
-        цветовой гаммы и использованию символов и элементов дизайна. Наша цель -
-        помочь вам создать пространство, где вы будете чувствовать себя
-        комфортно и защищенно, а также привлечете гармонию и успех в свою жизнь.
-        Обратитесь к нам сегодня и начните путь к созданию баланса и процветания
-        в своем доме.
-      </p>
+      <div class="diploma__images">
 
-      <div class="consultations__chapter-btns">
-        <a
-          href="consultations_card.html"
-          class="consultations__chapter-more-btn"
-        >
-          Узнать подробнее
-        </a>
-        <button data-order="flat" class="consultations__chapter-quick-order">
-          Быстрый заказ
-        </button>
+         <div class="diploma__left-img">
+            <a href="images/main/diploma/left_img_big.jpg" data-fancybox>
+               <img src="images/main/diploma/left_img.png" alt="Left Diploma Image">
+            </a>
+         </div>
+
+         <div class="diploma__main-img">
+            <a href="images/main/diploma/main_img_big.jpg" data-fancybox>
+               <img src="images/main/diploma/main_img.png" alt="Main Diploma Image">
+            </a>
+         </div>
+
+         <div class="diploma__right-img">
+            <a href="images/main/diploma/right_img_big.jpg" data-fancybox>
+               <img src="images/main/diploma/right_img.png" alt="Right Diploma Image">
+            </a>
+         </div>
+
       </div>
-    </div>
-  </div>
+   </div>
 </section>
 
-<section class="consultations__chapter consultations__artifacts center">
-  <div class="container consultations__chapter-container no-top fourth">
-    <div class="consultations__chapter-bg-img">
-      <a href="#">
-        <img
-          src="images/consultations/chapter_artifacts_img.png"
-          alt="Business Bg Image"
-        />
-      </a>
-    </div>
+<section class="about-us center">
+   <div class="container about-us__container">
 
-    <div class="consultations__chapter-info">
-      <div class="consultations__chapter-header-block">
-        <span class="consultations__chapter-header">Артефакты</span>
-        <span class="consultations__chapter-price">17 500 РУБ.</span>
+      <div class="about-us__title">
+         <h2 class="about-us__header">Немного о нас</h2>
+         <div class="about-us__line"></div>
       </div>
 
-      <p>
-        Вы хотите привнести баланс и гармонию в свой дом с помощью артефактов
-        Васту? Наши консультации помогут вам разобраться, как правильно выбирать
-        и использовать артефакты Васту, чтобы создать благоприятную энергетику в
-        вашем жилище. Мы предоставим вам экспертные рекомендации по выбору
-        артефактов, их расположению и влиянию на энергетику вашего дома.
-        Независимо от того, нужны ли вам артефакты для гармонизации пространства
-        или для достижения определенных целей, мы поможем вам выбрать подходящие
-        предметы и оптимально интегрировать их в ваш интерьер.
-      </p>
+      <div class="about-us__videos">
 
-      <div class="consultations__chapter-btns">
-        <a
-          href="consultations_card.html"
-          class="consultations__chapter-more-btn"
-        >
-          Узнать подробнее
-        </a>
-        <button
-          data-order="artifacts"
-          class="consultations__chapter-quick-order"
-        >
-          Быстрый заказ
-        </button>
+         <div class="about-us__main__video">
+            <div class="about-us__main__wraper">
+               <img class="about-us__main__img" src="images/main/about-us/main_video_bg.png" alt="Monitor Image">
+
+               <div class="about-us__main__frame">
+                  <a href="#">
+                     <img src="images/main/about-us/main_video_img.png" alt="">
+                     <div class="about-us__main__btn">
+                        <img src="images/main/about-us/play_arrow.svg" alt="">
+                     </div>
+                  </a>
+               </div>
+            </div>
+         </div>
+
+         <div class="about-us__aside__videos">
+            <div class="about-us__aside__first">
+               <a href="#">
+                  <img src="images/main/about-us/first_video_img.png" alt="First Aside Video">
+                  <div class="about-us__aside__btn">
+                     <img src="images/main/about-us/play_arrow.svg" alt="">
+                  </div>
+               </a>
+            </div>
+
+            <div class="about-us__aside__second">
+               <a href="#">
+                  <img src="images/main/about-us/second_video_img.png" alt="First Aside Video">
+                  <div class="about-us__aside__btn">
+                     <img src="images/main/about-us/play_arrow.svg" alt="">
+                  </div>
+               </a>
+            </div>
+
+            <div class="about-us__aside__more">
+               <a href="#">
+                  <div class="about-us__aside__img">
+                     <img src="images/main/about-us/flap.svg" alt="Flap Icon">
+                  </div>
+                  <div class="about-us__aside__text">
+                     СМОТРЕТЬ Все&nbsp;видео
+                  </div>
+               </a>
+            </div>
+
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
+</section>
+
+<section class="reviews center">
+   <div class="container reviews__container">
+      <div class="reviews__stars">
+         <h2 class="reviews__stars__header">Отзывы</h2>
+         <div class="reviews__stars__images">
+            <img src="images/main/reviews/star.svg" alt="Star Image 1" class="reviews__stars__image star-1">
+            <img src="images/main/reviews/star.svg" alt="Star Image 2" class="reviews__stars__image star-2">
+            <img src="images/main/reviews/star.svg" alt="Star Image 3" class="reviews__stars__image star-3">
+            <img src="images/main/reviews/star.svg" alt="Star Image 4" class="reviews__stars__image star-4">
+            <img src="images/main/reviews/star.svg" alt="Star Image 5" class="reviews__stars__image star-5">
+         </div>
+      </div>
+
+      <div class="swiper">
+
+         <div class="swiper-wrapper">
+            <!-- Белый фон для смены слайдов -->
+            <div class="swiper__bg--white">
+               <div class="swiper__bg-photo--white"></div>
+            </div>
+
+            <div class="swiper-slide">
+               <div class="reviews__card-wrapper">
+
+                  <div class="reviews__card card-1">
+                     <div class="reviews__card__img">
+                        <img src="images/main/reviews/review_photo.png" alt="Reviews Photo">
+                     </div>
+
+                     <h3 class="reviews__card__name">Сергей П.</h3>
+                     <div class="reviews__card__line"></div>
+                     <div class="reviews__card__quote-mark">
+                        <img src="images/main/reviews/quotemark.svg" alt="Quote Mark">
+                     </div>
+
+                     <div class="reviews__card__text">
+                        <p>Я очень доволен консультацией по Васту, которую приобрел на этом сайте. Консультант был
+                           очень
+                           профессиональным и дал мне
+                           много&nbsp;полезных советов по гармонизации пространства. Я чувствую, что моя жизнь начала
+                           меняться
+                           к
+                           лучшему
+                           после его
+                           рекомендаций. Благодарю за ценный опыт!</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="swiper-slide">
+               <div class="reviews__card-wrapper">
+                  <div class="reviews__card card-2">
+                     <div class="reviews__card__img">
+                        <img src="images/main/reviews/review_photo.png" alt="Reviews Photo">
+                     </div>
+
+                     <h3 class="reviews__card__name">Николай П.</h3>
+                     <div class="reviews__card__line"></div>
+                     <div class="reviews__card__quote-mark">
+                        <img src="images/main/reviews/quotemark.svg" alt="Quote Mark">
+                     </div>
+
+                     <div class="reviews__card__text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatem maiores ea
+                           quibusdam odio repellendus rem? Animi illo veniam quod accusantium in eos dicta
+                           distinctio?
+                           Nemo aspernatur dolore qui tenetur natus quod optio ad veritatis. Lorem ipsum dolor, sit
+                           amet
+                           consectetur adipisicing elit. Aperiam illum debitis sint doloremque excepturi earum est
+                           facere fuga esse? Aspernatur fugiat illo impedit optio similique! Animi error quia
+                           accusamus
+                           incidunt rem porro magni nesciunt, eum inventore! Consequatur, praesentium excepturi!
+                           Accusamus!</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="swiper-slide">
+               <div class="reviews__card-wrapper">
+                  <div class="reviews__card card-2">
+                     <div class="reviews__card__img">
+                        <img src="images/main/reviews/review_photo.png" alt="Reviews Photo">
+                     </div>
+
+                     <h3 class="reviews__card__name">Александр П.</h3>
+                     <div class="reviews__card__line"></div>
+                     <div class="reviews__card__quote-mark">
+                        <img src="images/main/reviews/quotemark.svg" alt="Quote Mark">
+                     </div>
+
+                     <div class="reviews__card__text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam reprehenderit ratione
+                           tenetur
+                           atque, nostrum sunt, perferendis ipsa architecto sequi neque nobis qui natus nisi?
+                           Architecto
+                           quod rem facere. Sit id harum ea quo eligendi officiis similique consequuntur quia aliquam
+                           quod!</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+         </div>
+
+         <div class="reviews__card__arrows">
+
+            <div class="reviews__card__arrow-left">
+               <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M9 1L2.55635 7.04093C1.82686 7.72482 1.46211 8.06677 1.46211 8.5C1.46211 8.93323 1.82686 9.27518 2.55635 9.95908L9 16"
+                     stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+            </div>
+
+            <div class="reviews__card__arrow-right">
+               <svg width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M0.999999 16L7.44365 9.95908C8.17314 9.27518 8.53789 8.93323 8.53789 8.5C8.53789 8.06677 8.17314 7.72482 7.44365 7.04093L1 1"
+                     stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+               </svg>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </div>
+</section>
+
+<section class="news center">
+   <div class="container news__container">
+      <div class="news__title">
+         <h2 class="news__header">Новости</h2>
+         <div class="news__line"></div>
+      </div>
+
+      <div class="news__info">
+
+         <div class="news__main">
+            <div class="news__main__img">
+               <a href="#">
+                  <img src="images/main/news/main_img.png" alt="Main Image">
+               </a>
+            </div>
+
+            <a href="#">
+               <div class="news__main__text">Новые тенденции в использовании артефактов Васту для гармонии дома</div>
+            </a>
+         </div>
+
+         <div class="news__aside">
+
+            <div class="news__aside__info news__aside__info_1">
+               <a href="#">
+                  <div class="news__aside__text text_1">Экспертные советы по выбору и размещению артефактов Васту в
+                     интерьере</div>
+               </a>
+               <div class="news__aside__img image_1">
+                  <a href="#">
+                     <img src="images/main/news/aside_img_1.png" alt="Aside Image 1">
+                  </a>
+               </div>
+            </div>
+
+            <div class="news__aside__info news__aside__info_2">
+               <a href="#">
+                  <div class="news__aside__text text_2">Как привлечь успех и процветание с помощью артефактов Васту
+                  </div>
+               </a>
+               <div class="news__aside__img image_2">
+                  <a href="#">
+                     <img src="images/main/news/aside_img_2.png" alt="Aside Image 2">
+                  </a>
+               </div>
+            </div>
+
+            <div class="news__aside__info news__aside__info_3">
+               <a href="#">
+                  <div class="news__aside__text text_3">История и значения основных символов и артефактов Васту</div>
+               </a>
+               <div class="news__aside__img image_3">
+                  <a href="#">
+                     <img src="images/main/news/aside_img_3.png" alt="Aside Image 3">
+                  </a>
+               </div>
+               </>
+            </div>
+
+         </div>
+      </div>
+   </div>
 </section>
 
 <footer class="footer center">
@@ -830,7 +992,9 @@
 
    </div>
    <div class="footer__copyright"><span>© соpyright 2024 vas-tu.ru</span></div>
-</footer> <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</footer>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 

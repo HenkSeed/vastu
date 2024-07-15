@@ -21,9 +21,7 @@
    <script type="module" src="js/main.js" defer></script>
 </head>
 
-<body>
-
-<!-- Затемнённый фон для бургер-меню -->
+<body> <!-- Затемнённый фон для бургер-меню -->
 <div class="dark-bg center">
    <div class="container dark-bg__container">
 
@@ -186,63 +184,6 @@
 
    </div>
 </div>
-
-<!-- Затемнённый фон для всплывающих окон -->
-<div class="shadow center">
-   <div class="container shadow__container">
-
-      <div class="shadow__cart-menu cart-menu--invisible">
-
-   <div class="cart-menu__items">
-
-      <div class="cart-menu__item">
-         <a href="#">
-            <img src="images/main/cart/item-1.png" alt="Item-1" class="cart-menu__img">
-         </a>
-
-         <div class="cart-menu__info">
-            <div class="cart-menu__header"><a href="#">Круглая спираль Васту</a></div>
-            <div class="cart-menu__price-block">
-               <span class="cart-menu__price">1700 руб.</span>
-
-               <button class="cart-menu__minus"><svg width="16" height="2" viewBox="0 0 16 2" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path d="M15 1H1" stroke="" stroke-width="2" stroke-linecap="round" />
-                  </svg></button>
-
-               <input type="number" value="1" class="cart-menu__counter">
-
-               <button class="cart-menu__plus"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path d="M8 1V8M8 8V15M8 8H15M8 8H1" stroke="" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                  </svg>
-               </button>
-
-               <button class="cart-menu__delete">
-                  <img src="images/main/cart/delete_icon.svg" alt="Delete Icon">
-               </button>
-            </div>
-         </div>
-      </div>
-
-   </div>
-
-   <div class="cart-menu__result-price">
-      <span class="cart-menu__text">Итого:</span>
-      <span class="cart-menu__price">5100 руб.</span>
-   </div>
-
-   <div class="cart-menu__buttons">
-      <a href="artifacts_card.html" class="cart-menu__button cart-menu__button--clear">Продолжить</a>
-
-      <a href="cart.html" class="cart-menu__button cart-menu__button--order">Заказать</a>
-   </div>
-</div>
-
-   </div>
-</div>
-
 <header class="header center">
    <!-- Затемнение для меню корзины -->
    <div class="dark__header dark dark--invisible"></div>
@@ -511,21 +452,16 @@
 </header>
 
 <!-- Оболочка страницы -->
-<div class="cart-page">
-
-   <section class="line-header center">
-      <div class="container line-header__container">
-         <span class="line-header__title">Оформление заказа</span>
-         <div class="line-header__line"></div>
+<div class="successful-question">
+  <section class="successful center">
+    <div class="container successful__container">
+      <div class="successful__img">
+        <img src="images/successful_order/airplane.svg" alt="" />
       </div>
-   </section>
-
-   <section class="order-items center">
-      <div class="container order-items__container">
-
-      </div>
-   </section>
-
+      <h2 class="successful__header">вопрос отправлен!</h2>
+      <p class="successful__text">Мы свяжемся с Вами в ближайшее время!</p>
+    </div>
+  </section>
 </div>
 
 <footer class="footer center">
@@ -678,9 +614,7 @@
 
    </div>
    <div class="footer__copyright"><span>© соpyright 2024 vas-tu.ru</span></div>
-</footer>
-
-<script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</footer> <script type="module" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
