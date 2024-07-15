@@ -6200,7 +6200,7 @@ ul {
   }
 }
 .cart-page {
-  background-color: #f5f5f5;
+  background-color: #f2e8de;
 }
 .cart-page .line-header {
   padding-top: 6rem;
@@ -6242,6 +6242,9 @@ ul {
   justify-content: center;
 }
 .cart-page .order-items .cart-menu__item {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   overflow: hidden;
   background-color: #f1c9a5;
   max-height: 170px;
@@ -7954,6 +7957,7 @@ ul {
 }
 .contacts .form-section {
   width: calc(100% - 30px);
+  max-width: 1170px;
   position: absolute;
   left: 50%;
   top: 50%;
